@@ -53,7 +53,7 @@ int main (int argc, char **argv)
         double delta=(current_time-last_time).toSec();
 
         //getting the left and right wheel velocities
-        left_v=(delta_enc1 *  DIST_CONST)/(560* delta);
+        left_v=(delta_enc1 *  DIST_CONST)/(560 * delta);
         right_v=(delta_enc2 * DIST_CONST)/(560 * delta);
 
         X_vel=(left_v+right_v)/2;
