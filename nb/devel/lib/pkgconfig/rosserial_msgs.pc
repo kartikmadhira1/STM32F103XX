@@ -1,0 +1,8 @@
+prefix=/home/kartik/workspaceSTM32/nb/devel
+
+Name: rosserial_msgs
+Description: Description of rosserial_msgs
+Version: 0.7.5
+Cflags: -I/home/kartik/workspaceSTM32/nb/devel/include
+Libs: -L/home/kartik/workspaceSTM32/nb/devel/lib 
+Requires: message_runtime

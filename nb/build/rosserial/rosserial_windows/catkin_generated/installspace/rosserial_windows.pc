@@ -1,0 +1,8 @@
+prefix=/home/kartik/workspaceSTM32/nb/install
+
+Name: rosserial_windows
+Description: Description of rosserial_windows
+Version: 0.7.5
+Cflags: 
+Libs: -L/home/kartik/workspaceSTM32/nb/install/lib 
+Requires: 
