@@ -1,2 +1,0 @@
-float32 right_wheel
-float32 left_wheel
