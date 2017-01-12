@@ -1,0 +1,3169 @@
+
+stepper.elf:     file format elf32-littlearm
+stepper.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0800010d
+
+Program Header:
+    LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
+         filesz 0x00000d94 memsz 0x00000d94 flags rwx
+    LOAD off    0x00010000 vaddr 0x20000000 paddr 0x08000d94 align 2**15
+         filesz 0x00000014 memsz 0x00000160 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .isr_vector   000001e8  08000000  08000000  00008000  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 ._inits       00000004  080001e8  080001e8  000081e8  2**2  CONTENTS, ALLOC, LOAD, DATA
+  2 .text         00000ba8  080001ec  080001ec  000081ec  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .data         00000014  20000000  08000d94  00010000  2**2  CONTENTS, ALLOC, LOAD, DATA
+  4 .bss          0000004c  20000014  08000da8  00010014  2**2  ALLOC
+  5 ._check_stack 00000100  20000060  08000df4  00010014  2**0  ALLOC
+  6 .comment      00000070  00000000  00000000  00010014  2**0  CONTENTS, READONLY
+  7 .ARM.attributes 00000033  00000000  00000000  00010084  2**0  CONTENTS, READONLY
+  8 .debug_aranges 00000450  00000000  00000000  000100b7  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   00002a68  00000000  00000000  00010507  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 00000b3e  00000000  00000000  00012f6f  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000029f8  00000000  00000000  00013aad  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  00000ca8  00000000  00000000  000164a8  2**2  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    000506bf  00000000  00000000  00017150  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 000003c0  00000000  00000000  0006780f  2**0  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_macro  0000e0e7  00000000  00000000  00067bcf  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08000000 l    d  .isr_vector	00000000 .isr_vector
+080001e8 l    d  ._inits	00000000 ._inits
+080001ec l    d  .text	00000000 .text
+20000000 l    d  .data	00000000 .data
+20000014 l    d  .bss	00000000 .bss
+20000060 l    d  ._check_stack	00000000 ._check_stack
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 vectors_stm32f10x.c
+00000000 l    df *ABS*	00000000 startup_cm.c
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 stm32f10x_dma.c
+00000000 l    df *ABS*	00000000 stm32f10x_gpio.c
+00000000 l    df *ABS*	00000000 stm32f10x_rcc.c
+20000000 l     O .data	00000010 APBAHBPrescTable
+20000010 l     O .data	00000004 ADCPrescTable
+00000000 l    df *ABS*	00000000 stm32f10x_usart.c
+00000000 l    df *ABS*	00000000 startup_stm32f10x.c
+00000000 l    df *ABS*	00000000 system_stm32f10x.c
+08000c88 l     F .text	0000000a SetSysClock
+08000c94 l     F .text	00000100 SetSysClockTo72
+00000000 l    df *ABS*	00000000 
+20004c00 l       *ABS*	00000000 _Heap_Limit
+00000400 l       *ABS*	00000000 _Main_Stack_Size
+08000d94 l       .text	00000000 __exidx_end
+20000060 l       ._check_stack	00000000 _Heap_Begin
+08000d94 l       .data	00000000 _etext
+20004c00 l       *ABS*	00000000 __Main_Stack_Limit
+080001ec l       ._inits	00000000 __fini_array_end
+08000d94 l       .text	00000000 __exidx_start
+00000400 l       *ABS*	00000000 __Main_Stack_Size
+00000100 l       *ABS*	00000000 _Minimum_Stack_Size
+20000060 l       ._check_stack	00000000 _end_noinit
+080001ec l       ._inits	00000000 __fini_array_start
+080001ec l       ._inits	00000000 __init_array_end
+080001ec l       ._inits	00000000 __preinit_array_end
+20005000 l       *ABS*	00000000 __stack
+080001ec l       ._inits	00000000 __init_array_start
+080001e8 l       ._inits	00000000 __preinit_array_start
+08000198  w    F .isr_vector	00000006 RTC_Alarm_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI2_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_TRG_COM_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_CC_IRQHandler
+080001d0  w    F .isr_vector	00000006 DebugMon_Handler
+08000410 g     F .text	00000038 DMA_Cmd
+080001e8 g     O ._inits	00000004 p_system_init
+20000000 g       .data	00000000 __data_start__
+20000018 g     O .bss	0000002c dma
+08000198  w    F .isr_vector	00000006 TIM1_CC_IRQHandler
+080001a8  w    F .isr_vector	00000006 HardFault_Handler
+08000198  w    F .isr_vector	00000006 TIM6_IRQHandler
+080001e0  w    F .isr_vector	00000006 SysTick_Handler
+08000198  w    F .isr_vector	00000006 PVD_IRQHandler
+08000198  w    F .isr_vector	00000006 SDIO_IRQHandler
+08000d94 g       .data	00000000 _sidata
+080001d8  w    F .isr_vector	00000006 PendSV_Handler
+080001a0  w    F .isr_vector	00000006 NMI_Handler
+08000150 g     F .isr_vector	00000048 system_init
+08000198  w    F .isr_vector	00000006 CAN2_RX1_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI3_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_TRG_COM_TIM14_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_UP_TIM10_IRQHandler
+20000014 g       .bss	00000000 _sbss
+08000394 g     F .text	0000007c DMA_Init
+08000198  w    F .isr_vector	00000006 TIM8_UP_TIM13_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI0_IRQHandler
+08000198  w    F .isr_vector	00000006 I2C2_EV_IRQHandler
+20000060 g       ._check_stack	00000000 _noinit
+08000198  w    F .isr_vector	00000006 CAN1_RX0_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_UP_TIM16_IRQHandler
+080001c0  w    F .isr_vector	00000006 UsageFault_Handler
+08000804 g     F .text	0000003c RCC_APB2PeriphClockCmd
+08000198  w    F .isr_vector	00000006 CAN2_SCE_IRQHandler
+08000198  w    F .isr_vector	00000006 ADC1_2_IRQHandler
+080004d0 g     F .text	00000176 GPIO_Init
+20000014 g       .bss	00000000 __bss_start__
+20000000 g       .data	00000000 _sdata
+08000198  w    F .isr_vector	00000006 SPI1_IRQHandler
+08000ae4 g     F .text	0000003e USART_Cmd
+08000198  w    F .isr_vector	00000006 TAMPER_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM6_DAC_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_BRK_TIM9_IRQHandler
+08000198  w    F .isr_vector	00000006 CAN2_RX0_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_UP_IRQHandler
+08000b6c g     F .text	0000006c __libc_init_array
+08000198  w    F .isr_vector	00000006 DMA2_Channel2_IRQHandler
+080007c8 g     F .text	0000003c RCC_AHBPeriphClockCmd
+08000198  w    F .isr_vector	00000006 DMA1_Channel4_IRQHandler
+08000448 g     F .text	00000054 DMA_GetFlagStatus
+08000198  w    F .isr_vector	00000006 USART3_IRQHandler
+08000bd8 g     F .text	0000003c __libc_fini_array
+08000198  w    F .isr_vector	00000006 RTC_IRQHandler
+20000060 g       .bss	00000000 _ebss
+08000198  w    F .isr_vector	00000006 DMA1_Channel7_IRQHandler
+0800010c  w    F .isr_vector	00000044 Reset_Handler
+08000198  w    F .isr_vector	00000006 CAN1_RX1_IRQHandler
+08000198  w    F .isr_vector	00000006 UART5_IRQHandler
+08000198  w    F .isr_vector	00000006 ADC3_IRQHandler
+20000044 g     O .bss	00000010 usart
+08000198  w    F .isr_vector	00000006 TIM4_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA2_Channel1_IRQHandler
+08000198  w    F .isr_vector	00000006 I2C1_EV_IRQHandler
+20000014 g       .data	00000000 __data_end__
+20000054 g     O .bss	00000004 i
+08000664 g     F .text	00000164 RCC_GetClocksFreq
+08000198  w    F .isr_vector	00000006 DMA1_Channel6_IRQHandler
+08000198  w    F .isr_vector	00000006 UART4_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA2_Channel4_IRQHandler
+08000970 g     F .text	00000174 USART_Init
+20000060 g       .bss	00000000 __bss_end__
+08000198  w    F .isr_vector	00000006 TIM3_IRQHandler
+08000198  w    F .isr_vector	00000006 RCC_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_BRK_TIM12_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_TRG_COM_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA1_Channel1_IRQHandler
+08000198  w    F .isr_vector	00000006 Default_Handler
+08000198  w    F .isr_vector	00000006 CEC_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI15_10_IRQHandler
+20000014 g     O .bss	00000004 buffer
+08000198  w    F .isr_vector	00000006 TIM14_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM13_IRQHandler
+08000648 g     F .text	0000001c GPIO_ResetBits
+08000198  w    F .isr_vector	00000006 TIM12_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM7_IRQHandler
+08000198  w    F .isr_vector	00000006 CAN2_TX_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM5_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI9_5_IRQHandler
+08000198  w    F .isr_vector	00000006 ETH_WKUP_IRQHandler
+080008b8 g     F .text	000000b8 USART_DeInit
+08000198  w    F .isr_vector	00000006 SPI2_IRQHandler
+080001b0  w    F .isr_vector	00000006 MemManage_Handler
+080001ec g     F .text	000000e8 main
+08000198  w    F .isr_vector	00000006 CAN1_TX_IRQHandler
+080001c8  w    F .isr_vector	00000006 SVC_Handler
+08000198  w    F .isr_vector	00000006 DMA2_Channel5_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA1_Channel5_IRQHandler
+08000198  w    F .isr_vector	00000006 EXTI4_IRQHandler
+08000198  w    F .isr_vector	00000006 USB_LP_CAN1_RX0_IRQHandler
+08000c20 g     F .text	00000068 SystemInit
+20000058 g     O .bss	00000004 count
+08000198  w    F .isr_vector	00000006 TIM1_TRG_COM_TIM17_IRQHandler
+08000198  w    F .isr_vector	00000006 USB_HP_CAN1_TX_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA1_Channel3_IRQHandler
+08000198  w    F .isr_vector	00000006 FSMC_IRQHandler
+08000198  w    F .isr_vector	00000006 ETH_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_UP_IRQHandler
+08000198  w    F .isr_vector	00000006 WWDG_IRQHandler
+0800087c g     F .text	0000003c RCC_APB1PeriphResetCmd
+08000198  w    F .isr_vector	00000006 TIM2_IRQHandler
+08000198  w    F .isr_vector	00000006 OTG_FS_WKUP_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_TRG_COM_TIM11_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_BRK_IRQHandler
+20005000 g       *ABS*	00000000 _estack
+08000198  w    F .isr_vector	00000006 EXTI1_IRQHandler
+2000005c g     O .bss	00000004 gpio
+20000014 g       .data	00000000 _edata
+080002d4 g     F .text	000000c0 rec_data
+08000198  w    F .isr_vector	00000006 DMA2_Channel4_5_IRQHandler
+08000198  w    F .isr_vector	00000006 USART2_IRQHandler
+08000000 g     O .isr_vector	0000010c g_pfnVectors
+08000198  w    F .isr_vector	00000006 I2C2_ER_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA1_Channel2_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM8_BRK_IRQHandler
+0800049c g     F .text	00000034 DMA_ClearFlag
+08000198  w    F .isr_vector	00000006 CAN1_SCE_IRQHandler
+08000198  w    F .isr_vector	00000006 FLASH_IRQHandler
+08000c14  w    F .text	0000000a _exit
+080001b8  w    F .isr_vector	00000006 BusFault_Handler
+08000198  w    F .isr_vector	00000006 USART1_IRQHandler
+08000198  w    F .isr_vector	00000006 OTG_FS_IRQHandler
+08000198  w    F .isr_vector	00000006 SPI3_IRQHandler
+08000840 g     F .text	0000003c RCC_APB2PeriphResetCmd
+08000198  w    F .isr_vector	00000006 I2C1_ER_IRQHandler
+08000b24 g     F .text	00000046 USART_DMACmd
+08000198  w    F .isr_vector	00000006 USBWakeUp_IRQHandler
+08000198  w    F .isr_vector	00000006 DMA2_Channel3_IRQHandler
+08000198  w    F .isr_vector	00000006 TIM1_BRK_TIM15_IRQHandler
+
+
+
+Disassembly of section .isr_vector:
+
+08000000 <g_pfnVectors>:
+$d():
+ 8000000:	00 50 00 20 0d 01 00 08 a1 01 00 08 a9 01 00 08     .P. ............
+ 8000010:	b1 01 00 08 b9 01 00 08 c1 01 00 08 00 00 00 00     ................
+	...
+ 800002c:	c9 01 00 08 d1 01 00 08 00 00 00 00 d9 01 00 08     ................
+ 800003c:	e1 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800004c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800005c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800006c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800007c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800008c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 800009c:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 80000ac:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 80000bc:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 80000cc:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+ 80000dc:	99 01 00 08 99 01 00 08 99 01 00 08 99 01 00 08     ................
+	...
+ 8000108:	5f f8 08 f1                                         _...
+
+0800010c <Reset_Handler>:
+Reset_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:217
+}
+
+// This is the place where Cortex-M core will go immediately after reset.
+void __attribute__ ((section(".after_vectors")))
+Reset_Handler(void)
+{
+ 800010c:	b580      	push	{r7, lr}
+ 800010e:	b084      	sub	sp, #16
+ 8000110:	af00      	add	r7, sp, #0
+ 8000112:	4b0d      	ldr	r3, [pc, #52]	; (8000148 <Reset_Handler+0x3c>)
+ 8000114:	60bb      	str	r3, [r7, #8]
+ 8000116:	4b0d      	ldr	r3, [pc, #52]	; (800014c <Reset_Handler+0x40>)
+ 8000118:	607b      	str	r3, [r7, #4]
+bss_init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:118
+__attribute__((always_inline))
+bss_init(unsigned int* section_begin, unsigned int* section_end)
+{
+  // Iterate and clear word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+ 800011a:	68bb      	ldr	r3, [r7, #8]
+ 800011c:	603b      	str	r3, [r7, #0]
+ 800011e:	e004      	b.n	800012a <Reset_Handler+0x1e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:120
+  while (p < section_end)
+    *p++ = 0;
+ 8000120:	683b      	ldr	r3, [r7, #0]
+ 8000122:	1d1a      	adds	r2, r3, #4
+ 8000124:	603a      	str	r2, [r7, #0]
+ 8000126:	2200      	movs	r2, #0
+ 8000128:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:119
+bss_init(unsigned int* section_begin, unsigned int* section_end)
+{
+  // Iterate and clear word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+  while (p < section_end)
+ 800012a:	687a      	ldr	r2, [r7, #4]
+ 800012c:	683b      	ldr	r3, [r7, #0]
+ 800012e:	429a      	cmp	r2, r3
+ 8000130:	d8f6      	bhi.n	8000120 <Reset_Handler+0x14>
+Reset_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:227
+  // Zero fill the bss segment
+  bss_init(&__bss_start__, &__bss_end__);
+
+  // Call the standard library initialisation (mandatory, SystemInit()
+  // and C++ static constructors are called from here).
+  __libc_init_array();
+ 8000132:	f000 fd1b 	bl	8000b6c <__libc_init_array>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:230
+
+  // Call the main entry point, and save the exit code.
+  int r = main();
+ 8000136:	f000 f859 	bl	80001ec <__fini_array_end>
+ 800013a:	60f8      	str	r0, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:233
+
+  // Run the static destructors.
+  __libc_fini_array();
+ 800013c:	f000 fd4c 	bl	8000bd8 <__libc_fini_array>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:238
+
+  // On test platforms, like semihosting, this can be used to inform
+  // the host on the test result.
+  // On embedded platforms, usually reset the processor.
+  _exit(r);
+ 8000140:	68f8      	ldr	r0, [r7, #12]
+ 8000142:	f000 fd67 	bl	8000c14 <_exit>
+ 8000146:	bf00      	nop
+ 8000148:	20000014 	.word	0x20000014
+ 800014c:	20000060 	.word	0x20000060
+
+08000150 <system_init>:
+system_init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:248
+
+// System initialisation, executed before constructors.
+void
+__attribute__((section(".after_vectors")))
+system_init()
+{
+ 8000150:	b580      	push	{r7, lr}
+ 8000152:	b084      	sub	sp, #16
+ 8000154:	af00      	add	r7, sp, #0
+ 8000156:	4b0d      	ldr	r3, [pc, #52]	; (800018c <system_init+0x3c>)
+ 8000158:	60fb      	str	r3, [r7, #12]
+ 800015a:	4b0d      	ldr	r3, [pc, #52]	; (8000190 <system_init+0x40>)
+ 800015c:	60bb      	str	r3, [r7, #8]
+ 800015e:	4b0d      	ldr	r3, [pc, #52]	; (8000194 <system_init+0x44>)
+ 8000160:	607b      	str	r3, [r7, #4]
+data_init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:105
+data_init(unsigned int* from, unsigned int* section_begin,
+    unsigned int* section_end)
+{
+  // Iterate and copy word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+ 8000162:	68bb      	ldr	r3, [r7, #8]
+ 8000164:	603b      	str	r3, [r7, #0]
+ 8000166:	e007      	b.n	8000178 <system_init+0x28>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:107
+  while (p < section_end)
+    *p++ = *from++;
+ 8000168:	683b      	ldr	r3, [r7, #0]
+ 800016a:	1d1a      	adds	r2, r3, #4
+ 800016c:	603a      	str	r2, [r7, #0]
+ 800016e:	68fa      	ldr	r2, [r7, #12]
+ 8000170:	1d11      	adds	r1, r2, #4
+ 8000172:	60f9      	str	r1, [r7, #12]
+ 8000174:	6812      	ldr	r2, [r2, #0]
+ 8000176:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:106
+    unsigned int* section_end)
+{
+  // Iterate and copy word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+  while (p < section_end)
+ 8000178:	687a      	ldr	r2, [r7, #4]
+ 800017a:	683b      	ldr	r3, [r7, #0]
+ 800017c:	429a      	cmp	r2, r3
+ 800017e:	d8f3      	bhi.n	8000168 <system_init+0x18>
+system_init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:256
+  // so we must be sure it is executed somewhere.
+  // (for example librdimon)
+  data_init(&_sidata, &_sdata, &_edata);
+
+  // Call the CSMSIS system initialisation routine
+  SystemInit();
+ 8000180:	f000 fd4e 	bl	8000c20 <SystemInit>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:257
+}
+ 8000184:	3710      	adds	r7, #16
+ 8000186:	46bd      	mov	sp, r7
+ 8000188:	bd80      	pop	{r7, pc}
+ 800018a:	bf00      	nop
+ 800018c:	08000d94 	.word	0x08000d94
+ 8000190:	20000000 	.word	0x20000000
+ 8000194:	20000014 	.word	0x20000014
+
+08000198 <ADC1_2_IRQHandler>:
+Default_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:934
+//
+//*****************************************************************************
+
+void __attribute__ ((section(".after_vectors")))
+Default_Handler(void)
+{
+ 8000198:	b480      	push	{r7}
+ 800019a:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:937 (discriminator 1)
+  while (1)
+    {
+    }
+ 800019c:	e7fe      	b.n	800019c <ADC1_2_IRQHandler+0x4>
+RTC_Alarm_IRQHandler():
+ 800019e:	bf00      	nop
+
+080001a0 <NMI_Handler>:
+NMI_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:946
+// Default exception handlers. Override the ones here by defining your own
+// handler routines in your application code.
+//*****************************************************************************
+void __attribute__ ((section(".after_vectors")))
+NMI_Handler(void)
+{
+ 80001a0:	b480      	push	{r7}
+ 80001a2:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:949 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001a4:	e7fe      	b.n	80001a4 <NMI_Handler+0x4>
+ 80001a6:	bf00      	nop
+
+080001a8 <HardFault_Handler>:
+HardFault_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:954
+}
+
+void __attribute__ ((section(".after_vectors")))
+HardFault_Handler(void)
+{
+ 80001a8:	b480      	push	{r7}
+ 80001aa:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:957 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001ac:	e7fe      	b.n	80001ac <HardFault_Handler+0x4>
+ 80001ae:	bf00      	nop
+
+080001b0 <MemManage_Handler>:
+MemManage_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:962
+}
+
+void __attribute__ ((section(".after_vectors")))
+MemManage_Handler(void)
+{
+ 80001b0:	b480      	push	{r7}
+ 80001b2:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:965 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001b4:	e7fe      	b.n	80001b4 <MemManage_Handler+0x4>
+ 80001b6:	bf00      	nop
+
+080001b8 <BusFault_Handler>:
+BusFault_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:970
+}
+
+void __attribute__ ((section(".after_vectors")))
+BusFault_Handler(void)
+{
+ 80001b8:	b480      	push	{r7}
+ 80001ba:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:973 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001bc:	e7fe      	b.n	80001bc <BusFault_Handler+0x4>
+ 80001be:	bf00      	nop
+
+080001c0 <UsageFault_Handler>:
+UsageFault_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:978
+}
+
+void __attribute__ ((section(".after_vectors")))
+UsageFault_Handler(void)
+{
+ 80001c0:	b480      	push	{r7}
+ 80001c2:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:981 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001c4:	e7fe      	b.n	80001c4 <UsageFault_Handler+0x4>
+ 80001c6:	bf00      	nop
+
+080001c8 <SVC_Handler>:
+SVC_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:986
+}
+
+void __attribute__ ((section(".after_vectors")))
+SVC_Handler(void)
+{
+ 80001c8:	b480      	push	{r7}
+ 80001ca:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:989 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001cc:	e7fe      	b.n	80001cc <SVC_Handler+0x4>
+ 80001ce:	bf00      	nop
+
+080001d0 <DebugMon_Handler>:
+DebugMon_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:994
+}
+
+void __attribute__ ((section(".after_vectors")))
+DebugMon_Handler(void)
+{
+ 80001d0:	b480      	push	{r7}
+ 80001d2:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:997 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001d4:	e7fe      	b.n	80001d4 <DebugMon_Handler+0x4>
+ 80001d6:	bf00      	nop
+
+080001d8 <PendSV_Handler>:
+PendSV_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:1002
+}
+
+void __attribute__ ((section(".after_vectors")))
+PendSV_Handler(void)
+{
+ 80001d8:	b480      	push	{r7}
+ 80001da:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:1005 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001dc:	e7fe      	b.n	80001dc <PendSV_Handler+0x4>
+ 80001de:	bf00      	nop
+
+080001e0 <SysTick_Handler>:
+SysTick_Handler():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:1010
+}
+
+void __attribute__ ((section(".after_vectors")))
+SysTick_Handler(void)
+{
+ 80001e0:	b480      	push	{r7}
+ 80001e2:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/vectors_stm32f10x.c:1013 (discriminator 1)
+  while (1)
+    {
+    }
+ 80001e4:	e7fe      	b.n	80001e4 <SysTick_Handler+0x4>
+ 80001e6:	bf00      	nop
+
+Disassembly of section .text:
+
+080001ec <main>:
+main():
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:35
+unsigned int count;
+int i;
+uint32_t  buffer = 0x0000;
+// ----------------------------------------------------------------------------
+int main ()
+{ /*
+ 80001ec:	b580      	push	{r7, lr}
+ 80001ee:	b082      	sub	sp, #8
+ 80001f0:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:42
+	gpio.GPIO_Pin=(1<<MS1 | 1<<MS2 | 1<<MS3 | 1<<DIR);
+	gpio.GPIO_Mode=GPIO_Mode_Out_PP;
+	gpio.GPIO_Speed=GPIO_Speed_10MHz;
+	//sTince gpio is a struct, it is passed by reference.
+	GPIO_Init(GPIOA, &gpio); */
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
+ 80001f2:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+ 80001f6:	2101      	movs	r1, #1
+ 80001f8:	f000 fb04 	bl	8000804 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:43
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
+ 80001fc:	2004      	movs	r0, #4
+ 80001fe:	2101      	movs	r1, #1
+ 8000200:	f000 fb00 	bl	8000804 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:44
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
+ 8000204:	2001      	movs	r0, #1
+ 8000206:	2101      	movs	r1, #1
+ 8000208:	f000 fafc 	bl	8000804 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:46
+	//setting USART Tx and Rx pins
+	gpio.GPIO_Pin=(USART_TX);
+ 800020c:	4b2b      	ldr	r3, [pc, #172]	; (80002bc <__fini_array_end+0xd0>)
+ 800020e:	f44f 7200 	mov.w	r2, #512	; 0x200
+ 8000212:	801a      	strh	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:47
+	gpio.GPIO_Mode=GPIO_Mode_AF_PP;
+ 8000214:	4b29      	ldr	r3, [pc, #164]	; (80002bc <__fini_array_end+0xd0>)
+ 8000216:	2218      	movs	r2, #24
+ 8000218:	70da      	strb	r2, [r3, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:48
+	gpio.GPIO_Speed=GPIO_Speed_10MHz;
+ 800021a:	4b28      	ldr	r3, [pc, #160]	; (80002bc <__fini_array_end+0xd0>)
+ 800021c:	2201      	movs	r2, #1
+ 800021e:	709a      	strb	r2, [r3, #2]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:49
+	GPIO_Init(GPIOA, &gpio);
+ 8000220:	4827      	ldr	r0, [pc, #156]	; (80002c0 <__fini_array_end+0xd4>)
+ 8000222:	4926      	ldr	r1, [pc, #152]	; (80002bc <__fini_array_end+0xd0>)
+ 8000224:	f000 f954 	bl	80004d0 <GPIO_Init>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:51
+
+	gpio.GPIO_Pin=USART_RX;
+ 8000228:	4b24      	ldr	r3, [pc, #144]	; (80002bc <__fini_array_end+0xd0>)
+ 800022a:	f44f 6280 	mov.w	r2, #1024	; 0x400
+ 800022e:	801a      	strh	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:52
+	gpio.GPIO_Mode=GPIO_Mode_IN_FLOATING;
+ 8000230:	4b22      	ldr	r3, [pc, #136]	; (80002bc <__fini_array_end+0xd0>)
+ 8000232:	2204      	movs	r2, #4
+ 8000234:	70da      	strb	r2, [r3, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:53
+	GPIO_Init(GPIOA, &gpio);
+ 8000236:	4822      	ldr	r0, [pc, #136]	; (80002c0 <__fini_array_end+0xd4>)
+ 8000238:	4920      	ldr	r1, [pc, #128]	; (80002bc <__fini_array_end+0xd0>)
+ 800023a:	f000 f949 	bl	80004d0 <GPIO_Init>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:58
+	//now the question is that do i intialize the USART individually or should I
+	//do that via a DMA- the answer is that USART is my peripeheral and DMA is the mode
+	//through which i want to access my data blocks
+	//instead of getting an integer value from DMA array
+	usart.USART_Mode=USART_Mode_Rx | USART_Mode_Tx ;
+ 800023e:	4b21      	ldr	r3, [pc, #132]	; (80002c4 <__fini_array_end+0xd8>)
+ 8000240:	220c      	movs	r2, #12
+ 8000242:	815a      	strh	r2, [r3, #10]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:59
+	usart.USART_BaudRate=9600;
+ 8000244:	4b1f      	ldr	r3, [pc, #124]	; (80002c4 <__fini_array_end+0xd8>)
+ 8000246:	f44f 5216 	mov.w	r2, #9600	; 0x2580
+ 800024a:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:60
+	usart.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
+ 800024c:	4b1d      	ldr	r3, [pc, #116]	; (80002c4 <__fini_array_end+0xd8>)
+ 800024e:	2200      	movs	r2, #0
+ 8000250:	819a      	strh	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:61
+	usart.USART_StopBits=USART_StopBits_1;
+ 8000252:	4b1c      	ldr	r3, [pc, #112]	; (80002c4 <__fini_array_end+0xd8>)
+ 8000254:	2200      	movs	r2, #0
+ 8000256:	80da      	strh	r2, [r3, #6]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:62
+	usart.USART_Parity=USART_Parity_No;
+ 8000258:	4b1a      	ldr	r3, [pc, #104]	; (80002c4 <__fini_array_end+0xd8>)
+ 800025a:	2200      	movs	r2, #0
+ 800025c:	811a      	strh	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:63
+	usart.USART_WordLength=USART_WordLength_8b;
+ 800025e:	4b19      	ldr	r3, [pc, #100]	; (80002c4 <__fini_array_end+0xd8>)
+ 8000260:	2200      	movs	r2, #0
+ 8000262:	809a      	strh	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:64
+	USART_Init(USART1, &usart);
+ 8000264:	4818      	ldr	r0, [pc, #96]	; (80002c8 <__fini_array_end+0xdc>)
+ 8000266:	4917      	ldr	r1, [pc, #92]	; (80002c4 <__fini_array_end+0xd8>)
+ 8000268:	f000 fb82 	bl	8000970 <USART_Init>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:65
+	USART_Cmd(USART1,ENABLE);
+ 800026c:	4816      	ldr	r0, [pc, #88]	; (80002c8 <__fini_array_end+0xdc>)
+ 800026e:	2101      	movs	r1, #1
+ 8000270:	f000 fc38 	bl	8000ae4 <USART_Cmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:67
+	//enabling the clock for DMA,
+	rec_data();
+ 8000274:	f000 f82e 	bl	80002d4 <rec_data>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:80
+		USART_Init(USART1, &usart);
+		USART_Cmd(USART1,ENABLE);
+		rec_data();
+		k[i]=buffer;
+	}
+*/	char k=buffer;
+ 8000278:	4b14      	ldr	r3, [pc, #80]	; (80002cc <__fini_array_end+0xe0>)
+ 800027a:	681b      	ldr	r3, [r3, #0]
+ 800027c:	71fb      	strb	r3, [r7, #7]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:81
+	if(k=='1')
+ 800027e:	f997 3007 	ldrsb.w	r3, [r7, #7]
+ 8000282:	2b31      	cmp	r3, #49	; 0x31
+ 8000284:	d114      	bne.n	80002b0 <main+0xc4>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:83
+	{	GPIO_InitTypeDef gpio;
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+ 8000286:	2010      	movs	r0, #16
+ 8000288:	2101      	movs	r1, #1
+ 800028a:	f000 fabb 	bl	8000804 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:85
+
+		gpio.GPIO_Pin=GPIO_Pin_13;
+ 800028e:	f44f 5300 	mov.w	r3, #8192	; 0x2000
+ 8000292:	803b      	strh	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:86
+		gpio.GPIO_Mode=GPIO_Mode_Out_PP;
+ 8000294:	2310      	movs	r3, #16
+ 8000296:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:87
+		gpio.GPIO_Speed=GPIO_Speed_50MHz;
+ 8000298:	2303      	movs	r3, #3
+ 800029a:	70bb      	strb	r3, [r7, #2]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:89
+		//sTince gpio is a struct, it is passed by reference.
+		GPIO_Init(GPIOC, &gpio);
+ 800029c:	463b      	mov	r3, r7
+ 800029e:	480c      	ldr	r0, [pc, #48]	; (80002d0 <__fini_array_end+0xe4>)
+ 80002a0:	4619      	mov	r1, r3
+ 80002a2:	f000 f915 	bl	80004d0 <GPIO_Init>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:90
+		GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+ 80002a6:	480a      	ldr	r0, [pc, #40]	; (80002d0 <__fini_array_end+0xe4>)
+ 80002a8:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+ 80002ac:	f000 f9cc 	bl	8000648 <GPIO_ResetBits>
+ 80002b0:	2300      	movs	r3, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:92
+	}
+}
+ 80002b2:	4618      	mov	r0, r3
+ 80002b4:	3708      	adds	r7, #8
+ 80002b6:	46bd      	mov	sp, r7
+ 80002b8:	bd80      	pop	{r7, pc}
+ 80002ba:	bf00      	nop
+ 80002bc:	2000005c 	.word	0x2000005c
+ 80002c0:	40010800 	.word	0x40010800
+ 80002c4:	20000044 	.word	0x20000044
+ 80002c8:	40013800 	.word	0x40013800
+ 80002cc:	20000014 	.word	0x20000014
+ 80002d0:	40011000 	.word	0x40011000
+
+080002d4 <rec_data>:
+rec_data():
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:96
+
+//subroutine to get the recieved data
+
+int rec_data(){
+ 80002d4:	b580      	push	{r7, lr}
+ 80002d6:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:97
+	USART_DMACmd(USART1,USART_DMAReq_Rx,ENABLE);
+ 80002d8:	4829      	ldr	r0, [pc, #164]	; (8000380 <rec_data+0xac>)
+ 80002da:	2140      	movs	r1, #64	; 0x40
+ 80002dc:	2201      	movs	r2, #1
+ 80002de:	f000 fc21 	bl	8000b24 <USART_DMACmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:98
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1,ENABLE);
+ 80002e2:	2001      	movs	r0, #1
+ 80002e4:	2101      	movs	r1, #1
+ 80002e6:	f000 fa6f 	bl	80007c8 <RCC_AHBPeriphClockCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:99
+	dma.DMA_PeripheralBaseAddr=(&(USART1->DR));
+ 80002ea:	4b26      	ldr	r3, [pc, #152]	; (8000384 <rec_data+0xb0>)
+ 80002ec:	4a26      	ldr	r2, [pc, #152]	; (8000388 <rec_data+0xb4>)
+ 80002ee:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:100
+	dma.DMA_PeripheralInc=DMA_PeripheralInc_Disable;
+ 80002f0:	4b24      	ldr	r3, [pc, #144]	; (8000384 <rec_data+0xb0>)
+ 80002f2:	2200      	movs	r2, #0
+ 80002f4:	611a      	str	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:102
+	//essentially, the USART uses 8 bit serial transfer
+	dma.DMA_PeripheralDataSize=DMA_PeripheralDataSize_Byte;
+ 80002f6:	4b23      	ldr	r3, [pc, #140]	; (8000384 <rec_data+0xb0>)
+ 80002f8:	2200      	movs	r2, #0
+ 80002fa:	619a      	str	r2, [r3, #24]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:103
+	dma.DMA_MemoryDataSize=DMA_MemoryDataSize_Byte;
+ 80002fc:	4b21      	ldr	r3, [pc, #132]	; (8000384 <rec_data+0xb0>)
+ 80002fe:	2200      	movs	r2, #0
+ 8000300:	61da      	str	r2, [r3, #28]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:105
+	//we are doing periph->DMA data block transfer, so disabling M2M
+	dma.DMA_M2M=DMA_M2M_Disable;
+ 8000302:	4b20      	ldr	r3, [pc, #128]	; (8000384 <rec_data+0xb0>)
+ 8000304:	2200      	movs	r2, #0
+ 8000306:	629a      	str	r2, [r3, #40]	; 0x28
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:107
+	//enabling circular buffer, as it it meant for continuous data flow
+	dma.DMA_Mode=DMA_Mode_Normal;
+ 8000308:	4b1e      	ldr	r3, [pc, #120]	; (8000384 <rec_data+0xb0>)
+ 800030a:	2200      	movs	r2, #0
+ 800030c:	621a      	str	r2, [r3, #32]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:109
+	//I dont know what this means lol, can be the iterations for the buffer
+	dma.DMA_BufferSize=1;
+ 800030e:	4b1d      	ldr	r3, [pc, #116]	; (8000384 <rec_data+0xb0>)
+ 8000310:	2201      	movs	r2, #1
+ 8000312:	60da      	str	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:110
+	dma.DMA_Priority=DMA_Priority_VeryHigh;
+ 8000314:	4b1b      	ldr	r3, [pc, #108]	; (8000384 <rec_data+0xb0>)
+ 8000316:	f44f 5240 	mov.w	r2, #12288	; 0x3000
+ 800031a:	625a      	str	r2, [r3, #36]	; 0x24
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:113
+	//recieving the data in memory location pointing to the buffer.
+	//buffer=recieved data
+	dma.DMA_MemoryBaseAddr=&buffer;
+ 800031c:	4a1b      	ldr	r2, [pc, #108]	; (800038c <rec_data+0xb8>)
+ 800031e:	4b19      	ldr	r3, [pc, #100]	; (8000384 <rec_data+0xb0>)
+ 8000320:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:114
+	dma.DMA_MemoryInc=DMA_MemoryInc_Enable;
+ 8000322:	4b18      	ldr	r3, [pc, #96]	; (8000384 <rec_data+0xb0>)
+ 8000324:	2280      	movs	r2, #128	; 0x80
+ 8000326:	615a      	str	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:116
+	//the peripheral is the source of the data block transfer
+	dma.DMA_DIR=DMA_DIR_PeripheralSRC;
+ 8000328:	4b16      	ldr	r3, [pc, #88]	; (8000384 <rec_data+0xb0>)
+ 800032a:	2200      	movs	r2, #0
+ 800032c:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:117
+	DMA_Init(DMA1_Channel5, &dma);
+ 800032e:	4818      	ldr	r0, [pc, #96]	; (8000390 <rec_data+0xbc>)
+ 8000330:	4914      	ldr	r1, [pc, #80]	; (8000384 <rec_data+0xb0>)
+ 8000332:	f000 f82f 	bl	8000394 <DMA_Init>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:121
+	/*now that all the properties are assigned and the DMA1 channel5 assigned,
+	we now start the DMA transfer and wait for the DMA flag to reset.
+	*/
+	DMA_Cmd(DMA1_Channel5,ENABLE);
+ 8000336:	4816      	ldr	r0, [pc, #88]	; (8000390 <rec_data+0xbc>)
+ 8000338:	2101      	movs	r1, #1
+ 800033a:	f000 f869 	bl	8000410 <DMA_Cmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:124
+	 /*enabling the Rx request for DMA*/
+	//since the DMA's is now enabled, we poll the transfer complete bit
+	while((DMA_GetFlagStatus(DMA1_FLAG_TC5)==RESET));
+ 800033e:	bf00      	nop
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:124 (discriminator 1)
+ 8000340:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+ 8000344:	f000 f880 	bl	8000448 <DMA_GetFlagStatus>
+ 8000348:	4603      	mov	r3, r0
+ 800034a:	2b00      	cmp	r3, #0
+ 800034c:	d0f8      	beq.n	8000340 <rec_data+0x6c>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:126
+	//disable the DMA
+	DMA_ClearFlag(DMA1_FLAG_TC5);
+ 800034e:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+ 8000352:	f000 f8a3 	bl	800049c <DMA_ClearFlag>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:127
+	DMA_Cmd(DMA1_Channel5,DISABLE);
+ 8000356:	480e      	ldr	r0, [pc, #56]	; (8000390 <rec_data+0xbc>)
+ 8000358:	2100      	movs	r1, #0
+ 800035a:	f000 f859 	bl	8000410 <DMA_Cmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:129
+	//disabling the UART also
+	USART_DMACmd(USART1,USART_DMAReq_Rx,DISABLE);
+ 800035e:	4808      	ldr	r0, [pc, #32]	; (8000380 <rec_data+0xac>)
+ 8000360:	2140      	movs	r1, #64	; 0x40
+ 8000362:	2200      	movs	r2, #0
+ 8000364:	f000 fbde 	bl	8000b24 <USART_DMACmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:130
+	USART_Cmd(USART1,DISABLE);
+ 8000368:	4805      	ldr	r0, [pc, #20]	; (8000380 <rec_data+0xac>)
+ 800036a:	2100      	movs	r1, #0
+ 800036c:	f000 fbba 	bl	8000ae4 <USART_Cmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:131
+	USART_DeInit(USART1);
+ 8000370:	4803      	ldr	r0, [pc, #12]	; (8000380 <rec_data+0xac>)
+ 8000372:	f000 faa1 	bl	80008b8 <USART_DeInit>
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:132
+	return buffer;
+ 8000376:	4b05      	ldr	r3, [pc, #20]	; (800038c <rec_data+0xb8>)
+ 8000378:	681b      	ldr	r3, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../src/main.c:133
+}
+ 800037a:	4618      	mov	r0, r3
+ 800037c:	bd80      	pop	{r7, pc}
+ 800037e:	bf00      	nop
+ 8000380:	40013800 	.word	0x40013800
+ 8000384:	20000018 	.word	0x20000018
+ 8000388:	40013804 	.word	0x40013804
+ 800038c:	20000014 	.word	0x20000014
+ 8000390:	40020058 	.word	0x40020058
+
+08000394 <DMA_Init>:
+DMA_Init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:203
+  * @param  DMA_InitStruct: pointer to a DMA_InitTypeDef structure that
+  *         contains the configuration information for the specified DMA Channel.
+  * @retval None
+  */
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct)
+{
+ 8000394:	b480      	push	{r7}
+ 8000396:	b085      	sub	sp, #20
+ 8000398:	af00      	add	r7, sp, #0
+ 800039a:	6078      	str	r0, [r7, #4]
+ 800039c:	6039      	str	r1, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:204
+  uint32_t tmpreg = 0;
+ 800039e:	2300      	movs	r3, #0
+ 80003a0:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:220
+  assert_param(IS_DMA_PRIORITY(DMA_InitStruct->DMA_Priority));
+  assert_param(IS_DMA_M2M_STATE(DMA_InitStruct->DMA_M2M));
+
+/*--------------------------- DMAy Channelx CCR Configuration -----------------*/
+  /* Get the DMAy_Channelx CCR value */
+  tmpreg = DMAy_Channelx->CCR;
+ 80003a2:	687b      	ldr	r3, [r7, #4]
+ 80003a4:	681b      	ldr	r3, [r3, #0]
+ 80003a6:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:222
+  /* Clear MEM2MEM, PL, MSIZE, PSIZE, MINC, PINC, CIRC and DIR bits */
+  tmpreg &= CCR_CLEAR_Mask;
+ 80003a8:	68fb      	ldr	r3, [r7, #12]
+ 80003aa:	f423 43ff 	bic.w	r3, r3, #32640	; 0x7f80
+ 80003ae:	f023 0370 	bic.w	r3, r3, #112	; 0x70
+ 80003b2:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:232
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+ 80003b4:	683b      	ldr	r3, [r7, #0]
+ 80003b6:	689a      	ldr	r2, [r3, #8]
+ 80003b8:	683b      	ldr	r3, [r7, #0]
+ 80003ba:	6a1b      	ldr	r3, [r3, #32]
+ 80003bc:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:233
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+ 80003be:	683b      	ldr	r3, [r7, #0]
+ 80003c0:	691b      	ldr	r3, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:232
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+ 80003c2:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:233
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+ 80003c4:	683b      	ldr	r3, [r7, #0]
+ 80003c6:	695b      	ldr	r3, [r3, #20]
+ 80003c8:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:234
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+ 80003ca:	683b      	ldr	r3, [r7, #0]
+ 80003cc:	699b      	ldr	r3, [r3, #24]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:233
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+ 80003ce:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:234
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+ 80003d0:	683b      	ldr	r3, [r7, #0]
+ 80003d2:	69db      	ldr	r3, [r3, #28]
+ 80003d4:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:235
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+ 80003d6:	683b      	ldr	r3, [r7, #0]
+ 80003d8:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:234
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+ 80003da:	431a      	orrs	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:235
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+ 80003dc:	683b      	ldr	r3, [r7, #0]
+ 80003de:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 80003e0:	4313      	orrs	r3, r2
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:232
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+ 80003e2:	68fa      	ldr	r2, [r7, #12]
+ 80003e4:	4313      	orrs	r3, r2
+ 80003e6:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:238
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+
+  /* Write to DMAy Channelx CCR */
+  DMAy_Channelx->CCR = tmpreg;
+ 80003e8:	687b      	ldr	r3, [r7, #4]
+ 80003ea:	68fa      	ldr	r2, [r7, #12]
+ 80003ec:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:242
+
+/*--------------------------- DMAy Channelx CNDTR Configuration ---------------*/
+  /* Write to DMAy Channelx CNDTR */
+  DMAy_Channelx->CNDTR = DMA_InitStruct->DMA_BufferSize;
+ 80003ee:	683b      	ldr	r3, [r7, #0]
+ 80003f0:	68da      	ldr	r2, [r3, #12]
+ 80003f2:	687b      	ldr	r3, [r7, #4]
+ 80003f4:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:246
+
+/*--------------------------- DMAy Channelx CPAR Configuration ----------------*/
+  /* Write to DMAy Channelx CPAR */
+  DMAy_Channelx->CPAR = DMA_InitStruct->DMA_PeripheralBaseAddr;
+ 80003f6:	683b      	ldr	r3, [r7, #0]
+ 80003f8:	681a      	ldr	r2, [r3, #0]
+ 80003fa:	687b      	ldr	r3, [r7, #4]
+ 80003fc:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:250
+
+/*--------------------------- DMAy Channelx CMAR Configuration ----------------*/
+  /* Write to DMAy Channelx CMAR */
+  DMAy_Channelx->CMAR = DMA_InitStruct->DMA_MemoryBaseAddr;
+ 80003fe:	683b      	ldr	r3, [r7, #0]
+ 8000400:	685a      	ldr	r2, [r3, #4]
+ 8000402:	687b      	ldr	r3, [r7, #4]
+ 8000404:	60da      	str	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:251
+}
+ 8000406:	3714      	adds	r7, #20
+ 8000408:	46bd      	mov	sp, r7
+ 800040a:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800040e:	4770      	bx	lr
+
+08000410 <DMA_Cmd>:
+DMA_Cmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:295
+  * @param  NewState: new state of the DMAy Channelx. 
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState)
+{
+ 8000410:	b480      	push	{r7}
+ 8000412:	b083      	sub	sp, #12
+ 8000414:	af00      	add	r7, sp, #0
+ 8000416:	6078      	str	r0, [r7, #4]
+ 8000418:	460b      	mov	r3, r1
+ 800041a:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:300
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+ 800041c:	78fb      	ldrb	r3, [r7, #3]
+ 800041e:	2b00      	cmp	r3, #0
+ 8000420:	d006      	beq.n	8000430 <DMA_Cmd+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:303
+  {
+    /* Enable the selected DMAy Channelx */
+    DMAy_Channelx->CCR |= DMA_CCR1_EN;
+ 8000422:	687b      	ldr	r3, [r7, #4]
+ 8000424:	681b      	ldr	r3, [r3, #0]
+ 8000426:	f043 0201 	orr.w	r2, r3, #1
+ 800042a:	687b      	ldr	r3, [r7, #4]
+ 800042c:	601a      	str	r2, [r3, #0]
+ 800042e:	e006      	b.n	800043e <DMA_Cmd+0x2e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:308
+  }
+  else
+  {
+    /* Disable the selected DMAy Channelx */
+    DMAy_Channelx->CCR &= (uint16_t)(~DMA_CCR1_EN);
+ 8000430:	687b      	ldr	r3, [r7, #4]
+ 8000432:	681a      	ldr	r2, [r3, #0]
+ 8000434:	f64f 73fe 	movw	r3, #65534	; 0xfffe
+ 8000438:	4013      	ands	r3, r2
+ 800043a:	687a      	ldr	r2, [r7, #4]
+ 800043c:	6013      	str	r3, [r2, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:310
+  }
+}
+ 800043e:	370c      	adds	r7, #12
+ 8000440:	46bd      	mov	sp, r7
+ 8000442:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000446:	4770      	bx	lr
+
+08000448 <DMA_GetFlagStatus>:
+DMA_GetFlagStatus():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:434
+  *     @arg DMA2_FLAG_HT5: DMA2 Channel5 half transfer flag.
+  *     @arg DMA2_FLAG_TE5: DMA2 Channel5 transfer error flag.
+  * @retval The new state of DMAy_FLAG (SET or RESET).
+  */
+FlagStatus DMA_GetFlagStatus(uint32_t DMAy_FLAG)
+{
+ 8000448:	b480      	push	{r7}
+ 800044a:	b085      	sub	sp, #20
+ 800044c:	af00      	add	r7, sp, #0
+ 800044e:	6078      	str	r0, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:435
+  FlagStatus bitstatus = RESET;
+ 8000450:	2300      	movs	r3, #0
+ 8000452:	73fb      	strb	r3, [r7, #15]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:436
+  uint32_t tmpreg = 0;
+ 8000454:	2300      	movs	r3, #0
+ 8000456:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:442
+  
+  /* Check the parameters */
+  assert_param(IS_DMA_GET_FLAG(DMAy_FLAG));
+
+  /* Calculate the used DMAy */
+  if ((DMAy_FLAG & FLAG_Mask) != (uint32_t)RESET)
+ 8000458:	687b      	ldr	r3, [r7, #4]
+ 800045a:	f003 5380 	and.w	r3, r3, #268435456	; 0x10000000
+ 800045e:	2b00      	cmp	r3, #0
+ 8000460:	d003      	beq.n	800046a <DMA_GetFlagStatus+0x22>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:445
+  {
+    /* Get DMA2 ISR register value */
+    tmpreg = DMA2->ISR ;
+ 8000462:	4b0c      	ldr	r3, [pc, #48]	; (8000494 <DMA_GetFlagStatus+0x4c>)
+ 8000464:	681b      	ldr	r3, [r3, #0]
+ 8000466:	60bb      	str	r3, [r7, #8]
+ 8000468:	e002      	b.n	8000470 <DMA_GetFlagStatus+0x28>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:450
+  }
+  else
+  {
+    /* Get DMA1 ISR register value */
+    tmpreg = DMA1->ISR ;
+ 800046a:	4b0b      	ldr	r3, [pc, #44]	; (8000498 <DMA_GetFlagStatus+0x50>)
+ 800046c:	681b      	ldr	r3, [r3, #0]
+ 800046e:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:454
+  }
+
+  /* Check the status of the specified DMAy flag */
+  if ((tmpreg & DMAy_FLAG) != (uint32_t)RESET)
+ 8000470:	68ba      	ldr	r2, [r7, #8]
+ 8000472:	687b      	ldr	r3, [r7, #4]
+ 8000474:	4013      	ands	r3, r2
+ 8000476:	2b00      	cmp	r3, #0
+ 8000478:	d002      	beq.n	8000480 <DMA_GetFlagStatus+0x38>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:457
+  {
+    /* DMAy_FLAG is set */
+    bitstatus = SET;
+ 800047a:	2301      	movs	r3, #1
+ 800047c:	73fb      	strb	r3, [r7, #15]
+ 800047e:	e001      	b.n	8000484 <DMA_GetFlagStatus+0x3c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:462
+  }
+  else
+  {
+    /* DMAy_FLAG is reset */
+    bitstatus = RESET;
+ 8000480:	2300      	movs	r3, #0
+ 8000482:	73fb      	strb	r3, [r7, #15]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:466
+  }
+  
+  /* Return the DMAy_FLAG status */
+  return  bitstatus;
+ 8000484:	7bfb      	ldrb	r3, [r7, #15]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:467
+}
+ 8000486:	4618      	mov	r0, r3
+ 8000488:	3714      	adds	r7, #20
+ 800048a:	46bd      	mov	sp, r7
+ 800048c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000490:	4770      	bx	lr
+ 8000492:	bf00      	nop
+ 8000494:	40020400 	.word	0x40020400
+ 8000498:	40020000 	.word	0x40020000
+
+0800049c <DMA_ClearFlag>:
+DMA_ClearFlag():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:524
+  *     @arg DMA2_FLAG_HT5: DMA2 Channel5 half transfer flag.
+  *     @arg DMA2_FLAG_TE5: DMA2 Channel5 transfer error flag.
+  * @retval None
+  */
+void DMA_ClearFlag(uint32_t DMAy_FLAG)
+{
+ 800049c:	b480      	push	{r7}
+ 800049e:	b083      	sub	sp, #12
+ 80004a0:	af00      	add	r7, sp, #0
+ 80004a2:	6078      	str	r0, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:529
+  /* Check the parameters */
+  assert_param(IS_DMA_CLEAR_FLAG(DMAy_FLAG));
+
+  /* Calculate the used DMAy */
+  if ((DMAy_FLAG & FLAG_Mask) != (uint32_t)RESET)
+ 80004a4:	687b      	ldr	r3, [r7, #4]
+ 80004a6:	f003 5380 	and.w	r3, r3, #268435456	; 0x10000000
+ 80004aa:	2b00      	cmp	r3, #0
+ 80004ac:	d003      	beq.n	80004b6 <DMA_ClearFlag+0x1a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:532
+  {
+    /* Clear the selected DMAy flags */
+    DMA2->IFCR = DMAy_FLAG;
+ 80004ae:	4b06      	ldr	r3, [pc, #24]	; (80004c8 <DMA_ClearFlag+0x2c>)
+ 80004b0:	687a      	ldr	r2, [r7, #4]
+ 80004b2:	605a      	str	r2, [r3, #4]
+ 80004b4:	e002      	b.n	80004bc <DMA_ClearFlag+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:537
+  }
+  else
+  {
+    /* Clear the selected DMAy flags */
+    DMA1->IFCR = DMAy_FLAG;
+ 80004b6:	4b05      	ldr	r3, [pc, #20]	; (80004cc <DMA_ClearFlag+0x30>)
+ 80004b8:	687a      	ldr	r2, [r7, #4]
+ 80004ba:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_dma.c:539
+  }
+}
+ 80004bc:	370c      	adds	r7, #12
+ 80004be:	46bd      	mov	sp, r7
+ 80004c0:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80004c4:	4770      	bx	lr
+ 80004c6:	bf00      	nop
+ 80004c8:	40020400 	.word	0x40020400
+ 80004cc:	40020000 	.word	0x40020000
+
+080004d0 <GPIO_Init>:
+GPIO_Init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:174
+  * @param  GPIO_InitStruct: pointer to a GPIO_InitTypeDef structure that
+  *         contains the configuration information for the specified GPIO peripheral.
+  * @retval None
+  */
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
+{
+ 80004d0:	b480      	push	{r7}
+ 80004d2:	b089      	sub	sp, #36	; 0x24
+ 80004d4:	af00      	add	r7, sp, #0
+ 80004d6:	6078      	str	r0, [r7, #4]
+ 80004d8:	6039      	str	r1, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:175
+  uint32_t currentmode = 0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+ 80004da:	2300      	movs	r3, #0
+ 80004dc:	61fb      	str	r3, [r7, #28]
+ 80004de:	2300      	movs	r3, #0
+ 80004e0:	613b      	str	r3, [r7, #16]
+ 80004e2:	2300      	movs	r3, #0
+ 80004e4:	61bb      	str	r3, [r7, #24]
+ 80004e6:	2300      	movs	r3, #0
+ 80004e8:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:176
+  uint32_t tmpreg = 0x00, pinmask = 0x00;
+ 80004ea:	2300      	movs	r3, #0
+ 80004ec:	617b      	str	r3, [r7, #20]
+ 80004ee:	2300      	movs	r3, #0
+ 80004f0:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:183
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PIN(GPIO_InitStruct->GPIO_Pin));  
+  
+/*---------------------------- GPIO Mode Configuration -----------------------*/
+  currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+ 80004f2:	683b      	ldr	r3, [r7, #0]
+ 80004f4:	78db      	ldrb	r3, [r3, #3]
+ 80004f6:	f003 030f 	and.w	r3, r3, #15
+ 80004fa:	61fb      	str	r3, [r7, #28]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:184
+  if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00)
+ 80004fc:	683b      	ldr	r3, [r7, #0]
+ 80004fe:	78db      	ldrb	r3, [r3, #3]
+ 8000500:	f003 0310 	and.w	r3, r3, #16
+ 8000504:	2b00      	cmp	r3, #0
+ 8000506:	d004      	beq.n	8000512 <GPIO_Init+0x42>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:189
+  { 
+    /* Check the parameters */
+    assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+    /* Output mode */
+    currentmode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
+ 8000508:	683b      	ldr	r3, [r7, #0]
+ 800050a:	789b      	ldrb	r3, [r3, #2]
+ 800050c:	69fa      	ldr	r2, [r7, #28]
+ 800050e:	4313      	orrs	r3, r2
+ 8000510:	61fb      	str	r3, [r7, #28]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:193
+  }
+/*---------------------------- GPIO CRL Configuration ------------------------*/
+  /* Configure the eight low port pins */
+  if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+ 8000512:	683b      	ldr	r3, [r7, #0]
+ 8000514:	881b      	ldrh	r3, [r3, #0]
+ 8000516:	b2db      	uxtb	r3, r3
+ 8000518:	2b00      	cmp	r3, #0
+ 800051a:	d044      	beq.n	80005a6 <GPIO_Init+0xd6>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:195
+  {
+    tmpreg = GPIOx->CRL;
+ 800051c:	687b      	ldr	r3, [r7, #4]
+ 800051e:	681b      	ldr	r3, [r3, #0]
+ 8000520:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:196
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 8000522:	2300      	movs	r3, #0
+ 8000524:	61bb      	str	r3, [r7, #24]
+ 8000526:	e038      	b.n	800059a <GPIO_Init+0xca>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:198
+    {
+      pos = ((uint32_t)0x01) << pinpos;
+ 8000528:	69bb      	ldr	r3, [r7, #24]
+ 800052a:	2201      	movs	r2, #1
+ 800052c:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000530:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:200
+      /* Get the port pins position */
+      currentpin = (GPIO_InitStruct->GPIO_Pin) & pos;
+ 8000532:	683b      	ldr	r3, [r7, #0]
+ 8000534:	881b      	ldrh	r3, [r3, #0]
+ 8000536:	461a      	mov	r2, r3
+ 8000538:	68fb      	ldr	r3, [r7, #12]
+ 800053a:	4013      	ands	r3, r2
+ 800053c:	613b      	str	r3, [r7, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:201
+      if (currentpin == pos)
+ 800053e:	693a      	ldr	r2, [r7, #16]
+ 8000540:	68fb      	ldr	r3, [r7, #12]
+ 8000542:	429a      	cmp	r2, r3
+ 8000544:	d126      	bne.n	8000594 <GPIO_Init+0xc4>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:203
+      {
+        pos = pinpos << 2;
+ 8000546:	69bb      	ldr	r3, [r7, #24]
+ 8000548:	009b      	lsls	r3, r3, #2
+ 800054a:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:205
+        /* Clear the corresponding low control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+ 800054c:	68fb      	ldr	r3, [r7, #12]
+ 800054e:	220f      	movs	r2, #15
+ 8000550:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000554:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:206
+        tmpreg &= ~pinmask;
+ 8000556:	68bb      	ldr	r3, [r7, #8]
+ 8000558:	43db      	mvns	r3, r3
+ 800055a:	697a      	ldr	r2, [r7, #20]
+ 800055c:	4013      	ands	r3, r2
+ 800055e:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:208
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 8000560:	68fb      	ldr	r3, [r7, #12]
+ 8000562:	69fa      	ldr	r2, [r7, #28]
+ 8000564:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000568:	697a      	ldr	r2, [r7, #20]
+ 800056a:	4313      	orrs	r3, r2
+ 800056c:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:210
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 800056e:	683b      	ldr	r3, [r7, #0]
+ 8000570:	78db      	ldrb	r3, [r3, #3]
+ 8000572:	2b28      	cmp	r3, #40	; 0x28
+ 8000574:	d105      	bne.n	8000582 <GPIO_Init+0xb2>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:212
+        {
+          GPIOx->BRR = (((uint32_t)0x01) << pinpos);
+ 8000576:	69bb      	ldr	r3, [r7, #24]
+ 8000578:	2201      	movs	r2, #1
+ 800057a:	409a      	lsls	r2, r3
+ 800057c:	687b      	ldr	r3, [r7, #4]
+ 800057e:	615a      	str	r2, [r3, #20]
+ 8000580:	e008      	b.n	8000594 <GPIO_Init+0xc4>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:217
+        }
+        else
+        {
+          /* Set the corresponding ODR bit */
+          if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU)
+ 8000582:	683b      	ldr	r3, [r7, #0]
+ 8000584:	78db      	ldrb	r3, [r3, #3]
+ 8000586:	2b48      	cmp	r3, #72	; 0x48
+ 8000588:	d104      	bne.n	8000594 <GPIO_Init+0xc4>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:219
+          {
+            GPIOx->BSRR = (((uint32_t)0x01) << pinpos);
+ 800058a:	69bb      	ldr	r3, [r7, #24]
+ 800058c:	2201      	movs	r2, #1
+ 800058e:	409a      	lsls	r2, r3
+ 8000590:	687b      	ldr	r3, [r7, #4]
+ 8000592:	611a      	str	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:196
+/*---------------------------- GPIO CRL Configuration ------------------------*/
+  /* Configure the eight low port pins */
+  if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+  {
+    tmpreg = GPIOx->CRL;
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 8000594:	69bb      	ldr	r3, [r7, #24]
+ 8000596:	3301      	adds	r3, #1
+ 8000598:	61bb      	str	r3, [r7, #24]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:196 (discriminator 1)
+ 800059a:	69bb      	ldr	r3, [r7, #24]
+ 800059c:	2b07      	cmp	r3, #7
+ 800059e:	d9c3      	bls.n	8000528 <GPIO_Init+0x58>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:224
+            GPIOx->BSRR = (((uint32_t)0x01) << pinpos);
+          }
+        }
+      }
+    }
+    GPIOx->CRL = tmpreg;
+ 80005a0:	687b      	ldr	r3, [r7, #4]
+ 80005a2:	697a      	ldr	r2, [r7, #20]
+ 80005a4:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:228
+  }
+/*---------------------------- GPIO CRH Configuration ------------------------*/
+  /* Configure the eight high port pins */
+  if (GPIO_InitStruct->GPIO_Pin > 0x00FF)
+ 80005a6:	683b      	ldr	r3, [r7, #0]
+ 80005a8:	881b      	ldrh	r3, [r3, #0]
+ 80005aa:	2bff      	cmp	r3, #255	; 0xff
+ 80005ac:	d946      	bls.n	800063c <GPIO_Init+0x16c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:230
+  {
+    tmpreg = GPIOx->CRH;
+ 80005ae:	687b      	ldr	r3, [r7, #4]
+ 80005b0:	685b      	ldr	r3, [r3, #4]
+ 80005b2:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:231
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 80005b4:	2300      	movs	r3, #0
+ 80005b6:	61bb      	str	r3, [r7, #24]
+ 80005b8:	e03a      	b.n	8000630 <GPIO_Init+0x160>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:233
+    {
+      pos = (((uint32_t)0x01) << (pinpos + 0x08));
+ 80005ba:	69bb      	ldr	r3, [r7, #24]
+ 80005bc:	3308      	adds	r3, #8
+ 80005be:	2201      	movs	r2, #1
+ 80005c0:	fa02 f303 	lsl.w	r3, r2, r3
+ 80005c4:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:235
+      /* Get the port pins position */
+      currentpin = ((GPIO_InitStruct->GPIO_Pin) & pos);
+ 80005c6:	683b      	ldr	r3, [r7, #0]
+ 80005c8:	881b      	ldrh	r3, [r3, #0]
+ 80005ca:	461a      	mov	r2, r3
+ 80005cc:	68fb      	ldr	r3, [r7, #12]
+ 80005ce:	4013      	ands	r3, r2
+ 80005d0:	613b      	str	r3, [r7, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:236
+      if (currentpin == pos)
+ 80005d2:	693a      	ldr	r2, [r7, #16]
+ 80005d4:	68fb      	ldr	r3, [r7, #12]
+ 80005d6:	429a      	cmp	r2, r3
+ 80005d8:	d127      	bne.n	800062a <GPIO_Init+0x15a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:238
+      {
+        pos = pinpos << 2;
+ 80005da:	69bb      	ldr	r3, [r7, #24]
+ 80005dc:	009b      	lsls	r3, r3, #2
+ 80005de:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:240
+        /* Clear the corresponding high control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+ 80005e0:	68fb      	ldr	r3, [r7, #12]
+ 80005e2:	220f      	movs	r2, #15
+ 80005e4:	fa02 f303 	lsl.w	r3, r2, r3
+ 80005e8:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:241
+        tmpreg &= ~pinmask;
+ 80005ea:	68bb      	ldr	r3, [r7, #8]
+ 80005ec:	43db      	mvns	r3, r3
+ 80005ee:	697a      	ldr	r2, [r7, #20]
+ 80005f0:	4013      	ands	r3, r2
+ 80005f2:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:243
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 80005f4:	68fb      	ldr	r3, [r7, #12]
+ 80005f6:	69fa      	ldr	r2, [r7, #28]
+ 80005f8:	fa02 f303 	lsl.w	r3, r2, r3
+ 80005fc:	697a      	ldr	r2, [r7, #20]
+ 80005fe:	4313      	orrs	r3, r2
+ 8000600:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:245
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 8000602:	683b      	ldr	r3, [r7, #0]
+ 8000604:	78db      	ldrb	r3, [r3, #3]
+ 8000606:	2b28      	cmp	r3, #40	; 0x28
+ 8000608:	d105      	bne.n	8000616 <GPIO_Init+0x146>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:247
+        {
+          GPIOx->BRR = (((uint32_t)0x01) << (pinpos + 0x08));
+ 800060a:	69bb      	ldr	r3, [r7, #24]
+ 800060c:	3308      	adds	r3, #8
+ 800060e:	2201      	movs	r2, #1
+ 8000610:	409a      	lsls	r2, r3
+ 8000612:	687b      	ldr	r3, [r7, #4]
+ 8000614:	615a      	str	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:250
+        }
+        /* Set the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU)
+ 8000616:	683b      	ldr	r3, [r7, #0]
+ 8000618:	78db      	ldrb	r3, [r3, #3]
+ 800061a:	2b48      	cmp	r3, #72	; 0x48
+ 800061c:	d105      	bne.n	800062a <GPIO_Init+0x15a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:252
+        {
+          GPIOx->BSRR = (((uint32_t)0x01) << (pinpos + 0x08));
+ 800061e:	69bb      	ldr	r3, [r7, #24]
+ 8000620:	3308      	adds	r3, #8
+ 8000622:	2201      	movs	r2, #1
+ 8000624:	409a      	lsls	r2, r3
+ 8000626:	687b      	ldr	r3, [r7, #4]
+ 8000628:	611a      	str	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:231
+/*---------------------------- GPIO CRH Configuration ------------------------*/
+  /* Configure the eight high port pins */
+  if (GPIO_InitStruct->GPIO_Pin > 0x00FF)
+  {
+    tmpreg = GPIOx->CRH;
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 800062a:	69bb      	ldr	r3, [r7, #24]
+ 800062c:	3301      	adds	r3, #1
+ 800062e:	61bb      	str	r3, [r7, #24]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:231 (discriminator 1)
+ 8000630:	69bb      	ldr	r3, [r7, #24]
+ 8000632:	2b07      	cmp	r3, #7
+ 8000634:	d9c1      	bls.n	80005ba <GPIO_Init+0xea>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:256
+        {
+          GPIOx->BSRR = (((uint32_t)0x01) << (pinpos + 0x08));
+        }
+      }
+    }
+    GPIOx->CRH = tmpreg;
+ 8000636:	687b      	ldr	r3, [r7, #4]
+ 8000638:	697a      	ldr	r2, [r7, #20]
+ 800063a:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:258
+  }
+}
+ 800063c:	3724      	adds	r7, #36	; 0x24
+ 800063e:	46bd      	mov	sp, r7
+ 8000640:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000644:	4770      	bx	lr
+ 8000646:	bf00      	nop
+
+08000648 <GPIO_ResetBits>:
+GPIO_ResetBits():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:375
+  * @param  GPIO_Pin: specifies the port bits to be written.
+  *   This parameter can be any combination of GPIO_Pin_x where x can be (0..15).
+  * @retval None
+  */
+void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+{
+ 8000648:	b480      	push	{r7}
+ 800064a:	b083      	sub	sp, #12
+ 800064c:	af00      	add	r7, sp, #0
+ 800064e:	6078      	str	r0, [r7, #4]
+ 8000650:	460b      	mov	r3, r1
+ 8000652:	807b      	strh	r3, [r7, #2]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:380
+  /* Check the parameters */
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_PIN(GPIO_Pin));
+  
+  GPIOx->BRR = GPIO_Pin;
+ 8000654:	887a      	ldrh	r2, [r7, #2]
+ 8000656:	687b      	ldr	r3, [r7, #4]
+ 8000658:	615a      	str	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_gpio.c:381
+}
+ 800065a:	370c      	adds	r7, #12
+ 800065c:	46bd      	mov	sp, r7
+ 800065e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000662:	4770      	bx	lr
+
+08000664 <RCC_GetClocksFreq>:
+RCC_GetClocksFreq():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:909
+  * @note   The result of this function could be not correct when using 
+  *         fractional value for HSE crystal.  
+  * @retval None
+  */
+void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks)
+{
+ 8000664:	b480      	push	{r7}
+ 8000666:	b087      	sub	sp, #28
+ 8000668:	af00      	add	r7, sp, #0
+ 800066a:	6078      	str	r0, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:910
+  uint32_t tmp = 0, pllmull = 0, pllsource = 0, presc = 0;
+ 800066c:	2300      	movs	r3, #0
+ 800066e:	617b      	str	r3, [r7, #20]
+ 8000670:	2300      	movs	r3, #0
+ 8000672:	613b      	str	r3, [r7, #16]
+ 8000674:	2300      	movs	r3, #0
+ 8000676:	60fb      	str	r3, [r7, #12]
+ 8000678:	2300      	movs	r3, #0
+ 800067a:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:921
+#if defined (STM32F10X_LD_VL) || defined (STM32F10X_MD_VL) || defined (STM32F10X_HD_VL)
+  uint32_t prediv1factor = 0;
+#endif
+    
+  /* Get SYSCLK source -------------------------------------------------------*/
+  tmp = RCC->CFGR & CFGR_SWS_Mask;
+ 800067c:	4b4d      	ldr	r3, [pc, #308]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 800067e:	685b      	ldr	r3, [r3, #4]
+ 8000680:	f003 030c 	and.w	r3, r3, #12
+ 8000684:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:923
+  
+  switch (tmp)
+ 8000686:	697b      	ldr	r3, [r7, #20]
+ 8000688:	2b04      	cmp	r3, #4
+ 800068a:	d007      	beq.n	800069c <RCC_GetClocksFreq+0x38>
+ 800068c:	2b08      	cmp	r3, #8
+ 800068e:	d009      	beq.n	80006a4 <RCC_GetClocksFreq+0x40>
+ 8000690:	2b00      	cmp	r3, #0
+ 8000692:	d134      	bne.n	80006fe <RCC_GetClocksFreq+0x9a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:926
+  {
+    case 0x00:  /* HSI used as system clock */
+      RCC_Clocks->SYSCLK_Frequency = HSI_VALUE;
+ 8000694:	687b      	ldr	r3, [r7, #4]
+ 8000696:	4a48      	ldr	r2, [pc, #288]	; (80007b8 <RCC_GetClocksFreq+0x154>)
+ 8000698:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:927
+      break;
+ 800069a:	e034      	b.n	8000706 <RCC_GetClocksFreq+0xa2>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:929
+    case 0x04:  /* HSE used as system clock */
+      RCC_Clocks->SYSCLK_Frequency = HSE_VALUE;
+ 800069c:	687b      	ldr	r3, [r7, #4]
+ 800069e:	4a46      	ldr	r2, [pc, #280]	; (80007b8 <RCC_GetClocksFreq+0x154>)
+ 80006a0:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:930
+      break;
+ 80006a2:	e030      	b.n	8000706 <RCC_GetClocksFreq+0xa2>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:934
+    case 0x08:  /* PLL used as system clock */
+
+      /* Get PLL clock source and multiplication factor ----------------------*/
+      pllmull = RCC->CFGR & CFGR_PLLMull_Mask;
+ 80006a4:	4b43      	ldr	r3, [pc, #268]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 80006a6:	685b      	ldr	r3, [r3, #4]
+ 80006a8:	f403 1370 	and.w	r3, r3, #3932160	; 0x3c0000
+ 80006ac:	613b      	str	r3, [r7, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:935
+      pllsource = RCC->CFGR & CFGR_PLLSRC_Mask;
+ 80006ae:	4b41      	ldr	r3, [pc, #260]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 80006b0:	685b      	ldr	r3, [r3, #4]
+ 80006b2:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+ 80006b6:	60fb      	str	r3, [r7, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:938
+      
+#ifndef STM32F10X_CL      
+      pllmull = ( pllmull >> 18) + 2;
+ 80006b8:	693b      	ldr	r3, [r7, #16]
+ 80006ba:	0c9b      	lsrs	r3, r3, #18
+ 80006bc:	3302      	adds	r3, #2
+ 80006be:	613b      	str	r3, [r7, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:940
+      
+      if (pllsource == 0x00)
+ 80006c0:	68fb      	ldr	r3, [r7, #12]
+ 80006c2:	2b00      	cmp	r3, #0
+ 80006c4:	d106      	bne.n	80006d4 <RCC_GetClocksFreq+0x70>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:942
+      {/* HSI oscillator clock divided by 2 selected as PLL clock entry */
+        RCC_Clocks->SYSCLK_Frequency = (HSI_VALUE >> 1) * pllmull;
+ 80006c6:	693b      	ldr	r3, [r7, #16]
+ 80006c8:	4a3c      	ldr	r2, [pc, #240]	; (80007bc <RCC_GetClocksFreq+0x158>)
+ 80006ca:	fb02 f203 	mul.w	r2, r2, r3
+ 80006ce:	687b      	ldr	r3, [r7, #4]
+ 80006d0:	601a      	str	r2, [r3, #0]
+ 80006d2:	e013      	b.n	80006fc <RCC_GetClocksFreq+0x98>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:952
+       prediv1factor = (RCC->CFGR2 & CFGR2_PREDIV1) + 1;
+       /* HSE oscillator clock selected as PREDIV1 clock entry */
+       RCC_Clocks->SYSCLK_Frequency = (HSE_VALUE / prediv1factor) * pllmull; 
+ #else
+        /* HSE selected as PLL clock entry */
+        if ((RCC->CFGR & CFGR_PLLXTPRE_Mask) != (uint32_t)RESET)
+ 80006d4:	4b37      	ldr	r3, [pc, #220]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 80006d6:	685b      	ldr	r3, [r3, #4]
+ 80006d8:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+ 80006dc:	2b00      	cmp	r3, #0
+ 80006de:	d006      	beq.n	80006ee <RCC_GetClocksFreq+0x8a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:954
+        {/* HSE oscillator clock divided by 2 */
+          RCC_Clocks->SYSCLK_Frequency = (HSE_VALUE >> 1) * pllmull;
+ 80006e0:	693b      	ldr	r3, [r7, #16]
+ 80006e2:	4a36      	ldr	r2, [pc, #216]	; (80007bc <RCC_GetClocksFreq+0x158>)
+ 80006e4:	fb02 f203 	mul.w	r2, r2, r3
+ 80006e8:	687b      	ldr	r3, [r7, #4]
+ 80006ea:	601a      	str	r2, [r3, #0]
+ 80006ec:	e006      	b.n	80006fc <RCC_GetClocksFreq+0x98>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:958
+        }
+        else
+        {
+          RCC_Clocks->SYSCLK_Frequency = HSE_VALUE * pllmull;
+ 80006ee:	693b      	ldr	r3, [r7, #16]
+ 80006f0:	4a31      	ldr	r2, [pc, #196]	; (80007b8 <RCC_GetClocksFreq+0x154>)
+ 80006f2:	fb02 f203 	mul.w	r2, r2, r3
+ 80006f6:	687b      	ldr	r3, [r7, #4]
+ 80006f8:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:999
+          pll2mull = ((RCC->CFGR2 & CFGR2_PLL2MUL) >> 8 ) + 2; 
+          RCC_Clocks->SYSCLK_Frequency = (((HSE_VALUE / prediv2factor) * pll2mull) / prediv1factor) * pllmull;                         
+        }
+      }
+#endif /* STM32F10X_CL */ 
+      break;
+ 80006fa:	e004      	b.n	8000706 <RCC_GetClocksFreq+0xa2>
+ 80006fc:	e003      	b.n	8000706 <RCC_GetClocksFreq+0xa2>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1002
+
+    default:
+      RCC_Clocks->SYSCLK_Frequency = HSI_VALUE;
+ 80006fe:	687b      	ldr	r3, [r7, #4]
+ 8000700:	4a2d      	ldr	r2, [pc, #180]	; (80007b8 <RCC_GetClocksFreq+0x154>)
+ 8000702:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1003
+      break;
+ 8000704:	bf00      	nop
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1008
+  }
+
+  /* Compute HCLK, PCLK1, PCLK2 and ADCCLK clocks frequencies ----------------*/
+  /* Get HCLK prescaler */
+  tmp = RCC->CFGR & CFGR_HPRE_Set_Mask;
+ 8000706:	4b2b      	ldr	r3, [pc, #172]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 8000708:	685b      	ldr	r3, [r3, #4]
+ 800070a:	f003 03f0 	and.w	r3, r3, #240	; 0xf0
+ 800070e:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1009
+  tmp = tmp >> 4;
+ 8000710:	697b      	ldr	r3, [r7, #20]
+ 8000712:	091b      	lsrs	r3, r3, #4
+ 8000714:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1010
+  presc = APBAHBPrescTable[tmp];
+ 8000716:	4a2a      	ldr	r2, [pc, #168]	; (80007c0 <RCC_GetClocksFreq+0x15c>)
+ 8000718:	697b      	ldr	r3, [r7, #20]
+ 800071a:	4413      	add	r3, r2
+ 800071c:	781b      	ldrb	r3, [r3, #0]
+ 800071e:	b2db      	uxtb	r3, r3
+ 8000720:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1012
+  /* HCLK clock frequency */
+  RCC_Clocks->HCLK_Frequency = RCC_Clocks->SYSCLK_Frequency >> presc;
+ 8000722:	687b      	ldr	r3, [r7, #4]
+ 8000724:	681a      	ldr	r2, [r3, #0]
+ 8000726:	68bb      	ldr	r3, [r7, #8]
+ 8000728:	40da      	lsrs	r2, r3
+ 800072a:	687b      	ldr	r3, [r7, #4]
+ 800072c:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1014
+  /* Get PCLK1 prescaler */
+  tmp = RCC->CFGR & CFGR_PPRE1_Set_Mask;
+ 800072e:	4b21      	ldr	r3, [pc, #132]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 8000730:	685b      	ldr	r3, [r3, #4]
+ 8000732:	f403 63e0 	and.w	r3, r3, #1792	; 0x700
+ 8000736:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1015
+  tmp = tmp >> 8;
+ 8000738:	697b      	ldr	r3, [r7, #20]
+ 800073a:	0a1b      	lsrs	r3, r3, #8
+ 800073c:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1016
+  presc = APBAHBPrescTable[tmp];
+ 800073e:	4a20      	ldr	r2, [pc, #128]	; (80007c0 <RCC_GetClocksFreq+0x15c>)
+ 8000740:	697b      	ldr	r3, [r7, #20]
+ 8000742:	4413      	add	r3, r2
+ 8000744:	781b      	ldrb	r3, [r3, #0]
+ 8000746:	b2db      	uxtb	r3, r3
+ 8000748:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1018
+  /* PCLK1 clock frequency */
+  RCC_Clocks->PCLK1_Frequency = RCC_Clocks->HCLK_Frequency >> presc;
+ 800074a:	687b      	ldr	r3, [r7, #4]
+ 800074c:	685a      	ldr	r2, [r3, #4]
+ 800074e:	68bb      	ldr	r3, [r7, #8]
+ 8000750:	40da      	lsrs	r2, r3
+ 8000752:	687b      	ldr	r3, [r7, #4]
+ 8000754:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1020
+  /* Get PCLK2 prescaler */
+  tmp = RCC->CFGR & CFGR_PPRE2_Set_Mask;
+ 8000756:	4b17      	ldr	r3, [pc, #92]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 8000758:	685b      	ldr	r3, [r3, #4]
+ 800075a:	f403 5360 	and.w	r3, r3, #14336	; 0x3800
+ 800075e:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1021
+  tmp = tmp >> 11;
+ 8000760:	697b      	ldr	r3, [r7, #20]
+ 8000762:	0adb      	lsrs	r3, r3, #11
+ 8000764:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1022
+  presc = APBAHBPrescTable[tmp];
+ 8000766:	4a16      	ldr	r2, [pc, #88]	; (80007c0 <RCC_GetClocksFreq+0x15c>)
+ 8000768:	697b      	ldr	r3, [r7, #20]
+ 800076a:	4413      	add	r3, r2
+ 800076c:	781b      	ldrb	r3, [r3, #0]
+ 800076e:	b2db      	uxtb	r3, r3
+ 8000770:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1024
+  /* PCLK2 clock frequency */
+  RCC_Clocks->PCLK2_Frequency = RCC_Clocks->HCLK_Frequency >> presc;
+ 8000772:	687b      	ldr	r3, [r7, #4]
+ 8000774:	685a      	ldr	r2, [r3, #4]
+ 8000776:	68bb      	ldr	r3, [r7, #8]
+ 8000778:	40da      	lsrs	r2, r3
+ 800077a:	687b      	ldr	r3, [r7, #4]
+ 800077c:	60da      	str	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1026
+  /* Get ADCCLK prescaler */
+  tmp = RCC->CFGR & CFGR_ADCPRE_Set_Mask;
+ 800077e:	4b0d      	ldr	r3, [pc, #52]	; (80007b4 <RCC_GetClocksFreq+0x150>)
+ 8000780:	685b      	ldr	r3, [r3, #4]
+ 8000782:	f403 4340 	and.w	r3, r3, #49152	; 0xc000
+ 8000786:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1027
+  tmp = tmp >> 14;
+ 8000788:	697b      	ldr	r3, [r7, #20]
+ 800078a:	0b9b      	lsrs	r3, r3, #14
+ 800078c:	617b      	str	r3, [r7, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1028
+  presc = ADCPrescTable[tmp];
+ 800078e:	4a0d      	ldr	r2, [pc, #52]	; (80007c4 <RCC_GetClocksFreq+0x160>)
+ 8000790:	697b      	ldr	r3, [r7, #20]
+ 8000792:	4413      	add	r3, r2
+ 8000794:	781b      	ldrb	r3, [r3, #0]
+ 8000796:	b2db      	uxtb	r3, r3
+ 8000798:	60bb      	str	r3, [r7, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1030
+  /* ADCCLK clock frequency */
+  RCC_Clocks->ADCCLK_Frequency = RCC_Clocks->PCLK2_Frequency / presc;
+ 800079a:	687b      	ldr	r3, [r7, #4]
+ 800079c:	68da      	ldr	r2, [r3, #12]
+ 800079e:	68bb      	ldr	r3, [r7, #8]
+ 80007a0:	fbb2 f2f3 	udiv	r2, r2, r3
+ 80007a4:	687b      	ldr	r3, [r7, #4]
+ 80007a6:	611a      	str	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1031
+}
+ 80007a8:	371c      	adds	r7, #28
+ 80007aa:	46bd      	mov	sp, r7
+ 80007ac:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80007b0:	4770      	bx	lr
+ 80007b2:	bf00      	nop
+ 80007b4:	40021000 	.word	0x40021000
+ 80007b8:	007a1200 	.word	0x007a1200
+ 80007bc:	003d0900 	.word	0x003d0900
+ 80007c0:	20000000 	.word	0x20000000
+ 80007c4:	20000010 	.word	0x20000010
+
+080007c8 <RCC_AHBPeriphClockCmd>:
+RCC_AHBPeriphClockCmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1065
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState)
+{
+ 80007c8:	b480      	push	{r7}
+ 80007ca:	b083      	sub	sp, #12
+ 80007cc:	af00      	add	r7, sp, #0
+ 80007ce:	6078      	str	r0, [r7, #4]
+ 80007d0:	460b      	mov	r3, r1
+ 80007d2:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1070
+  /* Check the parameters */
+  assert_param(IS_RCC_AHB_PERIPH(RCC_AHBPeriph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+ 80007d4:	78fb      	ldrb	r3, [r7, #3]
+ 80007d6:	2b00      	cmp	r3, #0
+ 80007d8:	d006      	beq.n	80007e8 <RCC_AHBPeriphClockCmd+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1072
+  {
+    RCC->AHBENR |= RCC_AHBPeriph;
+ 80007da:	4b09      	ldr	r3, [pc, #36]	; (8000800 <RCC_AHBPeriphClockCmd+0x38>)
+ 80007dc:	4a08      	ldr	r2, [pc, #32]	; (8000800 <RCC_AHBPeriphClockCmd+0x38>)
+ 80007de:	6951      	ldr	r1, [r2, #20]
+ 80007e0:	687a      	ldr	r2, [r7, #4]
+ 80007e2:	430a      	orrs	r2, r1
+ 80007e4:	615a      	str	r2, [r3, #20]
+ 80007e6:	e006      	b.n	80007f6 <RCC_AHBPeriphClockCmd+0x2e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1076
+  }
+  else
+  {
+    RCC->AHBENR &= ~RCC_AHBPeriph;
+ 80007e8:	4b05      	ldr	r3, [pc, #20]	; (8000800 <RCC_AHBPeriphClockCmd+0x38>)
+ 80007ea:	4a05      	ldr	r2, [pc, #20]	; (8000800 <RCC_AHBPeriphClockCmd+0x38>)
+ 80007ec:	6951      	ldr	r1, [r2, #20]
+ 80007ee:	687a      	ldr	r2, [r7, #4]
+ 80007f0:	43d2      	mvns	r2, r2
+ 80007f2:	400a      	ands	r2, r1
+ 80007f4:	615a      	str	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1078
+  }
+}
+ 80007f6:	370c      	adds	r7, #12
+ 80007f8:	46bd      	mov	sp, r7
+ 80007fa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80007fe:	4770      	bx	lr
+ 8000800:	40021000 	.word	0x40021000
+
+08000804 <RCC_APB2PeriphClockCmd>:
+RCC_APB2PeriphClockCmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1096
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+ 8000804:	b480      	push	{r7}
+ 8000806:	b083      	sub	sp, #12
+ 8000808:	af00      	add	r7, sp, #0
+ 800080a:	6078      	str	r0, [r7, #4]
+ 800080c:	460b      	mov	r3, r1
+ 800080e:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1100
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+ 8000810:	78fb      	ldrb	r3, [r7, #3]
+ 8000812:	2b00      	cmp	r3, #0
+ 8000814:	d006      	beq.n	8000824 <RCC_APB2PeriphClockCmd+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1102
+  {
+    RCC->APB2ENR |= RCC_APB2Periph;
+ 8000816:	4b09      	ldr	r3, [pc, #36]	; (800083c <RCC_APB2PeriphClockCmd+0x38>)
+ 8000818:	4a08      	ldr	r2, [pc, #32]	; (800083c <RCC_APB2PeriphClockCmd+0x38>)
+ 800081a:	6991      	ldr	r1, [r2, #24]
+ 800081c:	687a      	ldr	r2, [r7, #4]
+ 800081e:	430a      	orrs	r2, r1
+ 8000820:	619a      	str	r2, [r3, #24]
+ 8000822:	e006      	b.n	8000832 <RCC_APB2PeriphClockCmd+0x2e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1106
+  }
+  else
+  {
+    RCC->APB2ENR &= ~RCC_APB2Periph;
+ 8000824:	4b05      	ldr	r3, [pc, #20]	; (800083c <RCC_APB2PeriphClockCmd+0x38>)
+ 8000826:	4a05      	ldr	r2, [pc, #20]	; (800083c <RCC_APB2PeriphClockCmd+0x38>)
+ 8000828:	6991      	ldr	r1, [r2, #24]
+ 800082a:	687a      	ldr	r2, [r7, #4]
+ 800082c:	43d2      	mvns	r2, r2
+ 800082e:	400a      	ands	r2, r1
+ 8000830:	619a      	str	r2, [r3, #24]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1108
+  }
+}
+ 8000832:	370c      	adds	r7, #12
+ 8000834:	46bd      	mov	sp, r7
+ 8000836:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800083a:	4770      	bx	lr
+ 800083c:	40021000 	.word	0x40021000
+
+08000840 <RCC_APB2PeriphResetCmd>:
+RCC_APB2PeriphResetCmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1186
+  * @param  NewState: new state of the specified peripheral reset.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+ 8000840:	b480      	push	{r7}
+ 8000842:	b083      	sub	sp, #12
+ 8000844:	af00      	add	r7, sp, #0
+ 8000846:	6078      	str	r0, [r7, #4]
+ 8000848:	460b      	mov	r3, r1
+ 800084a:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1190
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+ 800084c:	78fb      	ldrb	r3, [r7, #3]
+ 800084e:	2b00      	cmp	r3, #0
+ 8000850:	d006      	beq.n	8000860 <RCC_APB2PeriphResetCmd+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1192
+  {
+    RCC->APB2RSTR |= RCC_APB2Periph;
+ 8000852:	4b09      	ldr	r3, [pc, #36]	; (8000878 <RCC_APB2PeriphResetCmd+0x38>)
+ 8000854:	4a08      	ldr	r2, [pc, #32]	; (8000878 <RCC_APB2PeriphResetCmd+0x38>)
+ 8000856:	68d1      	ldr	r1, [r2, #12]
+ 8000858:	687a      	ldr	r2, [r7, #4]
+ 800085a:	430a      	orrs	r2, r1
+ 800085c:	60da      	str	r2, [r3, #12]
+ 800085e:	e006      	b.n	800086e <RCC_APB2PeriphResetCmd+0x2e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1196
+  }
+  else
+  {
+    RCC->APB2RSTR &= ~RCC_APB2Periph;
+ 8000860:	4b05      	ldr	r3, [pc, #20]	; (8000878 <RCC_APB2PeriphResetCmd+0x38>)
+ 8000862:	4a05      	ldr	r2, [pc, #20]	; (8000878 <RCC_APB2PeriphResetCmd+0x38>)
+ 8000864:	68d1      	ldr	r1, [r2, #12]
+ 8000866:	687a      	ldr	r2, [r7, #4]
+ 8000868:	43d2      	mvns	r2, r2
+ 800086a:	400a      	ands	r2, r1
+ 800086c:	60da      	str	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1198
+  }
+}
+ 800086e:	370c      	adds	r7, #12
+ 8000870:	46bd      	mov	sp, r7
+ 8000872:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000876:	4770      	bx	lr
+ 8000878:	40021000 	.word	0x40021000
+
+0800087c <RCC_APB1PeriphResetCmd>:
+RCC_APB1PeriphResetCmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1217
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB1PeriphResetCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)
+{
+ 800087c:	b480      	push	{r7}
+ 800087e:	b083      	sub	sp, #12
+ 8000880:	af00      	add	r7, sp, #0
+ 8000882:	6078      	str	r0, [r7, #4]
+ 8000884:	460b      	mov	r3, r1
+ 8000886:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1221
+  /* Check the parameters */
+  assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+ 8000888:	78fb      	ldrb	r3, [r7, #3]
+ 800088a:	2b00      	cmp	r3, #0
+ 800088c:	d006      	beq.n	800089c <RCC_APB1PeriphResetCmd+0x20>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1223
+  {
+    RCC->APB1RSTR |= RCC_APB1Periph;
+ 800088e:	4b09      	ldr	r3, [pc, #36]	; (80008b4 <RCC_APB1PeriphResetCmd+0x38>)
+ 8000890:	4a08      	ldr	r2, [pc, #32]	; (80008b4 <RCC_APB1PeriphResetCmd+0x38>)
+ 8000892:	6911      	ldr	r1, [r2, #16]
+ 8000894:	687a      	ldr	r2, [r7, #4]
+ 8000896:	430a      	orrs	r2, r1
+ 8000898:	611a      	str	r2, [r3, #16]
+ 800089a:	e006      	b.n	80008aa <RCC_APB1PeriphResetCmd+0x2e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1227
+  }
+  else
+  {
+    RCC->APB1RSTR &= ~RCC_APB1Periph;
+ 800089c:	4b05      	ldr	r3, [pc, #20]	; (80008b4 <RCC_APB1PeriphResetCmd+0x38>)
+ 800089e:	4a05      	ldr	r2, [pc, #20]	; (80008b4 <RCC_APB1PeriphResetCmd+0x38>)
+ 80008a0:	6911      	ldr	r1, [r2, #16]
+ 80008a2:	687a      	ldr	r2, [r7, #4]
+ 80008a4:	43d2      	mvns	r2, r2
+ 80008a6:	400a      	ands	r2, r1
+ 80008a8:	611a      	str	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_rcc.c:1229
+  }
+}
+ 80008aa:	370c      	adds	r7, #12
+ 80008ac:	46bd      	mov	sp, r7
+ 80008ae:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80008b2:	4770      	bx	lr
+ 80008b4:	40021000 	.word	0x40021000
+
+080008b8 <USART_DeInit>:
+USART_DeInit():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:131
+  *   This parameter can be one of the following values: 
+  *      USART1, USART2, USART3, UART4 or UART5.
+  * @retval None
+  */
+void USART_DeInit(USART_TypeDef* USARTx)
+{
+ 80008b8:	b580      	push	{r7, lr}
+ 80008ba:	b082      	sub	sp, #8
+ 80008bc:	af00      	add	r7, sp, #0
+ 80008be:	6078      	str	r0, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:135
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+
+  if (USARTx == USART1)
+ 80008c0:	687a      	ldr	r2, [r7, #4]
+ 80008c2:	4b26      	ldr	r3, [pc, #152]	; (800095c <USART_DeInit+0xa4>)
+ 80008c4:	429a      	cmp	r2, r3
+ 80008c6:	d10a      	bne.n	80008de <USART_DeInit+0x26>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:137
+  {
+    RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, ENABLE);
+ 80008c8:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+ 80008cc:	2101      	movs	r1, #1
+ 80008ce:	f7ff ffb7 	bl	8000840 <RCC_APB2PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:138
+    RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, DISABLE);
+ 80008d2:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+ 80008d6:	2100      	movs	r1, #0
+ 80008d8:	f7ff ffb2 	bl	8000840 <RCC_APB2PeriphResetCmd>
+ 80008dc:	e03a      	b.n	8000954 <USART_DeInit+0x9c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:140
+  }
+  else if (USARTx == USART2)
+ 80008de:	687a      	ldr	r2, [r7, #4]
+ 80008e0:	4b1f      	ldr	r3, [pc, #124]	; (8000960 <USART_DeInit+0xa8>)
+ 80008e2:	429a      	cmp	r2, r3
+ 80008e4:	d10a      	bne.n	80008fc <USART_DeInit+0x44>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:142
+  {
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2, ENABLE);
+ 80008e6:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+ 80008ea:	2101      	movs	r1, #1
+ 80008ec:	f7ff ffc6 	bl	800087c <RCC_APB1PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:143
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2, DISABLE);
+ 80008f0:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+ 80008f4:	2100      	movs	r1, #0
+ 80008f6:	f7ff ffc1 	bl	800087c <RCC_APB1PeriphResetCmd>
+ 80008fa:	e02b      	b.n	8000954 <USART_DeInit+0x9c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:145
+  }
+  else if (USARTx == USART3)
+ 80008fc:	687a      	ldr	r2, [r7, #4]
+ 80008fe:	4b19      	ldr	r3, [pc, #100]	; (8000964 <USART_DeInit+0xac>)
+ 8000900:	429a      	cmp	r2, r3
+ 8000902:	d10a      	bne.n	800091a <USART_DeInit+0x62>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:147
+  {
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART3, ENABLE);
+ 8000904:	f44f 2080 	mov.w	r0, #262144	; 0x40000
+ 8000908:	2101      	movs	r1, #1
+ 800090a:	f7ff ffb7 	bl	800087c <RCC_APB1PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:148
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART3, DISABLE);
+ 800090e:	f44f 2080 	mov.w	r0, #262144	; 0x40000
+ 8000912:	2100      	movs	r1, #0
+ 8000914:	f7ff ffb2 	bl	800087c <RCC_APB1PeriphResetCmd>
+ 8000918:	e01c      	b.n	8000954 <USART_DeInit+0x9c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:150
+  }    
+  else if (USARTx == UART4)
+ 800091a:	687a      	ldr	r2, [r7, #4]
+ 800091c:	4b12      	ldr	r3, [pc, #72]	; (8000968 <USART_DeInit+0xb0>)
+ 800091e:	429a      	cmp	r2, r3
+ 8000920:	d10a      	bne.n	8000938 <USART_DeInit+0x80>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:152
+  {
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART4, ENABLE);
+ 8000922:	f44f 2000 	mov.w	r0, #524288	; 0x80000
+ 8000926:	2101      	movs	r1, #1
+ 8000928:	f7ff ffa8 	bl	800087c <RCC_APB1PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:153
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART4, DISABLE);
+ 800092c:	f44f 2000 	mov.w	r0, #524288	; 0x80000
+ 8000930:	2100      	movs	r1, #0
+ 8000932:	f7ff ffa3 	bl	800087c <RCC_APB1PeriphResetCmd>
+ 8000936:	e00d      	b.n	8000954 <USART_DeInit+0x9c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:157
+  }    
+  else
+  {
+    if (USARTx == UART5)
+ 8000938:	687a      	ldr	r2, [r7, #4]
+ 800093a:	4b0c      	ldr	r3, [pc, #48]	; (800096c <USART_DeInit+0xb4>)
+ 800093c:	429a      	cmp	r2, r3
+ 800093e:	d109      	bne.n	8000954 <USART_DeInit+0x9c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:159
+    { 
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART5, ENABLE);
+ 8000940:	f44f 1080 	mov.w	r0, #1048576	; 0x100000
+ 8000944:	2101      	movs	r1, #1
+ 8000946:	f7ff ff99 	bl	800087c <RCC_APB1PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:160
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART5, DISABLE);
+ 800094a:	f44f 1080 	mov.w	r0, #1048576	; 0x100000
+ 800094e:	2100      	movs	r1, #0
+ 8000950:	f7ff ff94 	bl	800087c <RCC_APB1PeriphResetCmd>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:163
+    }
+  }
+}
+ 8000954:	3708      	adds	r7, #8
+ 8000956:	46bd      	mov	sp, r7
+ 8000958:	bd80      	pop	{r7, pc}
+ 800095a:	bf00      	nop
+ 800095c:	40013800 	.word	0x40013800
+ 8000960:	40004400 	.word	0x40004400
+ 8000964:	40004800 	.word	0x40004800
+ 8000968:	40004c00 	.word	0x40004c00
+ 800096c:	40005000 	.word	0x40005000
+
+08000970 <USART_Init>:
+USART_Init():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:177
+  *         that contains the configuration information for the specified USART 
+  *         peripheral.
+  * @retval None
+  */
+void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct)
+{
+ 8000970:	b580      	push	{r7, lr}
+ 8000972:	b08c      	sub	sp, #48	; 0x30
+ 8000974:	af00      	add	r7, sp, #0
+ 8000976:	6078      	str	r0, [r7, #4]
+ 8000978:	6039      	str	r1, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:178
+  uint32_t tmpreg = 0x00, apbclock = 0x00;
+ 800097a:	2300      	movs	r3, #0
+ 800097c:	62fb      	str	r3, [r7, #44]	; 0x2c
+ 800097e:	2300      	movs	r3, #0
+ 8000980:	62bb      	str	r3, [r7, #40]	; 0x28
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:179
+  uint32_t integerdivider = 0x00;
+ 8000982:	2300      	movs	r3, #0
+ 8000984:	627b      	str	r3, [r7, #36]	; 0x24
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:180
+  uint32_t fractionaldivider = 0x00;
+ 8000986:	2300      	movs	r3, #0
+ 8000988:	623b      	str	r3, [r7, #32]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:181
+  uint32_t usartxbase = 0;
+ 800098a:	2300      	movs	r3, #0
+ 800098c:	61fb      	str	r3, [r7, #28]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:197
+  if (USART_InitStruct->USART_HardwareFlowControl != USART_HardwareFlowControl_None)
+  {
+    assert_param(IS_USART_123_PERIPH(USARTx));
+  }
+
+  usartxbase = (uint32_t)USARTx;
+ 800098e:	687b      	ldr	r3, [r7, #4]
+ 8000990:	61fb      	str	r3, [r7, #28]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:200
+
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+ 8000992:	687b      	ldr	r3, [r7, #4]
+ 8000994:	8a1b      	ldrh	r3, [r3, #16]
+ 8000996:	b29b      	uxth	r3, r3
+ 8000998:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:202
+  /* Clear STOP[13:12] bits */
+  tmpreg &= CR2_STOP_CLEAR_Mask;
+ 800099a:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 800099c:	f64c 73ff 	movw	r3, #53247	; 0xcfff
+ 80009a0:	4013      	ands	r3, r2
+ 80009a2:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:205
+  /* Configure the USART Stop Bits, Clock, CPOL, CPHA and LastBit ------------*/
+  /* Set STOP[13:12] bits according to USART_StopBits value */
+  tmpreg |= (uint32_t)USART_InitStruct->USART_StopBits;
+ 80009a4:	683b      	ldr	r3, [r7, #0]
+ 80009a6:	88db      	ldrh	r3, [r3, #6]
+ 80009a8:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 80009aa:	4313      	orrs	r3, r2
+ 80009ac:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:208
+  
+  /* Write to USART CR2 */
+  USARTx->CR2 = (uint16_t)tmpreg;
+ 80009ae:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+ 80009b0:	b29a      	uxth	r2, r3
+ 80009b2:	687b      	ldr	r3, [r7, #4]
+ 80009b4:	821a      	strh	r2, [r3, #16]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:211
+
+/*---------------------------- USART CR1 Configuration -----------------------*/
+  tmpreg = USARTx->CR1;
+ 80009b6:	687b      	ldr	r3, [r7, #4]
+ 80009b8:	899b      	ldrh	r3, [r3, #12]
+ 80009ba:	b29b      	uxth	r3, r3
+ 80009bc:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:213
+  /* Clear M, PCE, PS, TE and RE bits */
+  tmpreg &= CR1_CLEAR_Mask;
+ 80009be:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 80009c0:	f64e 13f3 	movw	r3, #59891	; 0xe9f3
+ 80009c4:	4013      	ands	r3, r2
+ 80009c6:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:218
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (uint32_t)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+ 80009c8:	683b      	ldr	r3, [r7, #0]
+ 80009ca:	889a      	ldrh	r2, [r3, #4]
+ 80009cc:	683b      	ldr	r3, [r7, #0]
+ 80009ce:	891b      	ldrh	r3, [r3, #8]
+ 80009d0:	4313      	orrs	r3, r2
+ 80009d2:	b29a      	uxth	r2, r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:219
+            USART_InitStruct->USART_Mode;
+ 80009d4:	683b      	ldr	r3, [r7, #0]
+ 80009d6:	895b      	ldrh	r3, [r3, #10]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:218
+  tmpreg &= CR1_CLEAR_Mask;
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (uint32_t)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+ 80009d8:	4313      	orrs	r3, r2
+ 80009da:	b29b      	uxth	r3, r3
+ 80009dc:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 80009de:	4313      	orrs	r3, r2
+ 80009e0:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:221
+            USART_InitStruct->USART_Mode;
+  /* Write to USART CR1 */
+  USARTx->CR1 = (uint16_t)tmpreg;
+ 80009e2:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+ 80009e4:	b29a      	uxth	r2, r3
+ 80009e6:	687b      	ldr	r3, [r7, #4]
+ 80009e8:	819a      	strh	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:224
+
+/*---------------------------- USART CR3 Configuration -----------------------*/  
+  tmpreg = USARTx->CR3;
+ 80009ea:	687b      	ldr	r3, [r7, #4]
+ 80009ec:	8a9b      	ldrh	r3, [r3, #20]
+ 80009ee:	b29b      	uxth	r3, r3
+ 80009f0:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:226
+  /* Clear CTSE and RTSE bits */
+  tmpreg &= CR3_CLEAR_Mask;
+ 80009f2:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 80009f4:	f64f 43ff 	movw	r3, #64767	; 0xfcff
+ 80009f8:	4013      	ands	r3, r2
+ 80009fa:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:229
+  /* Configure the USART HFC -------------------------------------------------*/
+  /* Set CTSE and RTSE bits according to USART_HardwareFlowControl value */
+  tmpreg |= USART_InitStruct->USART_HardwareFlowControl;
+ 80009fc:	683b      	ldr	r3, [r7, #0]
+ 80009fe:	899b      	ldrh	r3, [r3, #12]
+ 8000a00:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 8000a02:	4313      	orrs	r3, r2
+ 8000a04:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:231
+  /* Write to USART CR3 */
+  USARTx->CR3 = (uint16_t)tmpreg;
+ 8000a06:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+ 8000a08:	b29a      	uxth	r2, r3
+ 8000a0a:	687b      	ldr	r3, [r7, #4]
+ 8000a0c:	829a      	strh	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:235
+
+/*---------------------------- USART BRR Configuration -----------------------*/
+  /* Configure the USART Baud Rate -------------------------------------------*/
+  RCC_GetClocksFreq(&RCC_ClocksStatus);
+ 8000a0e:	f107 0308 	add.w	r3, r7, #8
+ 8000a12:	4618      	mov	r0, r3
+ 8000a14:	f7ff fe26 	bl	8000664 <RCC_GetClocksFreq>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:236
+  if (usartxbase == USART1_BASE)
+ 8000a18:	69fa      	ldr	r2, [r7, #28]
+ 8000a1a:	4b30      	ldr	r3, [pc, #192]	; (8000adc <USART_Init+0x16c>)
+ 8000a1c:	429a      	cmp	r2, r3
+ 8000a1e:	d102      	bne.n	8000a26 <USART_Init+0xb6>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:238
+  {
+    apbclock = RCC_ClocksStatus.PCLK2_Frequency;
+ 8000a20:	697b      	ldr	r3, [r7, #20]
+ 8000a22:	62bb      	str	r3, [r7, #40]	; 0x28
+ 8000a24:	e001      	b.n	8000a2a <USART_Init+0xba>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:242
+  }
+  else
+  {
+    apbclock = RCC_ClocksStatus.PCLK1_Frequency;
+ 8000a26:	693b      	ldr	r3, [r7, #16]
+ 8000a28:	62bb      	str	r3, [r7, #40]	; 0x28
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:246
+  }
+  
+  /* Determine the integer part */
+  if ((USARTx->CR1 & CR1_OVER8_Set) != 0)
+ 8000a2a:	687b      	ldr	r3, [r7, #4]
+ 8000a2c:	899b      	ldrh	r3, [r3, #12]
+ 8000a2e:	b29b      	uxth	r3, r3
+ 8000a30:	b29b      	uxth	r3, r3
+ 8000a32:	b21b      	sxth	r3, r3
+ 8000a34:	2b00      	cmp	r3, #0
+ 8000a36:	da0c      	bge.n	8000a52 <USART_Init+0xe2>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:249
+  {
+    /* Integer part computing in case Oversampling mode is 8 Samples */
+    integerdivider = ((25 * apbclock) / (2 * (USART_InitStruct->USART_BaudRate)));    
+ 8000a38:	6aba      	ldr	r2, [r7, #40]	; 0x28
+ 8000a3a:	4613      	mov	r3, r2
+ 8000a3c:	009b      	lsls	r3, r3, #2
+ 8000a3e:	4413      	add	r3, r2
+ 8000a40:	009a      	lsls	r2, r3, #2
+ 8000a42:	441a      	add	r2, r3
+ 8000a44:	683b      	ldr	r3, [r7, #0]
+ 8000a46:	681b      	ldr	r3, [r3, #0]
+ 8000a48:	005b      	lsls	r3, r3, #1
+ 8000a4a:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000a4e:	627b      	str	r3, [r7, #36]	; 0x24
+ 8000a50:	e00b      	b.n	8000a6a <USART_Init+0xfa>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:254
+  }
+  else /* if ((USARTx->CR1 & CR1_OVER8_Set) == 0) */
+  {
+    /* Integer part computing in case Oversampling mode is 16 Samples */
+    integerdivider = ((25 * apbclock) / (4 * (USART_InitStruct->USART_BaudRate)));    
+ 8000a52:	6aba      	ldr	r2, [r7, #40]	; 0x28
+ 8000a54:	4613      	mov	r3, r2
+ 8000a56:	009b      	lsls	r3, r3, #2
+ 8000a58:	4413      	add	r3, r2
+ 8000a5a:	009a      	lsls	r2, r3, #2
+ 8000a5c:	441a      	add	r2, r3
+ 8000a5e:	683b      	ldr	r3, [r7, #0]
+ 8000a60:	681b      	ldr	r3, [r3, #0]
+ 8000a62:	009b      	lsls	r3, r3, #2
+ 8000a64:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000a68:	627b      	str	r3, [r7, #36]	; 0x24
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:256
+  }
+  tmpreg = (integerdivider / 100) << 4;
+ 8000a6a:	6a7a      	ldr	r2, [r7, #36]	; 0x24
+ 8000a6c:	4b1c      	ldr	r3, [pc, #112]	; (8000ae0 <USART_Init+0x170>)
+ 8000a6e:	fba3 1302 	umull	r1, r3, r3, r2
+ 8000a72:	095b      	lsrs	r3, r3, #5
+ 8000a74:	011b      	lsls	r3, r3, #4
+ 8000a76:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:259
+
+  /* Determine the fractional part */
+  fractionaldivider = integerdivider - (100 * (tmpreg >> 4));
+ 8000a78:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+ 8000a7a:	091b      	lsrs	r3, r3, #4
+ 8000a7c:	2264      	movs	r2, #100	; 0x64
+ 8000a7e:	fb02 f303 	mul.w	r3, r2, r3
+ 8000a82:	6a7a      	ldr	r2, [r7, #36]	; 0x24
+ 8000a84:	1ad3      	subs	r3, r2, r3
+ 8000a86:	623b      	str	r3, [r7, #32]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:262
+
+  /* Implement the fractional part in the register */
+  if ((USARTx->CR1 & CR1_OVER8_Set) != 0)
+ 8000a88:	687b      	ldr	r3, [r7, #4]
+ 8000a8a:	899b      	ldrh	r3, [r3, #12]
+ 8000a8c:	b29b      	uxth	r3, r3
+ 8000a8e:	b29b      	uxth	r3, r3
+ 8000a90:	b21b      	sxth	r3, r3
+ 8000a92:	2b00      	cmp	r3, #0
+ 8000a94:	da0d      	bge.n	8000ab2 <USART_Init+0x142>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:264
+  {
+    tmpreg |= ((((fractionaldivider * 8) + 50) / 100)) & ((uint8_t)0x07);
+ 8000a96:	6a3b      	ldr	r3, [r7, #32]
+ 8000a98:	00db      	lsls	r3, r3, #3
+ 8000a9a:	f103 0232 	add.w	r2, r3, #50	; 0x32
+ 8000a9e:	4b10      	ldr	r3, [pc, #64]	; (8000ae0 <USART_Init+0x170>)
+ 8000aa0:	fba3 1302 	umull	r1, r3, r3, r2
+ 8000aa4:	095b      	lsrs	r3, r3, #5
+ 8000aa6:	f003 0307 	and.w	r3, r3, #7
+ 8000aaa:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 8000aac:	4313      	orrs	r3, r2
+ 8000aae:	62fb      	str	r3, [r7, #44]	; 0x2c
+ 8000ab0:	e00c      	b.n	8000acc <USART_Init+0x15c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:268
+  }
+  else /* if ((USARTx->CR1 & CR1_OVER8_Set) == 0) */
+  {
+    tmpreg |= ((((fractionaldivider * 16) + 50) / 100)) & ((uint8_t)0x0F);
+ 8000ab2:	6a3b      	ldr	r3, [r7, #32]
+ 8000ab4:	011b      	lsls	r3, r3, #4
+ 8000ab6:	f103 0232 	add.w	r2, r3, #50	; 0x32
+ 8000aba:	4b09      	ldr	r3, [pc, #36]	; (8000ae0 <USART_Init+0x170>)
+ 8000abc:	fba3 1302 	umull	r1, r3, r3, r2
+ 8000ac0:	095b      	lsrs	r3, r3, #5
+ 8000ac2:	f003 030f 	and.w	r3, r3, #15
+ 8000ac6:	6afa      	ldr	r2, [r7, #44]	; 0x2c
+ 8000ac8:	4313      	orrs	r3, r2
+ 8000aca:	62fb      	str	r3, [r7, #44]	; 0x2c
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:272
+  }
+  
+  /* Write to USART BRR */
+  USARTx->BRR = (uint16_t)tmpreg;
+ 8000acc:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+ 8000ace:	b29a      	uxth	r2, r3
+ 8000ad0:	687b      	ldr	r3, [r7, #4]
+ 8000ad2:	811a      	strh	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:273
+}
+ 8000ad4:	3730      	adds	r7, #48	; 0x30
+ 8000ad6:	46bd      	mov	sp, r7
+ 8000ad8:	bd80      	pop	{r7, pc}
+ 8000ada:	bf00      	nop
+ 8000adc:	40013800 	.word	0x40013800
+ 8000ae0:	51eb851f 	.word	0x51eb851f
+
+08000ae4 <USART_Cmd>:
+USART_Cmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:352
+  * @param  NewState: new state of the USARTx peripheral.
+  *         This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState)
+{
+ 8000ae4:	b480      	push	{r7}
+ 8000ae6:	b083      	sub	sp, #12
+ 8000ae8:	af00      	add	r7, sp, #0
+ 8000aea:	6078      	str	r0, [r7, #4]
+ 8000aec:	460b      	mov	r3, r1
+ 8000aee:	70fb      	strb	r3, [r7, #3]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:357
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+ 8000af0:	78fb      	ldrb	r3, [r7, #3]
+ 8000af2:	2b00      	cmp	r3, #0
+ 8000af4:	d008      	beq.n	8000b08 <USART_Cmd+0x24>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:360
+  {
+    /* Enable the selected USART by setting the UE bit in the CR1 register */
+    USARTx->CR1 |= CR1_UE_Set;
+ 8000af6:	687b      	ldr	r3, [r7, #4]
+ 8000af8:	899b      	ldrh	r3, [r3, #12]
+ 8000afa:	b29b      	uxth	r3, r3
+ 8000afc:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+ 8000b00:	b29a      	uxth	r2, r3
+ 8000b02:	687b      	ldr	r3, [r7, #4]
+ 8000b04:	819a      	strh	r2, [r3, #12]
+ 8000b06:	e007      	b.n	8000b18 <USART_Cmd+0x34>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:365
+  }
+  else
+  {
+    /* Disable the selected USART by clearing the UE bit in the CR1 register */
+    USARTx->CR1 &= CR1_UE_Reset;
+ 8000b08:	687b      	ldr	r3, [r7, #4]
+ 8000b0a:	899b      	ldrh	r3, [r3, #12]
+ 8000b0c:	b29b      	uxth	r3, r3
+ 8000b0e:	f423 5300 	bic.w	r3, r3, #8192	; 0x2000
+ 8000b12:	b29a      	uxth	r2, r3
+ 8000b14:	687b      	ldr	r3, [r7, #4]
+ 8000b16:	819a      	strh	r2, [r3, #12]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:367
+  }
+}
+ 8000b18:	370c      	adds	r7, #12
+ 8000b1a:	46bd      	mov	sp, r7
+ 8000b1c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000b20:	4770      	bx	lr
+ 8000b22:	bf00      	nop
+
+08000b24 <USART_DMACmd>:
+USART_DMACmd():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:449
+  * @note The DMA mode is not available for UART5 except in the STM32
+  *       High density value line devices(STM32F10X_HD_VL).  
+  * @retval None
+  */
+void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState)
+{
+ 8000b24:	b480      	push	{r7}
+ 8000b26:	b083      	sub	sp, #12
+ 8000b28:	af00      	add	r7, sp, #0
+ 8000b2a:	6078      	str	r0, [r7, #4]
+ 8000b2c:	4613      	mov	r3, r2
+ 8000b2e:	460a      	mov	r2, r1
+ 8000b30:	807a      	strh	r2, [r7, #2]
+ 8000b32:	707b      	strb	r3, [r7, #1]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:454
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_DMAREQ(USART_DMAReq));  
+  assert_param(IS_FUNCTIONAL_STATE(NewState)); 
+  if (NewState != DISABLE)
+ 8000b34:	787b      	ldrb	r3, [r7, #1]
+ 8000b36:	2b00      	cmp	r3, #0
+ 8000b38:	d008      	beq.n	8000b4c <USART_DMACmd+0x28>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:458
+  {
+    /* Enable the DMA transfer for selected requests by setting the DMAT and/or
+       DMAR bits in the USART CR3 register */
+    USARTx->CR3 |= USART_DMAReq;
+ 8000b3a:	687b      	ldr	r3, [r7, #4]
+ 8000b3c:	8a9b      	ldrh	r3, [r3, #20]
+ 8000b3e:	b29a      	uxth	r2, r3
+ 8000b40:	887b      	ldrh	r3, [r7, #2]
+ 8000b42:	4313      	orrs	r3, r2
+ 8000b44:	b29a      	uxth	r2, r3
+ 8000b46:	687b      	ldr	r3, [r7, #4]
+ 8000b48:	829a      	strh	r2, [r3, #20]
+ 8000b4a:	e009      	b.n	8000b60 <USART_DMACmd+0x3c>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:464
+  }
+  else
+  {
+    /* Disable the DMA transfer for selected requests by clearing the DMAT and/or
+       DMAR bits in the USART CR3 register */
+    USARTx->CR3 &= (uint16_t)~USART_DMAReq;
+ 8000b4c:	687b      	ldr	r3, [r7, #4]
+ 8000b4e:	8a9b      	ldrh	r3, [r3, #20]
+ 8000b50:	b29a      	uxth	r2, r3
+ 8000b52:	887b      	ldrh	r3, [r7, #2]
+ 8000b54:	43db      	mvns	r3, r3
+ 8000b56:	b29b      	uxth	r3, r3
+ 8000b58:	4013      	ands	r3, r2
+ 8000b5a:	b29a      	uxth	r2, r3
+ 8000b5c:	687b      	ldr	r3, [r7, #4]
+ 8000b5e:	829a      	strh	r2, [r3, #20]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/StdPeriph/src/stm32f10x_usart.c:466
+  }
+}
+ 8000b60:	370c      	adds	r7, #12
+ 8000b62:	46bd      	mov	sp, r7
+ 8000b64:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000b68:	4770      	bx	lr
+ 8000b6a:	bf00      	nop
+
+08000b6c <__libc_init_array>:
+__libc_init_array():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:179
+(*__fini_array_end[])(void) __attribute__((weak));
+
+// Iterate over all the preinit/init routines.
+inline void
+__libc_init_array(void)
+{
+ 8000b6c:	b580      	push	{r7, lr}
+ 8000b6e:	b082      	sub	sp, #8
+ 8000b70:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:183
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+ 8000b72:	4a15      	ldr	r2, [pc, #84]	; (8000bc8 <__libc_init_array+0x5c>)
+ 8000b74:	4b15      	ldr	r3, [pc, #84]	; (8000bcc <__libc_init_array+0x60>)
+ 8000b76:	1ad3      	subs	r3, r2, r3
+ 8000b78:	109b      	asrs	r3, r3, #2
+ 8000b7a:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:184
+  for (i = 0; i < count; i++)
+ 8000b7c:	2300      	movs	r3, #0
+ 8000b7e:	607b      	str	r3, [r7, #4]
+ 8000b80:	e007      	b.n	8000b92 <__libc_init_array+0x26>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:185 (discriminator 2)
+    __preinit_array_start[i]();
+ 8000b82:	4b12      	ldr	r3, [pc, #72]	; (8000bcc <__libc_init_array+0x60>)
+ 8000b84:	687a      	ldr	r2, [r7, #4]
+ 8000b86:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 8000b8a:	4798      	blx	r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:184 (discriminator 2)
+{
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+  for (i = 0; i < count; i++)
+ 8000b8c:	687b      	ldr	r3, [r7, #4]
+ 8000b8e:	3301      	adds	r3, #1
+ 8000b90:	607b      	str	r3, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:184 (discriminator 1)
+ 8000b92:	687a      	ldr	r2, [r7, #4]
+ 8000b94:	683b      	ldr	r3, [r7, #0]
+ 8000b96:	429a      	cmp	r2, r3
+ 8000b98:	d3f3      	bcc.n	8000b82 <__libc_init_array+0x16>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:192
+  // If you need to run the code in the .init section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+ 8000b9a:	4a0d      	ldr	r2, [pc, #52]	; (8000bd0 <__libc_init_array+0x64>)
+ 8000b9c:	4b0d      	ldr	r3, [pc, #52]	; (8000bd4 <__libc_init_array+0x68>)
+ 8000b9e:	1ad3      	subs	r3, r2, r3
+ 8000ba0:	109b      	asrs	r3, r3, #2
+ 8000ba2:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:193
+  for (i = 0; i < count; i++)
+ 8000ba4:	2300      	movs	r3, #0
+ 8000ba6:	607b      	str	r3, [r7, #4]
+ 8000ba8:	e007      	b.n	8000bba <__libc_init_array+0x4e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:194 (discriminator 2)
+    __init_array_start[i]();
+ 8000baa:	4b0a      	ldr	r3, [pc, #40]	; (8000bd4 <__libc_init_array+0x68>)
+ 8000bac:	687a      	ldr	r2, [r7, #4]
+ 8000bae:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 8000bb2:	4798      	blx	r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:193 (discriminator 2)
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+  for (i = 0; i < count; i++)
+ 8000bb4:	687b      	ldr	r3, [r7, #4]
+ 8000bb6:	3301      	adds	r3, #1
+ 8000bb8:	607b      	str	r3, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:193 (discriminator 1)
+ 8000bba:	687a      	ldr	r2, [r7, #4]
+ 8000bbc:	683b      	ldr	r3, [r7, #0]
+ 8000bbe:	429a      	cmp	r2, r3
+ 8000bc0:	d3f3      	bcc.n	8000baa <__libc_init_array+0x3e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:195
+    __init_array_start[i]();
+}
+ 8000bc2:	3708      	adds	r7, #8
+ 8000bc4:	46bd      	mov	sp, r7
+ 8000bc6:	bd80      	pop	{r7, pc}
+ 8000bc8:	080001ec 	.word	0x080001ec
+ 8000bcc:	080001e8 	.word	0x080001e8
+ 8000bd0:	080001ec 	.word	0x080001ec
+ 8000bd4:	080001ec 	.word	0x080001ec
+
+08000bd8 <__libc_fini_array>:
+__libc_fini_array():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:200
+
+// Run all the cleanup routines.
+inline void
+__libc_fini_array(void)
+{
+ 8000bd8:	b580      	push	{r7, lr}
+ 8000bda:	b082      	sub	sp, #8
+ 8000bdc:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:204
+  size_t count;
+  size_t i;
+
+  count = __fini_array_end - __fini_array_start;
+ 8000bde:	4a0b      	ldr	r2, [pc, #44]	; (8000c0c <__libc_fini_array+0x34>)
+ 8000be0:	4b0b      	ldr	r3, [pc, #44]	; (8000c10 <__libc_fini_array+0x38>)
+ 8000be2:	1ad3      	subs	r3, r2, r3
+ 8000be4:	109b      	asrs	r3, r3, #2
+ 8000be6:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:205
+  for (i = count; i > 0; i--)
+ 8000be8:	683b      	ldr	r3, [r7, #0]
+ 8000bea:	607b      	str	r3, [r7, #4]
+ 8000bec:	e008      	b.n	8000c00 <__libc_fini_array+0x28>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:206 (discriminator 2)
+    __fini_array_start[i - 1]();
+ 8000bee:	687b      	ldr	r3, [r7, #4]
+ 8000bf0:	1e5a      	subs	r2, r3, #1
+ 8000bf2:	4b07      	ldr	r3, [pc, #28]	; (8000c10 <__libc_fini_array+0x38>)
+ 8000bf4:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 8000bf8:	4798      	blx	r3
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:205 (discriminator 2)
+{
+  size_t count;
+  size_t i;
+
+  count = __fini_array_end - __fini_array_start;
+  for (i = count; i > 0; i--)
+ 8000bfa:	687b      	ldr	r3, [r7, #4]
+ 8000bfc:	3b01      	subs	r3, #1
+ 8000bfe:	607b      	str	r3, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:205 (discriminator 1)
+ 8000c00:	687b      	ldr	r3, [r7, #4]
+ 8000c02:	2b00      	cmp	r3, #0
+ 8000c04:	d1f3      	bne.n	8000bee <__libc_fini_array+0x16>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_cm.c:212
+
+  // If you need to run the code in the .fini section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_fini();
+}
+ 8000c06:	3708      	adds	r7, #8
+ 8000c08:	46bd      	mov	sp, r7
+ 8000c0a:	bd80      	pop	{r7, pc}
+ 8000c0c:	080001ec 	.word	0x080001ec
+ 8000c10:	080001ec 	.word	0x080001ec
+
+08000c14 <_exit>:
+_exit():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_stm32f10x.c:15
+// You can redefine it in the application, if more functionality
+// is required
+void
+__attribute__((weak))
+_exit(int r)
+{
+ 8000c14:	b480      	push	{r7}
+ 8000c16:	b083      	sub	sp, #12
+ 8000c18:	af00      	add	r7, sp, #0
+ 8000c1a:	6078      	str	r0, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/startup_stm32f10x.c:18 (discriminator 1)
+#if defined(DEBUG)
+  while(1)
+  ;
+ 8000c1c:	e7fe      	b.n	8000c1c <_exit+0x8>
+ 8000c1e:	bf00      	nop
+
+08000c20 <SystemInit>:
+SystemInit():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:213
+  * @note   This function should be used only after reset.
+  * @param  None
+  * @retval None
+  */
+void SystemInit (void)
+{
+ 8000c20:	b580      	push	{r7, lr}
+ 8000c22:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:216
+  /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+ 8000c24:	4b15      	ldr	r3, [pc, #84]	; (8000c7c <SystemInit+0x5c>)
+ 8000c26:	4a15      	ldr	r2, [pc, #84]	; (8000c7c <SystemInit+0x5c>)
+ 8000c28:	6812      	ldr	r2, [r2, #0]
+ 8000c2a:	f042 0201 	orr.w	r2, r2, #1
+ 8000c2e:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:220
+
+  /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
+#ifndef STM32F10X_CL
+  RCC->CFGR &= (uint32_t)0xF8FF0000;
+ 8000c30:	4a12      	ldr	r2, [pc, #72]	; (8000c7c <SystemInit+0x5c>)
+ 8000c32:	4b12      	ldr	r3, [pc, #72]	; (8000c7c <SystemInit+0x5c>)
+ 8000c34:	6859      	ldr	r1, [r3, #4]
+ 8000c36:	4b12      	ldr	r3, [pc, #72]	; (8000c80 <SystemInit+0x60>)
+ 8000c38:	400b      	ands	r3, r1
+ 8000c3a:	6053      	str	r3, [r2, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:226
+#else
+  RCC->CFGR &= (uint32_t)0xF0FF0000;
+#endif /* STM32F10X_CL */   
+  
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+ 8000c3c:	4a0f      	ldr	r2, [pc, #60]	; (8000c7c <SystemInit+0x5c>)
+ 8000c3e:	4b0f      	ldr	r3, [pc, #60]	; (8000c7c <SystemInit+0x5c>)
+ 8000c40:	681b      	ldr	r3, [r3, #0]
+ 8000c42:	f023 7384 	bic.w	r3, r3, #17301504	; 0x1080000
+ 8000c46:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+ 8000c4a:	6013      	str	r3, [r2, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:229
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+ 8000c4c:	4b0b      	ldr	r3, [pc, #44]	; (8000c7c <SystemInit+0x5c>)
+ 8000c4e:	4a0b      	ldr	r2, [pc, #44]	; (8000c7c <SystemInit+0x5c>)
+ 8000c50:	6812      	ldr	r2, [r2, #0]
+ 8000c52:	f422 2280 	bic.w	r2, r2, #262144	; 0x40000
+ 8000c56:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:232
+
+  /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE/OTGFSPRE bits */
+  RCC->CFGR &= (uint32_t)0xFF80FFFF;
+ 8000c58:	4b08      	ldr	r3, [pc, #32]	; (8000c7c <SystemInit+0x5c>)
+ 8000c5a:	4a08      	ldr	r2, [pc, #32]	; (8000c7c <SystemInit+0x5c>)
+ 8000c5c:	6852      	ldr	r2, [r2, #4]
+ 8000c5e:	f422 02fe 	bic.w	r2, r2, #8323072	; 0x7f0000
+ 8000c62:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:251
+
+  /* Reset CFGR2 register */
+  RCC->CFGR2 = 0x00000000;      
+#else
+  /* Disable all interrupts and clear pending bits  */
+  RCC->CIR = 0x009F0000;
+ 8000c64:	4b05      	ldr	r3, [pc, #20]	; (8000c7c <SystemInit+0x5c>)
+ 8000c66:	f44f 021f 	mov.w	r2, #10420224	; 0x9f0000
+ 8000c6a:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:262
+  #endif /* DATA_IN_ExtSRAM */
+#endif 
+
+  /* Configure the System clock frequency, HCLK, PCLK2 and PCLK1 prescalers */
+  /* Configure the Flash Latency cycles and enable prefetch buffer */
+  SetSysClock();
+ 8000c6c:	f000 f80c 	bl	8000c88 <SetSysClock>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:267
+
+#ifdef VECT_TAB_SRAM
+  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */
+#else
+  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
+ 8000c70:	4b04      	ldr	r3, [pc, #16]	; (8000c84 <SystemInit+0x64>)
+ 8000c72:	f04f 6200 	mov.w	r2, #134217728	; 0x8000000
+ 8000c76:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:269
+#endif 
+}
+ 8000c78:	bd80      	pop	{r7, pc}
+ 8000c7a:	bf00      	nop
+ 8000c7c:	40021000 	.word	0x40021000
+ 8000c80:	f8ff0000 	.word	0xf8ff0000
+ 8000c84:	e000ed00 	.word	0xe000ed00
+
+08000c88 <SetSysClock>:
+SetSysClock():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:420
+  * @brief  Configures the System clock frequency, HCLK, PCLK2 and PCLK1 prescalers.
+  * @param  None
+  * @retval None
+  */
+static void SetSysClock(void)
+{
+ 8000c88:	b580      	push	{r7, lr}
+ 8000c8a:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:432
+#elif defined SYSCLK_FREQ_48MHz
+  SetSysClockTo48();
+#elif defined SYSCLK_FREQ_56MHz
+  SetSysClockTo56();  
+#elif defined SYSCLK_FREQ_72MHz
+  SetSysClockTo72();
+ 8000c8c:	f000 f802 	bl	8000c94 <SetSysClockTo72>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:437
+#endif
+ 
+ /* If none of the define above is enabled, the HSI is used as System clock
+    source (default after reset) */ 
+}
+ 8000c90:	bd80      	pop	{r7, pc}
+ 8000c92:	bf00      	nop
+
+08000c94 <SetSysClockTo72>:
+SetSysClockTo72():
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:988
+  * @note   This function should be used only after reset.
+  * @param  None
+  * @retval None
+  */
+static void SetSysClockTo72(void)
+{
+ 8000c94:	b480      	push	{r7}
+ 8000c96:	b083      	sub	sp, #12
+ 8000c98:	af00      	add	r7, sp, #0
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:989
+  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+ 8000c9a:	2300      	movs	r3, #0
+ 8000c9c:	607b      	str	r3, [r7, #4]
+ 8000c9e:	2300      	movs	r3, #0
+ 8000ca0:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:993
+  
+  /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/    
+  /* Enable HSE */    
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+ 8000ca2:	4b3a      	ldr	r3, [pc, #232]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000ca4:	4a39      	ldr	r2, [pc, #228]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000ca6:	6812      	ldr	r2, [r2, #0]
+ 8000ca8:	f442 3280 	orr.w	r2, r2, #65536	; 0x10000
+ 8000cac:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:998 (discriminator 1)
+ 
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC->CR & RCC_CR_HSERDY;
+ 8000cae:	4b37      	ldr	r3, [pc, #220]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000cb0:	681b      	ldr	r3, [r3, #0]
+ 8000cb2:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+ 8000cb6:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:999 (discriminator 1)
+    StartUpCounter++;  
+ 8000cb8:	687b      	ldr	r3, [r7, #4]
+ 8000cba:	3301      	adds	r3, #1
+ 8000cbc:	607b      	str	r3, [r7, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1000 (discriminator 1)
+  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+ 8000cbe:	683b      	ldr	r3, [r7, #0]
+ 8000cc0:	2b00      	cmp	r3, #0
+ 8000cc2:	d103      	bne.n	8000ccc <SetSysClockTo72+0x38>
+ 8000cc4:	687b      	ldr	r3, [r7, #4]
+ 8000cc6:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
+ 8000cca:	d1f0      	bne.n	8000cae <SetSysClockTo72+0x1a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1002
+
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+ 8000ccc:	4b2f      	ldr	r3, [pc, #188]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000cce:	681b      	ldr	r3, [r3, #0]
+ 8000cd0:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+ 8000cd4:	2b00      	cmp	r3, #0
+ 8000cd6:	d002      	beq.n	8000cde <SetSysClockTo72+0x4a>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1004
+  {
+    HSEStatus = (uint32_t)0x01;
+ 8000cd8:	2301      	movs	r3, #1
+ 8000cda:	603b      	str	r3, [r7, #0]
+ 8000cdc:	e001      	b.n	8000ce2 <SetSysClockTo72+0x4e>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1008
+  }
+  else
+  {
+    HSEStatus = (uint32_t)0x00;
+ 8000cde:	2300      	movs	r3, #0
+ 8000ce0:	603b      	str	r3, [r7, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1011
+  }  
+
+  if (HSEStatus == (uint32_t)0x01)
+ 8000ce2:	683b      	ldr	r3, [r7, #0]
+ 8000ce4:	2b01      	cmp	r3, #1
+ 8000ce6:	d14b      	bne.n	8000d80 <SetSysClockTo72+0xec>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1014
+  {
+    /* Enable Prefetch Buffer */
+    FLASH->ACR |= FLASH_ACR_PRFTBE;
+ 8000ce8:	4b29      	ldr	r3, [pc, #164]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000cea:	4a29      	ldr	r2, [pc, #164]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000cec:	6812      	ldr	r2, [r2, #0]
+ 8000cee:	f042 0210 	orr.w	r2, r2, #16
+ 8000cf2:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1017
+
+    /* Flash 2 wait state */
+    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
+ 8000cf4:	4b26      	ldr	r3, [pc, #152]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000cf6:	4a26      	ldr	r2, [pc, #152]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000cf8:	6812      	ldr	r2, [r2, #0]
+ 8000cfa:	f022 0203 	bic.w	r2, r2, #3
+ 8000cfe:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1018
+    FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;    
+ 8000d00:	4b23      	ldr	r3, [pc, #140]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000d02:	4a23      	ldr	r2, [pc, #140]	; (8000d90 <SetSysClockTo72+0xfc>)
+ 8000d04:	6812      	ldr	r2, [r2, #0]
+ 8000d06:	f042 0202 	orr.w	r2, r2, #2
+ 8000d0a:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1022
+
+ 
+    /* HCLK = SYSCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+ 8000d0c:	4b1f      	ldr	r3, [pc, #124]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d0e:	4a1f      	ldr	r2, [pc, #124]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d10:	6852      	ldr	r2, [r2, #4]
+ 8000d12:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1025
+      
+    /* PCLK2 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
+ 8000d14:	4b1d      	ldr	r3, [pc, #116]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d16:	4a1d      	ldr	r2, [pc, #116]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d18:	6852      	ldr	r2, [r2, #4]
+ 8000d1a:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1028
+    
+    /* PCLK1 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
+ 8000d1c:	4b1b      	ldr	r3, [pc, #108]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d1e:	4a1b      	ldr	r2, [pc, #108]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d20:	6852      	ldr	r2, [r2, #4]
+ 8000d22:	f442 6280 	orr.w	r2, r2, #1024	; 0x400
+ 8000d26:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1054
+    RCC->CFGR &= (uint32_t)~(RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL);
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | 
+                            RCC_CFGR_PLLMULL9); 
+#else    
+    /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
+ 8000d28:	4b18      	ldr	r3, [pc, #96]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d2a:	4a18      	ldr	r2, [pc, #96]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d2c:	6852      	ldr	r2, [r2, #4]
+ 8000d2e:	f422 127c 	bic.w	r2, r2, #4128768	; 0x3f0000
+ 8000d32:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1056
+                                        RCC_CFGR_PLLMULL));
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
+ 8000d34:	4b15      	ldr	r3, [pc, #84]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d36:	4a15      	ldr	r2, [pc, #84]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d38:	6852      	ldr	r2, [r2, #4]
+ 8000d3a:	f442 12e8 	orr.w	r2, r2, #1900544	; 0x1d0000
+ 8000d3e:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1060
+#endif /* STM32F10X_CL */
+
+    /* Enable PLL */
+    RCC->CR |= RCC_CR_PLLON;
+ 8000d40:	4b12      	ldr	r3, [pc, #72]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d42:	4a12      	ldr	r2, [pc, #72]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d44:	6812      	ldr	r2, [r2, #0]
+ 8000d46:	f042 7280 	orr.w	r2, r2, #16777216	; 0x1000000
+ 8000d4a:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1063
+
+    /* Wait till PLL is ready */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)
+ 8000d4c:	bf00      	nop
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1063 (discriminator 1)
+ 8000d4e:	4b0f      	ldr	r3, [pc, #60]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d50:	681b      	ldr	r3, [r3, #0]
+ 8000d52:	f003 7300 	and.w	r3, r3, #33554432	; 0x2000000
+ 8000d56:	2b00      	cmp	r3, #0
+ 8000d58:	d0f9      	beq.n	8000d4e <SetSysClockTo72+0xba>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1068
+    {
+    }
+    
+    /* Select PLL as system clock source */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+ 8000d5a:	4b0c      	ldr	r3, [pc, #48]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d5c:	4a0b      	ldr	r2, [pc, #44]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d5e:	6852      	ldr	r2, [r2, #4]
+ 8000d60:	f022 0203 	bic.w	r2, r2, #3
+ 8000d64:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1069
+    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
+ 8000d66:	4b09      	ldr	r3, [pc, #36]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d68:	4a08      	ldr	r2, [pc, #32]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d6a:	6852      	ldr	r2, [r2, #4]
+ 8000d6c:	f042 0202 	orr.w	r2, r2, #2
+ 8000d70:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1072
+
+    /* Wait till PLL is used as system clock source */
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)
+ 8000d72:	bf00      	nop
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1072 (discriminator 1)
+ 8000d74:	4b05      	ldr	r3, [pc, #20]	; (8000d8c <SetSysClockTo72+0xf8>)
+ 8000d76:	685b      	ldr	r3, [r3, #4]
+ 8000d78:	f003 030c 	and.w	r3, r3, #12
+ 8000d7c:	2b08      	cmp	r3, #8
+ 8000d7e:	d1f9      	bne.n	8000d74 <SetSysClockTo72+0xe0>
+/home/kartik/workspaceSTM32/stepper/Debug/../libs/CMSIS/src/system_stm32f10x.c:1080
+  }
+  else
+  { /* If HSE fails to start-up, the application will have wrong clock 
+         configuration. User can add here some code to deal with this error */
+  }
+}
+ 8000d80:	370c      	adds	r7, #12
+ 8000d82:	46bd      	mov	sp, r7
+ 8000d84:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000d88:	4770      	bx	lr
+ 8000d8a:	bf00      	nop
+ 8000d8c:	40021000 	.word	0x40021000
+ 8000d90:	40022000 	.word	0x40022000
