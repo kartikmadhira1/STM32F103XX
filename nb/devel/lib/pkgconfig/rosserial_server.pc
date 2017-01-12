@@ -1,0 +1,8 @@
+prefix=/home/kartik/workspaceSTM32/nb/devel
+
+Name: rosserial_server
+Description: Description of rosserial_server
+Version: 0.7.5
+Cflags: -I/home/kartik/workspaceSTM32/nb/src/rosserial/rosserial_server/include
+Libs: -L/home/kartik/workspaceSTM32/nb/devel/lib 
+Requires: roscpp rosserial_msgs topic_tools

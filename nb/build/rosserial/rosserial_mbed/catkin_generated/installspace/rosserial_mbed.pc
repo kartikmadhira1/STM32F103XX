@@ -1,0 +1,8 @@
+prefix=/home/kartik/workspaceSTM32/nb/install
+
+Name: rosserial_mbed
+Description: Description of rosserial_mbed
+Version: 0.7.5
+Cflags: -I/home/kartik/workspaceSTM32/nb/install/include
+Libs: -L/home/kartik/workspaceSTM32/nb/install/lib 
+Requires: message_runtime

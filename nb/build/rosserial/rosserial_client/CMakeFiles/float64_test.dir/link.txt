@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/float64_test.dir/test/float64_test.cpp.o  -o /home/kartik/workspaceSTM32/nb/devel/lib/rosserial_client/float64_test -rdynamic -Wl,-Bstatic -lgtest -Wl,-Bdynamic 

@@ -1,0 +1,1978 @@
+
+nb.elf:     file format elf32-littlearm
+nb.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x08000135
+
+Program Header:
+    LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
+         filesz 0x00000628 memsz 0x00000628 flags rwx
+    LOAD off    0x00010000 vaddr 0x20000000 paddr 0x20000000 align 2**15
+         filesz 0x00000000 memsz 0x0000011c flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .isr_vector   00000178  08000000  08000000  00008000  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 ._inits       00000004  08000178  08000178  00008178  2**2  CONTENTS, ALLOC, LOAD, DATA
+  2 .text         000004ac  0800017c  0800017c  0000817c  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .bss          0000001c  20000000  20000000  00010000  2**2  ALLOC
+  4 ._check_stack 00000100  2000001c  2000001c  00010000  2**0  ALLOC
+  5 .comment      00000070  00000000  00000000  00008628  2**0  CONTENTS, READONLY
+  6 .ARM.attributes 00000033  00000000  00000000  00008698  2**0  CONTENTS, READONLY
+  7 .debug_aranges 00000368  00000000  00000000  000086cb  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   00002a87  00000000  00000000  00008a33  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00000d2c  00000000  00000000  0000b4ba  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   00000f2f  00000000  00000000  0000c1e6  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  00000648  00000000  00000000  0000d118  2**2  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    00001355  00000000  00000000  0000d760  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_loc    00001084  00000000  00000000  0000eab5  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 000002f0  00000000  00000000  0000fb39  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08000000 l    d  .isr_vector	00000000 .isr_vector
+08000178 l    d  ._inits	00000000 ._inits
+0800017c l    d  .text	00000000 .text
+20000000 l    d  .bss	00000000 .bss
+2000001c l    d  ._check_stack	00000000 ._check_stack
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 vectors_stm32f10x.c
+00000000 l    df *ABS*	00000000 startup_cm.c
+00000000 l    df *ABS*	00000000 main.c
+20000000 l     O .bss	00000002 current_encoder_pos.6411
+20000002 l     O .bss	00000002 enc_count.6412
+08000618 l     O .text	00000010 states.6410
+20000004 l     O .bss	00000001 prev_encoder_pos.6413
+20000005 l     O .bss	00000001 count.6409
+00000000 l    df *ABS*	00000000 misc.c
+00000000 l    df *ABS*	00000000 stm32f10x_exti.c
+00000000 l    df *ABS*	00000000 stm32f10x_gpio.c
+00000000 l    df *ABS*	00000000 stm32f10x_rcc.c
+00000000 l    df *ABS*	00000000 startup_stm32f10x.c
+00000000 l    df *ABS*	00000000 system_stm32f10x.c
+00000000 l    df *ABS*	00000000 
+20004c00 l       *ABS*	00000000 _Heap_Limit
+00000400 l       *ABS*	00000000 _Main_Stack_Size
+08000628 l       .text	00000000 __exidx_end
+2000001c l       ._check_stack	00000000 _Heap_Begin
+08000628 l       .bss	00000000 _etext
+20004c00 l       *ABS*	00000000 __Main_Stack_Limit
+0800017c l       ._inits	00000000 __fini_array_end
+08000628 l       .text	00000000 __exidx_start
+00000400 l       *ABS*	00000000 __Main_Stack_Size
+00000100 l       *ABS*	00000000 _Minimum_Stack_Size
+2000001c l       ._check_stack	00000000 _end_noinit
+0800017c l       ._inits	00000000 __fini_array_start
+0800017c l       ._inits	00000000 __init_array_end
+0800017c l       ._inits	00000000 __preinit_array_end
+20005000 l       *ABS*	00000000 __stack
+0800017c l       ._inits	00000000 __init_array_start
+08000178 l       ._inits	00000000 __preinit_array_start
+08000164  w    F .isr_vector	00000002 RTC_Alarm_IRQHandler
+08000164  w    F .isr_vector	00000002 EXTI2_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_TRG_COM_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_CC_IRQHandler
+08000172  w    F .isr_vector	00000002 DebugMon_Handler
+08000178 g     O ._inits	00000004 p_system_init
+20000000 g       .text	00000000 __data_start__
+08000164  w    F .isr_vector	00000002 TIM1_CC_IRQHandler
+08000168  w    F .isr_vector	00000002 HardFault_Handler
+08000164  w    F .isr_vector	00000002 TIM6_IRQHandler
+08000176  w    F .isr_vector	00000002 SysTick_Handler
+080002c0 g     F .text	00000068 NVIC_Init
+08000164  w    F .isr_vector	00000002 PVD_IRQHandler
+08000164  w    F .isr_vector	00000002 SDIO_IRQHandler
+08000628 g       .bss	00000000 _sidata
+08000174  w    F .isr_vector	00000002 PendSV_Handler
+08000166  w    F .isr_vector	00000002 NMI_Handler
+0800010c g     F .isr_vector	00000028 system_init
+08000164  w    F .isr_vector	00000002 CAN2_RX1_IRQHandler
+08000164  w    F .isr_vector	00000002 EXTI3_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_TRG_COM_TIM14_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_UP_TIM10_IRQHandler
+20000000 g       .bss	00000000 _sbss
+08000164  w    F .isr_vector	00000002 TIM8_UP_TIM13_IRQHandler
+08000164  w    F .isr_vector	00000002 EXTI0_IRQHandler
+08000164  w    F .isr_vector	00000002 I2C2_EV_IRQHandler
+2000001c g       ._check_stack	00000000 _noinit
+08000164  w    F .isr_vector	00000002 CAN1_RX0_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_UP_TIM16_IRQHandler
+0800016e  w    F .isr_vector	00000002 UsageFault_Handler
+08000484 g     F .text	00000018 RCC_APB2PeriphClockCmd
+08000164  w    F .isr_vector	00000002 CAN2_SCE_IRQHandler
+08000164  w    F .isr_vector	00000002 ADC1_2_IRQHandler
+080003a8 g     F .text	0000009c GPIO_Init
+20000000 g       .bss	00000000 __bss_start__
+20000000 g       .text	00000000 _sdata
+08000164  w    F .isr_vector	00000002 SPI1_IRQHandler
+08000164  w    F .isr_vector	00000002 TAMPER_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM6_DAC_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_BRK_TIM9_IRQHandler
+08000164  w    F .isr_vector	00000002 CAN2_RX0_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_UP_IRQHandler
+0800049c g     F .text	00000048 __libc_init_array
+08000164  w    F .isr_vector	00000002 DMA2_Channel2_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA1_Channel4_IRQHandler
+08000164  w    F .isr_vector	00000002 USART3_IRQHandler
+0800039c g     F .text	0000000c EXTI_ClearITPendingBit
+080004e4 g     F .text	00000024 __libc_fini_array
+08000164  w    F .isr_vector	00000002 RTC_IRQHandler
+2000001c g       .bss	00000000 _ebss
+08000164  w    F .isr_vector	00000002 DMA1_Channel7_IRQHandler
+08000134  w    F .isr_vector	00000030 Reset_Handler
+08000164  w    F .isr_vector	00000002 CAN1_RX1_IRQHandler
+08000164  w    F .isr_vector	00000002 UART5_IRQHandler
+08000164  w    F .isr_vector	00000002 ADC3_IRQHandler
+08000450 g     F .text	00000004 GPIO_SetBits
+08000164  w    F .isr_vector	00000002 TIM4_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA2_Channel1_IRQHandler
+08000164  w    F .isr_vector	00000002 I2C1_EV_IRQHandler
+20000000 g       .text	00000000 __data_end__
+08000164  w    F .isr_vector	00000002 DMA1_Channel6_IRQHandler
+08000164  w    F .isr_vector	00000002 UART4_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA2_Channel4_IRQHandler
+2000001c g       .bss	00000000 __bss_end__
+08000164  w    F .isr_vector	00000002 TIM3_IRQHandler
+08000164  w    F .isr_vector	00000002 RCC_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_BRK_TIM12_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_TRG_COM_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA1_Channel1_IRQHandler
+08000164  w    F .isr_vector	00000002 Default_Handler
+08000164  w    F .isr_vector	00000002 CEC_IRQHandler
+08000164  w    F .isr_vector	00000002 EXTI15_10_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM14_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM13_IRQHandler
+08000328 g     F .text	00000074 EXTI_Init
+08000454 g     F .text	00000004 GPIO_ResetBits
+08000164  w    F .isr_vector	00000002 TIM12_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM7_IRQHandler
+08000164  w    F .isr_vector	00000002 CAN2_TX_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM5_IRQHandler
+0800017c g     F .text	000000a8 EXTI9_5_IRQHandler
+08000458 g     F .text	0000002a GPIO_EXTILineConfig
+08000164  w    F .isr_vector	00000002 ETH_WKUP_IRQHandler
+08000164  w    F .isr_vector	00000002 SPI2_IRQHandler
+0800016a  w    F .isr_vector	00000002 MemManage_Handler
+08000224 g     F .text	0000009c main
+08000164  w    F .isr_vector	00000002 CAN1_TX_IRQHandler
+08000170  w    F .isr_vector	00000002 SVC_Handler
+08000164  w    F .isr_vector	00000002 DMA2_Channel5_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA1_Channel5_IRQHandler
+08000164  w    F .isr_vector	00000002 EXTI4_IRQHandler
+08000164  w    F .isr_vector	00000002 USB_LP_CAN1_RX0_IRQHandler
+20000008 g     O .bss	00000004 GPIO_InitStructure
+2000000c g     O .bss	00000004 nvic
+08000524 g     F .text	000000f4 SystemInit
+20000010 g     O .bss	00000004 count
+08000164  w    F .isr_vector	00000002 TIM1_TRG_COM_TIM17_IRQHandler
+08000164  w    F .isr_vector	00000002 USB_HP_CAN1_TX_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA1_Channel3_IRQHandler
+08000164  w    F .isr_vector	00000002 FSMC_IRQHandler
+08000164  w    F .isr_vector	00000002 ETH_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_UP_IRQHandler
+08000164  w    F .isr_vector	00000002 WWDG_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM2_IRQHandler
+08000164  w    F .isr_vector	00000002 OTG_FS_WKUP_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_TRG_COM_TIM11_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_BRK_IRQHandler
+20005000 g       *ABS*	00000000 _estack
+08000164  w    F .isr_vector	00000002 EXTI1_IRQHandler
+20000000 g       .text	00000000 _edata
+08000164  w    F .isr_vector	00000002 DMA2_Channel4_5_IRQHandler
+08000164  w    F .isr_vector	00000002 USART2_IRQHandler
+08000000 g     O .isr_vector	0000010c g_pfnVectors
+08000164  w    F .isr_vector	00000002 I2C2_ER_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA1_Channel2_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM8_BRK_IRQHandler
+08000164  w    F .isr_vector	00000002 CAN1_SCE_IRQHandler
+08000164  w    F .isr_vector	00000002 FLASH_IRQHandler
+08000508  w    F .text	0000001c _exit
+20000014 g     O .bss	00000008 EXTI_struct
+0800016c  w    F .isr_vector	00000002 BusFault_Handler
+08000164  w    F .isr_vector	00000002 USART1_IRQHandler
+08000164  w    F .isr_vector	00000002 OTG_FS_IRQHandler
+08000164  w    F .isr_vector	00000002 SPI3_IRQHandler
+08000164  w    F .isr_vector	00000002 I2C1_ER_IRQHandler
+08000444 g     F .text	0000000c GPIO_ReadInputDataBit
+08000164  w    F .isr_vector	00000002 USBWakeUp_IRQHandler
+08000164  w    F .isr_vector	00000002 DMA2_Channel3_IRQHandler
+08000164  w    F .isr_vector	00000002 TIM1_BRK_TIM15_IRQHandler
+
+
+
+Disassembly of section .isr_vector:
+
+08000000 <g_pfnVectors>:
+$d():
+ 8000000:	00 50 00 20 35 01 00 08 67 01 00 08 69 01 00 08     .P. 5...g...i...
+ 8000010:	6b 01 00 08 6d 01 00 08 6f 01 00 08 00 00 00 00     k...m...o.......
+	...
+ 800002c:	71 01 00 08 73 01 00 08 00 00 00 00 75 01 00 08     q...s.......u...
+ 800003c:	77 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     w...e...e...e...
+ 800004c:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 800005c:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 800006c:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 800007c:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 800008c:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 800009c:	7d 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     }...e...e...e...
+ 80000ac:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 80000bc:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 80000cc:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+ 80000dc:	65 01 00 08 65 01 00 08 65 01 00 08 65 01 00 08     e...e...e...e...
+	...
+ 8000108:	5f f8 08 f1                                         _...
+
+0800010c <system_init>:
+system_init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:248
+
+// System initialisation, executed before constructors.
+void
+__attribute__((section(".after_vectors")))
+system_init()
+{
+ 800010c:	2300      	movs	r3, #0
+ 800010e:	4a06      	ldr	r2, [pc, #24]	; (8000128 <system_init+0x1c>)
+data_init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:106
+    unsigned int* section_end)
+{
+  // Iterate and copy word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+  while (p < section_end)
+ 8000110:	4906      	ldr	r1, [pc, #24]	; (800012c <system_init+0x20>)
+ 8000112:	1898      	adds	r0, r3, r2
+ 8000114:	4288      	cmp	r0, r1
+ 8000116:	d204      	bcs.n	8000122 <system_init+0x16>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:107
+    *p++ = *from++;
+ 8000118:	4905      	ldr	r1, [pc, #20]	; (8000130 <system_init+0x24>)
+ 800011a:	5859      	ldr	r1, [r3, r1]
+ 800011c:	5099      	str	r1, [r3, r2]
+ 800011e:	3304      	adds	r3, #4
+ 8000120:	e7f5      	b.n	800010e <system_init+0x2>
+system_init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:256
+  // so we must be sure it is executed somewhere.
+  // (for example librdimon)
+  data_init(&_sidata, &_sdata, &_edata);
+
+  // Call the CSMSIS system initialisation routine
+  SystemInit();
+ 8000122:	f000 b9ff 	b.w	8000524 <SystemInit>
+ 8000126:	bf00      	nop
+ 8000128:	20000000 	.word	0x20000000
+ 800012c:	20000000 	.word	0x20000000
+ 8000130:	08000628 	.word	0x08000628
+
+08000134 <Reset_Handler>:
+Reset_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:217
+}
+
+// This is the place where Cortex-M core will go immediately after reset.
+void __attribute__ ((section(".after_vectors")))
+Reset_Handler(void)
+{
+ 8000134:	b510      	push	{r4, lr}
+bss_init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:118
+__attribute__((always_inline))
+bss_init(unsigned int* section_begin, unsigned int* section_end)
+{
+  // Iterate and clear word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+ 8000136:	4b09      	ldr	r3, [pc, #36]	; (800015c <Reset_Handler+0x28>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:119
+  while (p < section_end)
+ 8000138:	4a09      	ldr	r2, [pc, #36]	; (8000160 <Reset_Handler+0x2c>)
+ 800013a:	4293      	cmp	r3, r2
+ 800013c:	d203      	bcs.n	8000146 <Reset_Handler+0x12>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:120
+    *p++ = 0;
+ 800013e:	2200      	movs	r2, #0
+ 8000140:	f843 2b04 	str.w	r2, [r3], #4
+ 8000144:	e7f8      	b.n	8000138 <Reset_Handler+0x4>
+Reset_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:227
+  // Zero fill the bss segment
+  bss_init(&__bss_start__, &__bss_end__);
+
+  // Call the standard library initialisation (mandatory, SystemInit()
+  // and C++ static constructors are called from here).
+  __libc_init_array();
+ 8000146:	f000 f9a9 	bl	800049c <__libc_init_array>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:230
+
+  // Call the main entry point, and save the exit code.
+  int r = main();
+ 800014a:	f000 f86b 	bl	8000224 <main>
+ 800014e:	4604      	mov	r4, r0
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:233
+
+  // Run the static destructors.
+  __libc_fini_array();
+ 8000150:	f000 f9c8 	bl	80004e4 <__libc_fini_array>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:238
+
+  // On test platforms, like semihosting, this can be used to inform
+  // the host on the test result.
+  // On embedded platforms, usually reset the processor.
+  _exit(r);
+ 8000154:	4620      	mov	r0, r4
+ 8000156:	f000 f9d7 	bl	8000508 <_exit>
+ 800015a:	bf00      	nop
+ 800015c:	20000000 	.word	0x20000000
+ 8000160:	2000001c 	.word	0x2000001c
+
+08000164 <ADC1_2_IRQHandler>:
+Default_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:934
+//
+//*****************************************************************************
+
+void __attribute__ ((section(".after_vectors")))
+Default_Handler(void)
+{
+ 8000164:	e7fe      	b.n	8000164 <ADC1_2_IRQHandler>
+
+08000166 <NMI_Handler>:
+NMI_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:946
+// Default exception handlers. Override the ones here by defining your own
+// handler routines in your application code.
+//*****************************************************************************
+void __attribute__ ((section(".after_vectors")))
+NMI_Handler(void)
+{
+ 8000166:	e7fe      	b.n	8000166 <NMI_Handler>
+
+08000168 <HardFault_Handler>:
+HardFault_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:954
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+HardFault_Handler(void)
+{
+ 8000168:	e7fe      	b.n	8000168 <HardFault_Handler>
+
+0800016a <MemManage_Handler>:
+MemManage_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:962
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+MemManage_Handler(void)
+{
+ 800016a:	e7fe      	b.n	800016a <MemManage_Handler>
+
+0800016c <BusFault_Handler>:
+BusFault_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:970
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+BusFault_Handler(void)
+{
+ 800016c:	e7fe      	b.n	800016c <BusFault_Handler>
+
+0800016e <UsageFault_Handler>:
+UsageFault_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:978
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+UsageFault_Handler(void)
+{
+ 800016e:	e7fe      	b.n	800016e <UsageFault_Handler>
+
+08000170 <SVC_Handler>:
+SVC_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:986
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+SVC_Handler(void)
+{
+ 8000170:	e7fe      	b.n	8000170 <SVC_Handler>
+
+08000172 <DebugMon_Handler>:
+DebugMon_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:994
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+DebugMon_Handler(void)
+{
+ 8000172:	e7fe      	b.n	8000172 <DebugMon_Handler>
+
+08000174 <PendSV_Handler>:
+PendSV_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:1002
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+PendSV_Handler(void)
+{
+ 8000174:	e7fe      	b.n	8000174 <PendSV_Handler>
+
+08000176 <SysTick_Handler>:
+SysTick_Handler():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/vectors_stm32f10x.c:1010
+    }
+}
+
+void __attribute__ ((section(".after_vectors")))
+SysTick_Handler(void)
+{
+ 8000176:	e7fe      	b.n	8000176 <SysTick_Handler>
+
+Disassembly of section .text:
+
+0800017c <EXTI9_5_IRQHandler>:
+EXTI9_5_IRQHandler():
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:30
+
+
+
+void EXTI9_5_IRQHandler(void)
+
+{ 	static int8_t   count;
+ 800017c:	b537      	push	{r0, r1, r2, r4, r5, lr}
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:35
+	static const    int8_t states[] = {0,-1,1,0,1,0,0,-1,-1,0,0,1,0,1,-1,0} ;
+	static uint16_t  current_encoder_pos,enc_count;
+	static uint8_t  prev_encoder_pos=0;
+	//first reading the current encoder values and storing in the form of AB.
+	prev_encoder_pos<<=2;
+ 800017e:	4c22      	ldr	r4, [pc, #136]	; (8000208 <__fini_array_end+0x8c>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:36
+	current_encoder_pos=GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)<<1| GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5);
+ 8000180:	2140      	movs	r1, #64	; 0x40
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:35
+{ 	static int8_t   count;
+	static const    int8_t states[] = {0,-1,1,0,1,0,0,-1,-1,0,0,1,0,1,-1,0} ;
+	static uint16_t  current_encoder_pos,enc_count;
+	static uint8_t  prev_encoder_pos=0;
+	//first reading the current encoder values and storing in the form of AB.
+	prev_encoder_pos<<=2;
+ 8000182:	7823      	ldrb	r3, [r4, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:36
+	current_encoder_pos=GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)<<1| GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5);
+ 8000184:	4821      	ldr	r0, [pc, #132]	; (800020c <__fini_array_end+0x90>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:35
+{ 	static int8_t   count;
+	static const    int8_t states[] = {0,-1,1,0,1,0,0,-1,-1,0,0,1,0,1,-1,0} ;
+	static uint16_t  current_encoder_pos,enc_count;
+	static uint8_t  prev_encoder_pos=0;
+	//first reading the current encoder values and storing in the form of AB.
+	prev_encoder_pos<<=2;
+ 8000186:	009b      	lsls	r3, r3, #2
+ 8000188:	7023      	strb	r3, [r4, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:36
+	current_encoder_pos=GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)<<1| GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5);
+ 800018a:	f000 f95b 	bl	8000444 <GPIO_ReadInputDataBit>
+ 800018e:	2120      	movs	r1, #32
+ 8000190:	4605      	mov	r5, r0
+ 8000192:	481e      	ldr	r0, [pc, #120]	; (800020c <__fini_array_end+0x90>)
+ 8000194:	f000 f956 	bl	8000444 <GPIO_ReadInputDataBit>
+ 8000198:	4a1d      	ldr	r2, [pc, #116]	; (8000210 <__fini_array_end+0x94>)
+ 800019a:	ea40 0045 	orr.w	r0, r0, r5, lsl #1
+ 800019e:	b283      	uxth	r3, r0
+ 80001a0:	8013      	strh	r3, [r2, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:38
+	//adding the previous state also and appending it to the prev_encoder_pos;
+	prev_encoder_pos|=(current_encoder_pos & 0x03);
+ 80001a2:	7822      	ldrb	r2, [r4, #0]
+ 80001a4:	f003 0303 	and.w	r3, r3, #3
+ 80001a8:	4313      	orrs	r3, r2
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:40
+	//now anding with 0xff and it will give one of the states given in the statetable;
+	count= states[(prev_encoder_pos & 0x0f)];
+ 80001aa:	4a1a      	ldr	r2, [pc, #104]	; (8000214 <__fini_array_end+0x98>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:38
+	static uint8_t  prev_encoder_pos=0;
+	//first reading the current encoder values and storing in the form of AB.
+	prev_encoder_pos<<=2;
+	current_encoder_pos=GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)<<1| GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5);
+	//adding the previous state also and appending it to the prev_encoder_pos;
+	prev_encoder_pos|=(current_encoder_pos & 0x03);
+ 80001ac:	7023      	strb	r3, [r4, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:40
+	//now anding with 0xff and it will give one of the states given in the statetable;
+	count= states[(prev_encoder_pos & 0x0f)];
+ 80001ae:	f003 030f 	and.w	r3, r3, #15
+ 80001b2:	5cd3      	ldrb	r3, [r2, r3]
+ 80001b4:	4a18      	ldr	r2, [pc, #96]	; (8000218 <__fini_array_end+0x9c>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:41
+	if (count==1)
+ 80001b6:	2b01      	cmp	r3, #1
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:40
+	prev_encoder_pos<<=2;
+	current_encoder_pos=GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)<<1| GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5);
+	//adding the previous state also and appending it to the prev_encoder_pos;
+	prev_encoder_pos|=(current_encoder_pos & 0x03);
+	//now anding with 0xff and it will give one of the states given in the statetable;
+	count= states[(prev_encoder_pos & 0x0f)];
+ 80001b8:	7013      	strb	r3, [r2, #0]
+ 80001ba:	4b18      	ldr	r3, [pc, #96]	; (800021c <__fini_array_end+0xa0>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:41
+	if (count==1)
+ 80001bc:	d102      	bne.n	80001c4 <EXTI9_5_IRQHandler+0x48>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:43
+	{
+		enc_count++;
+ 80001be:	881a      	ldrh	r2, [r3, #0]
+ 80001c0:	3201      	adds	r2, #1
+ 80001c2:	801a      	strh	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:46
+	}
+
+	if (enc_count==1200)
+ 80001c4:	881b      	ldrh	r3, [r3, #0]
+ 80001c6:	f5b3 6f96 	cmp.w	r3, #1200	; 0x4b0
+ 80001ca:	d115      	bne.n	80001f8 <EXTI9_5_IRQHandler+0x7c>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:49
+	{
+		GPIO_InitTypeDef GPIO_InitStructure;
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+ 80001cc:	2010      	movs	r0, #16
+ 80001ce:	2101      	movs	r1, #1
+ 80001d0:	f000 f958 	bl	8000484 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:51
+		GPIO_InitStructure.GPIO_Pin=GPIO_Pin_13;
+		GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+ 80001d4:	2310      	movs	r3, #16
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:50
+
+	if (enc_count==1200)
+	{
+		GPIO_InitTypeDef GPIO_InitStructure;
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+		GPIO_InitStructure.GPIO_Pin=GPIO_Pin_13;
+ 80001d6:	f44f 5400 	mov.w	r4, #8192	; 0x2000
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:51
+		GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+ 80001da:	f88d 3007 	strb.w	r3, [sp, #7]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:53
+		GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+		GPIO_Init(GPIOC,&GPIO_InitStructure);
+ 80001de:	4810      	ldr	r0, [pc, #64]	; (8000220 <__fini_array_end+0xa4>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:52
+	{
+		GPIO_InitTypeDef GPIO_InitStructure;
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+		GPIO_InitStructure.GPIO_Pin=GPIO_Pin_13;
+		GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+		GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+ 80001e0:	2302      	movs	r3, #2
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:53
+		GPIO_Init(GPIOC,&GPIO_InitStructure);
+ 80001e2:	a901      	add	r1, sp, #4
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:50
+
+	if (enc_count==1200)
+	{
+		GPIO_InitTypeDef GPIO_InitStructure;
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+		GPIO_InitStructure.GPIO_Pin=GPIO_Pin_13;
+ 80001e4:	f8ad 4004 	strh.w	r4, [sp, #4]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:52
+		GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+		GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+ 80001e8:	f88d 3006 	strb.w	r3, [sp, #6]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:53
+		GPIO_Init(GPIOC,&GPIO_InitStructure);
+ 80001ec:	f000 f8dc 	bl	80003a8 <GPIO_Init>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:55
+		//setting the pin high for the led
+		GPIO_ResetBits(GPIOC,GPIO_Pin_13);
+ 80001f0:	480b      	ldr	r0, [pc, #44]	; (8000220 <__fini_array_end+0xa4>)
+ 80001f2:	4621      	mov	r1, r4
+ 80001f4:	f000 f92e 	bl	8000454 <GPIO_ResetBits>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:57
+	}
+	EXTI_ClearITPendingBit(EXTI_Line5);  //Clear Channel B
+ 80001f8:	2020      	movs	r0, #32
+ 80001fa:	f000 f8cf 	bl	800039c <EXTI_ClearITPendingBit>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:58
+	EXTI_ClearITPendingBit(EXTI_Line6);  //Clear Channel A
+ 80001fe:	2040      	movs	r0, #64	; 0x40
+ 8000200:	f000 f8cc 	bl	800039c <EXTI_ClearITPendingBit>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:59
+}
+ 8000204:	b003      	add	sp, #12
+ 8000206:	bd30      	pop	{r4, r5, pc}
+ 8000208:	20000004 	.word	0x20000004
+ 800020c:	40010800 	.word	0x40010800
+ 8000210:	20000000 	.word	0x20000000
+ 8000214:	08000618 	.word	0x08000618
+ 8000218:	20000005 	.word	0x20000005
+ 800021c:	20000002 	.word	0x20000002
+ 8000220:	40011000 	.word	0x40011000
+
+08000224 <main>:
+main():
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:63
+
+
+int main()
+{
+ 8000224:	b508      	push	{r3, lr}
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:68 (discriminator 1)
+	while(1)
+	{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+//setting enable A, inputs 1 & 2 configurations
+GPIO_InitStructure.GPIO_Pin=(GPIO_Pin_3 | GPIO_Pin_4| GPIO_Pin_5);
+ 8000226:	4c21      	ldr	r4, [pc, #132]	; (80002ac <main+0x88>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:66 (discriminator 1)
+
+int main()
+{
+	while(1)
+	{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+ 8000228:	2008      	movs	r0, #8
+ 800022a:	2101      	movs	r1, #1
+ 800022c:	f000 f92a 	bl	8000484 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:69 (discriminator 1)
+//setting enable A, inputs 1 & 2 configurations
+GPIO_InitStructure.GPIO_Pin=(GPIO_Pin_3 | GPIO_Pin_4| GPIO_Pin_5);
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+ 8000230:	2510      	movs	r5, #16
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:68 (discriminator 1)
+{
+	while(1)
+	{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+//setting enable A, inputs 1 & 2 configurations
+GPIO_InitStructure.GPIO_Pin=(GPIO_Pin_3 | GPIO_Pin_4| GPIO_Pin_5);
+ 8000232:	2338      	movs	r3, #56	; 0x38
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:70 (discriminator 1)
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+ 8000234:	2602      	movs	r6, #2
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:71 (discriminator 1)
+GPIO_Init(GPIOB,&GPIO_InitStructure);
+ 8000236:	4621      	mov	r1, r4
+ 8000238:	481d      	ldr	r0, [pc, #116]	; (80002b0 <main+0x8c>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:68 (discriminator 1)
+{
+	while(1)
+	{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+//setting enable A, inputs 1 & 2 configurations
+GPIO_InitStructure.GPIO_Pin=(GPIO_Pin_3 | GPIO_Pin_4| GPIO_Pin_5);
+ 800023a:	8023      	strh	r3, [r4, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:69 (discriminator 1)
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+ 800023c:	70e5      	strb	r5, [r4, #3]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:70 (discriminator 1)
+GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+ 800023e:	70a6      	strb	r6, [r4, #2]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:71 (discriminator 1)
+GPIO_Init(GPIOB,&GPIO_InitStructure);
+ 8000240:	f000 f8b2 	bl	80003a8 <GPIO_Init>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:72 (discriminator 1)
+GPIO_ResetBits(GPIOB,(GPIO_Pin_3 | GPIO_Pin_5));
+ 8000244:	481a      	ldr	r0, [pc, #104]	; (80002b0 <main+0x8c>)
+ 8000246:	2128      	movs	r1, #40	; 0x28
+ 8000248:	f000 f904 	bl	8000454 <GPIO_ResetBits>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:73 (discriminator 1)
+GPIO_SetBits(GPIOB,GPIO_Pin_4);
+ 800024c:	4629      	mov	r1, r5
+ 800024e:	4818      	ldr	r0, [pc, #96]	; (80002b0 <main+0x8c>)
+ 8000250:	f000 f8fe 	bl	8000450 <GPIO_SetBits>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:76 (discriminator 1)
+
+//connecting it to the line8 for EXTI8
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
+ 8000254:	2001      	movs	r0, #1
+ 8000256:	4601      	mov	r1, r0
+ 8000258:	f000 f914 	bl	8000484 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:78 (discriminator 1)
+//capsulating all the values in the gpio struct
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
+ 800025c:	2004      	movs	r0, #4
+ 800025e:	2101      	movs	r1, #1
+ 8000260:	f000 f910 	bl	8000484 <RCC_APB2PeriphClockCmd>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:80 (discriminator 1)
+
+GPIO_InitStructure.GPIO_Pin=GPIO_Pin_6 | GPIO_Pin_5;
+ 8000264:	2560      	movs	r5, #96	; 0x60
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:82 (discriminator 1)
+//the pin PA8 has to be externally pulled low or high.
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;
+ 8000266:	2348      	movs	r3, #72	; 0x48
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:85 (discriminator 1)
+//setting the speed on the input.
+GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+GPIO_Init(GPIOA,&GPIO_InitStructure);
+ 8000268:	4621      	mov	r1, r4
+ 800026a:	4812      	ldr	r0, [pc, #72]	; (80002b4 <main+0x90>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:82 (discriminator 1)
+//capsulating all the values in the gpio struct
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
+
+GPIO_InitStructure.GPIO_Pin=GPIO_Pin_6 | GPIO_Pin_5;
+//the pin PA8 has to be externally pulled low or high.
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;
+ 800026c:	70e3      	strb	r3, [r4, #3]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:80 (discriminator 1)
+//connecting it to the line8 for EXTI8
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
+//capsulating all the values in the gpio struct
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
+
+GPIO_InitStructure.GPIO_Pin=GPIO_Pin_6 | GPIO_Pin_5;
+ 800026e:	8025      	strh	r5, [r4, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:84 (discriminator 1)
+//the pin PA8 has to be externally pulled low or high.
+GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;
+//setting the speed on the input.
+GPIO_InitStructure.GPIO_Speed=GPIO_Speed_2MHz;
+ 8000270:	70a6      	strb	r6, [r4, #2]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:85 (discriminator 1)
+GPIO_Init(GPIOA,&GPIO_InitStructure);
+ 8000272:	f000 f899 	bl	80003a8 <GPIO_Init>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:88 (discriminator 1)
+
+
+GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource6);
+ 8000276:	2000      	movs	r0, #0
+ 8000278:	2106      	movs	r1, #6
+ 800027a:	f000 f8ed 	bl	8000458 <GPIO_EXTILineConfig>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:89 (discriminator 1)
+GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource5);
+ 800027e:	2105      	movs	r1, #5
+ 8000280:	2000      	movs	r0, #0
+ 8000282:	f000 f8e9 	bl	8000458 <GPIO_EXTILineConfig>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:93 (discriminator 1)
+
+//First updating the external interrupt lines.
+//The lines enable the interrupt in all the GPIOx.8 pins.
+EXTI_struct.EXTI_Line=EXTI_Line6|EXTI_Line5;
+ 8000286:	480c      	ldr	r0, [pc, #48]	; (80002b8 <main+0x94>)
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:95 (discriminator 1)
+//Mode are of two types- event and interrupt.
+EXTI_struct.EXTI_Mode=EXTI_Mode_Interrupt;
+ 8000288:	2400      	movs	r4, #0
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:93 (discriminator 1)
+GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource6);
+GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource5);
+
+//First updating the external interrupt lines.
+//The lines enable the interrupt in all the GPIOx.8 pins.
+EXTI_struct.EXTI_Line=EXTI_Line6|EXTI_Line5;
+ 800028a:	6005      	str	r5, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:97 (discriminator 1)
+//Mode are of two types- event and interrupt.
+EXTI_struct.EXTI_Mode=EXTI_Mode_Interrupt;
+//capturing the rising edge from the encoder ticks
+EXTI_struct.EXTI_Trigger=EXTI_Trigger_Rising;
+ 800028c:	2308      	movs	r3, #8
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:99 (discriminator 1)
+//specifing the states of pins.
+EXTI_struct.EXTI_LineCmd=ENABLE;
+ 800028e:	2501      	movs	r5, #1
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:95 (discriminator 1)
+
+//First updating the external interrupt lines.
+//The lines enable the interrupt in all the GPIOx.8 pins.
+EXTI_struct.EXTI_Line=EXTI_Line6|EXTI_Line5;
+//Mode are of two types- event and interrupt.
+EXTI_struct.EXTI_Mode=EXTI_Mode_Interrupt;
+ 8000290:	7104      	strb	r4, [r0, #4]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:97 (discriminator 1)
+//capturing the rising edge from the encoder ticks
+EXTI_struct.EXTI_Trigger=EXTI_Trigger_Rising;
+ 8000292:	7143      	strb	r3, [r0, #5]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:99 (discriminator 1)
+//specifing the states of pins.
+EXTI_struct.EXTI_LineCmd=ENABLE;
+ 8000294:	7185      	strb	r5, [r0, #6]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:101 (discriminator 1)
+//firing the struct
+EXTI_Init(&EXTI_struct);
+ 8000296:	f000 f847 	bl	8000328 <EXTI_Init>
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:109 (discriminator 1)
+
+//Fusing both EXTI line 8 and pin PA8.
+
+//Setting up the vector handler functions
+//capsulating all the values for the interrupt controller.
+nvic.NVIC_IRQChannel=EXTI9_5_IRQn;
+ 800029a:	4808      	ldr	r0, [pc, #32]	; (80002bc <main+0x98>)
+ 800029c:	2317      	movs	r3, #23
+ 800029e:	7003      	strb	r3, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:110 (discriminator 1)
+nvic.NVIC_IRQChannelPreemptionPriority=0x00;
+ 80002a0:	7044      	strb	r4, [r0, #1]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:111 (discriminator 1)
+nvic.NVIC_IRQChannelSubPriority=0x00;
+ 80002a2:	7084      	strb	r4, [r0, #2]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:112 (discriminator 1)
+nvic.NVIC_IRQChannelCmd=ENABLE;
+ 80002a4:	70c5      	strb	r5, [r0, #3]
+/home/kartik/workspaceSTM32/nb/Release/../src/main.c:113 (discriminator 1)
+NVIC_Init(&nvic);
+ 80002a6:	f000 f80b 	bl	80002c0 <NVIC_Init>
+ 80002aa:	e7bc      	b.n	8000226 <main+0x2>
+ 80002ac:	20000008 	.word	0x20000008
+ 80002b0:	40010c00 	.word	0x40010c00
+ 80002b4:	40010800 	.word	0x40010800
+ 80002b8:	20000014 	.word	0x20000014
+ 80002bc:	2000000c 	.word	0x2000000c
+
+080002c0 <NVIC_Init>:
+NVIC_Init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:121
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
+  assert_param(IS_NVIC_PREEMPTION_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority));  
+  assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
+    
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+ 80002c0:	78c2      	ldrb	r2, [r0, #3]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:113
+  * @param  NVIC_InitStruct: pointer to a NVIC_InitTypeDef structure that contains
+  *         the configuration information for the specified NVIC peripheral.
+  * @retval None
+  */
+void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
+{
+ 80002c2:	b510      	push	{r4, lr}
+ 80002c4:	7803      	ldrb	r3, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:121
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
+  assert_param(IS_NVIC_PREEMPTION_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority));  
+  assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
+    
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+ 80002c6:	b1fa      	cbz	r2, 8000308 <NVIC_Init+0x48>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:124
+  {
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
+    tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+ 80002c8:	4a15      	ldr	r2, [pc, #84]	; (8000320 <NVIC_Init+0x60>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:128
+    tmppre = (0x4 - tmppriority);
+    tmpsub = tmpsub >> tmppriority;
+
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+ 80002ca:	7844      	ldrb	r4, [r0, #1]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:124
+  assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
+    
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+  {
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
+    tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+ 80002cc:	68d2      	ldr	r2, [r2, #12]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:132
+
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+    tmppriority = tmppriority << 0x04;
+        
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+ 80002ce:	f103 4360 	add.w	r3, r3, #3758096384	; 0xe0000000
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:124
+  assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
+    
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+  {
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
+    tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+ 80002d2:	43d2      	mvns	r2, r2
+ 80002d4:	f3c2 2202 	ubfx	r2, r2, #8, #3
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:125
+    tmppre = (0x4 - tmppriority);
+ 80002d8:	f1c2 0104 	rsb	r1, r2, #4
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:128
+    tmpsub = tmpsub >> tmppriority;
+
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+ 80002dc:	fa04 f101 	lsl.w	r1, r4, r1
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:126
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+  {
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
+    tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+    tmppre = (0x4 - tmppriority);
+    tmpsub = tmpsub >> tmppriority;
+ 80002e0:	240f      	movs	r4, #15
+ 80002e2:	fa24 f202 	lsr.w	r2, r4, r2
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:129
+
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 80002e6:	7884      	ldrb	r4, [r0, #2]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:132
+    tmppriority = tmppriority << 0x04;
+        
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+ 80002e8:	f503 4361 	add.w	r3, r3, #57600	; 0xe100
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:129
+    tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+    tmppre = (0x4 - tmppriority);
+    tmpsub = tmpsub >> tmppriority;
+
+    tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 80002ec:	4022      	ands	r2, r4
+ 80002ee:	430a      	orrs	r2, r1
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:130
+    tmppriority = tmppriority << 0x04;
+ 80002f0:	0112      	lsls	r2, r2, #4
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:132
+        
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+ 80002f2:	b2d2      	uxtb	r2, r2
+ 80002f4:	f883 2300 	strb.w	r2, [r3, #768]	; 0x300
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:135
+    
+    /* Enable the Selected IRQ Channels --------------------------------------*/
+    NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 80002f8:	7803      	ldrb	r3, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:136
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 80002fa:	2201      	movs	r2, #1
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:135
+    tmppriority = tmppriority << 0x04;
+        
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+    
+    /* Enable the Selected IRQ Channels --------------------------------------*/
+    NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 80002fc:	0959      	lsrs	r1, r3, #5
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:136
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 80002fe:	f003 031f 	and.w	r3, r3, #31
+ 8000302:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000306:	e006      	b.n	8000316 <NVIC_Init+0x56>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:141
+  }
+  else
+  {
+    /* Disable the Selected IRQ Channels -------------------------------------*/
+    NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 8000308:	0959      	lsrs	r1, r3, #5
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:142
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 800030a:	2201      	movs	r2, #1
+ 800030c:	f003 031f 	and.w	r3, r3, #31
+ 8000310:	fa02 f303 	lsl.w	r3, r2, r3
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/misc.c:141
+      (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+  }
+  else
+  {
+    /* Disable the Selected IRQ Channels -------------------------------------*/
+    NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 8000314:	3120      	adds	r1, #32
+ 8000316:	4a03      	ldr	r2, [pc, #12]	; (8000324 <NVIC_Init+0x64>)
+ 8000318:	f842 3021 	str.w	r3, [r2, r1, lsl #2]
+ 800031c:	bd10      	pop	{r4, pc}
+ 800031e:	bf00      	nop
+ 8000320:	e000ed00 	.word	0xe000ed00
+ 8000324:	e000e100 	.word	0xe000e100
+
+08000328 <EXTI_Init>:
+EXTI_Init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:113
+  assert_param(IS_EXTI_LINE(EXTI_InitStruct->EXTI_Line));  
+  assert_param(IS_FUNCTIONAL_STATE(EXTI_InitStruct->EXTI_LineCmd));
+
+  tmp = (uint32_t)EXTI_BASE;
+     
+  if (EXTI_InitStruct->EXTI_LineCmd != DISABLE)
+ 8000328:	7983      	ldrb	r3, [r0, #6]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:102
+  * @param  EXTI_InitStruct: pointer to a EXTI_InitTypeDef structure
+  *         that contains the configuration information for the EXTI peripheral.
+  * @retval None
+  */
+void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct)
+{
+ 800032a:	b530      	push	{r4, r5, lr}
+ 800032c:	6801      	ldr	r1, [r0, #0]
+ 800032e:	7902      	ldrb	r2, [r0, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:113
+  assert_param(IS_EXTI_LINE(EXTI_InitStruct->EXTI_Line));  
+  assert_param(IS_FUNCTIONAL_STATE(EXTI_InitStruct->EXTI_LineCmd));
+
+  tmp = (uint32_t)EXTI_BASE;
+     
+  if (EXTI_InitStruct->EXTI_LineCmd != DISABLE)
+ 8000330:	b343      	cbz	r3, 8000384 <EXTI_Init+0x5c>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:116
+  {
+    /* Clear EXTI line configuration */
+    EXTI->IMR &= ~EXTI_InitStruct->EXTI_Line;
+ 8000332:	4b19      	ldr	r3, [pc, #100]	; (8000398 <EXTI_Init+0x70>)
+ 8000334:	43cc      	mvns	r4, r1
+ 8000336:	681d      	ldr	r5, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:119
+    EXTI->EMR &= ~EXTI_InitStruct->EXTI_Line;
+    
+    tmp += EXTI_InitStruct->EXTI_Mode;
+ 8000338:	f102 4280 	add.w	r2, r2, #1073741824	; 0x40000000
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:116
+  tmp = (uint32_t)EXTI_BASE;
+     
+  if (EXTI_InitStruct->EXTI_LineCmd != DISABLE)
+  {
+    /* Clear EXTI line configuration */
+    EXTI->IMR &= ~EXTI_InitStruct->EXTI_Line;
+ 800033c:	4025      	ands	r5, r4
+ 800033e:	601d      	str	r5, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:117
+    EXTI->EMR &= ~EXTI_InitStruct->EXTI_Line;
+ 8000340:	685d      	ldr	r5, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:119
+    
+    tmp += EXTI_InitStruct->EXTI_Mode;
+ 8000342:	f502 3282 	add.w	r2, r2, #66560	; 0x10400
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:117
+     
+  if (EXTI_InitStruct->EXTI_LineCmd != DISABLE)
+  {
+    /* Clear EXTI line configuration */
+    EXTI->IMR &= ~EXTI_InitStruct->EXTI_Line;
+    EXTI->EMR &= ~EXTI_InitStruct->EXTI_Line;
+ 8000346:	402c      	ands	r4, r5
+ 8000348:	605c      	str	r4, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:121
+    
+    tmp += EXTI_InitStruct->EXTI_Mode;
+
+    *(__IO uint32_t *) tmp |= EXTI_InitStruct->EXTI_Line;
+ 800034a:	6814      	ldr	r4, [r2, #0]
+ 800034c:	4321      	orrs	r1, r4
+ 800034e:	6011      	str	r1, [r2, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:124
+
+    /* Clear Rising Falling edge configuration */
+    EXTI->RTSR &= ~EXTI_InitStruct->EXTI_Line;
+ 8000350:	6802      	ldr	r2, [r0, #0]
+ 8000352:	689c      	ldr	r4, [r3, #8]
+ 8000354:	43d1      	mvns	r1, r2
+ 8000356:	400c      	ands	r4, r1
+ 8000358:	609c      	str	r4, [r3, #8]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:125
+    EXTI->FTSR &= ~EXTI_InitStruct->EXTI_Line;
+ 800035a:	68dc      	ldr	r4, [r3, #12]
+ 800035c:	4021      	ands	r1, r4
+ 800035e:	60d9      	str	r1, [r3, #12]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:128
+    
+    /* Select the trigger for the selected external interrupts */
+    if (EXTI_InitStruct->EXTI_Trigger == EXTI_Trigger_Rising_Falling)
+ 8000360:	7941      	ldrb	r1, [r0, #5]
+ 8000362:	2910      	cmp	r1, #16
+ 8000364:	d106      	bne.n	8000374 <EXTI_Init+0x4c>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:131
+    {
+      /* Rising Falling edge */
+      EXTI->RTSR |= EXTI_InitStruct->EXTI_Line;
+ 8000366:	6899      	ldr	r1, [r3, #8]
+ 8000368:	4311      	orrs	r1, r2
+ 800036a:	6099      	str	r1, [r3, #8]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:132
+      EXTI->FTSR |= EXTI_InitStruct->EXTI_Line;
+ 800036c:	68d9      	ldr	r1, [r3, #12]
+ 800036e:	430a      	orrs	r2, r1
+ 8000370:	60da      	str	r2, [r3, #12]
+ 8000372:	bd30      	pop	{r4, r5, pc}
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:137
+    }
+    else
+    {
+      tmp = (uint32_t)EXTI_BASE;
+      tmp += EXTI_InitStruct->EXTI_Trigger;
+ 8000374:	f101 4380 	add.w	r3, r1, #1073741824	; 0x40000000
+ 8000378:	f503 3382 	add.w	r3, r3, #66560	; 0x10400
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:139
+
+      *(__IO uint32_t *) tmp |= EXTI_InitStruct->EXTI_Line;
+ 800037c:	6819      	ldr	r1, [r3, #0]
+ 800037e:	430a      	orrs	r2, r1
+ 8000380:	601a      	str	r2, [r3, #0]
+ 8000382:	bd30      	pop	{r4, r5, pc}
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:144
+    }
+  }
+  else
+  {
+    tmp += EXTI_InitStruct->EXTI_Mode;
+ 8000384:	f102 4380 	add.w	r3, r2, #1073741824	; 0x40000000
+ 8000388:	f503 3382 	add.w	r3, r3, #66560	; 0x10400
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:147
+
+    /* Disable the selected external lines */
+    *(__IO uint32_t *) tmp &= ~EXTI_InitStruct->EXTI_Line;
+ 800038c:	681a      	ldr	r2, [r3, #0]
+ 800038e:	ea22 0101 	bic.w	r1, r2, r1
+ 8000392:	6019      	str	r1, [r3, #0]
+ 8000394:	bd30      	pop	{r4, r5, pc}
+ 8000396:	bf00      	nop
+ 8000398:	40010400 	.word	0x40010400
+
+0800039c <EXTI_ClearITPendingBit>:
+EXTI_ClearITPendingBit():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_exti.c:254
+void EXTI_ClearITPendingBit(uint32_t EXTI_Line)
+{
+  /* Check the parameters */
+  assert_param(IS_EXTI_LINE(EXTI_Line));
+  
+  EXTI->PR = EXTI_Line;
+ 800039c:	4b01      	ldr	r3, [pc, #4]	; (80003a4 <EXTI_ClearITPendingBit+0x8>)
+ 800039e:	6158      	str	r0, [r3, #20]
+ 80003a0:	4770      	bx	lr
+ 80003a2:	bf00      	nop
+ 80003a4:	40010400 	.word	0x40010400
+
+080003a8 <GPIO_Init>:
+GPIO_Init():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:183
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PIN(GPIO_InitStruct->GPIO_Pin));  
+  
+/*---------------------------- GPIO Mode Configuration -----------------------*/
+  currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+ 80003a8:	78cb      	ldrb	r3, [r1, #3]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:174
+  * @param  GPIO_InitStruct: pointer to a GPIO_InitTypeDef structure that
+  *         contains the configuration information for the specified GPIO peripheral.
+  * @retval None
+  */
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
+{
+ 80003aa:	b5f0      	push	{r4, r5, r6, r7, lr}
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:184
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PIN(GPIO_InitStruct->GPIO_Pin));  
+  
+/*---------------------------- GPIO Mode Configuration -----------------------*/
+  currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+  if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00)
+ 80003ac:	06da      	lsls	r2, r3, #27
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:189
+  { 
+    /* Check the parameters */
+    assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+    /* Output mode */
+    currentmode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
+ 80003ae:	bf48      	it	mi
+ 80003b0:	788a      	ldrbmi	r2, [r1, #2]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:193
+  }
+/*---------------------------- GPIO CRL Configuration ------------------------*/
+  /* Configure the eight low port pins */
+  if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+ 80003b2:	8809      	ldrh	r1, [r1, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:183
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PIN(GPIO_InitStruct->GPIO_Pin));  
+  
+/*---------------------------- GPIO Mode Configuration -----------------------*/
+  currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+ 80003b4:	f003 050f 	and.w	r5, r3, #15
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:189
+  if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00)
+  { 
+    /* Check the parameters */
+    assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+    /* Output mode */
+    currentmode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
+ 80003b8:	bf48      	it	mi
+ 80003ba:	4315      	orrmi	r5, r2
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:193
+  }
+/*---------------------------- GPIO CRL Configuration ------------------------*/
+  /* Configure the eight low port pins */
+  if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+ 80003bc:	f011 0fff 	tst.w	r1, #255	; 0xff
+ 80003c0:	d01d      	beq.n	80003fe <GPIO_Init+0x56>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:195
+  {
+    tmpreg = GPIOx->CRL;
+ 80003c2:	6804      	ldr	r4, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:196
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 80003c4:	2200      	movs	r2, #0
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:198
+    {
+      pos = ((uint32_t)0x01) << pinpos;
+ 80003c6:	2701      	movs	r7, #1
+ 80003c8:	4097      	lsls	r7, r2
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:200
+      /* Get the port pins position */
+      currentpin = (GPIO_InitStruct->GPIO_Pin) & pos;
+ 80003ca:	ea07 0601 	and.w	r6, r7, r1
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:201
+      if (currentpin == pos)
+ 80003ce:	42be      	cmp	r6, r7
+ 80003d0:	d111      	bne.n	80003f6 <GPIO_Init+0x4e>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:203
+      {
+        pos = pinpos << 2;
+ 80003d2:	0097      	lsls	r7, r2, #2
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:205
+        /* Clear the corresponding low control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+ 80003d4:	f04f 0c0f 	mov.w	ip, #15
+ 80003d8:	fa0c fc07 	lsl.w	ip, ip, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:208
+        tmpreg &= ~pinmask;
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 80003dc:	fa05 f707 	lsl.w	r7, r5, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:206
+      if (currentpin == pos)
+      {
+        pos = pinpos << 2;
+        /* Clear the corresponding low control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+        tmpreg &= ~pinmask;
+ 80003e0:	ea24 040c 	bic.w	r4, r4, ip
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:210
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 80003e4:	2b28      	cmp	r3, #40	; 0x28
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:208
+        pos = pinpos << 2;
+        /* Clear the corresponding low control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+        tmpreg &= ~pinmask;
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 80003e6:	ea44 0407 	orr.w	r4, r4, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:210
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 80003ea:	d101      	bne.n	80003f0 <GPIO_Init+0x48>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:212
+        {
+          GPIOx->BRR = (((uint32_t)0x01) << pinpos);
+ 80003ec:	6146      	str	r6, [r0, #20]
+ 80003ee:	e002      	b.n	80003f6 <GPIO_Init+0x4e>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:217
+        }
+        else
+        {
+          /* Set the corresponding ODR bit */
+          if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU)
+ 80003f0:	2b48      	cmp	r3, #72	; 0x48
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:219
+          {
+            GPIOx->BSRR = (((uint32_t)0x01) << pinpos);
+ 80003f2:	bf08      	it	eq
+ 80003f4:	6106      	streq	r6, [r0, #16]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:196
+/*---------------------------- GPIO CRL Configuration ------------------------*/
+  /* Configure the eight low port pins */
+  if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00)
+  {
+    tmpreg = GPIOx->CRL;
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 80003f6:	3201      	adds	r2, #1
+ 80003f8:	2a08      	cmp	r2, #8
+ 80003fa:	d1e4      	bne.n	80003c6 <GPIO_Init+0x1e>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:224
+            GPIOx->BSRR = (((uint32_t)0x01) << pinpos);
+          }
+        }
+      }
+    }
+    GPIOx->CRL = tmpreg;
+ 80003fc:	6004      	str	r4, [r0, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:228
+  }
+/*---------------------------- GPIO CRH Configuration ------------------------*/
+  /* Configure the eight high port pins */
+  if (GPIO_InitStruct->GPIO_Pin > 0x00FF)
+ 80003fe:	29ff      	cmp	r1, #255	; 0xff
+ 8000400:	d91f      	bls.n	8000442 <GPIO_Init+0x9a>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:230
+  {
+    tmpreg = GPIOx->CRH;
+ 8000402:	6844      	ldr	r4, [r0, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:231
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 8000404:	2200      	movs	r2, #0
+ 8000406:	f102 0608 	add.w	r6, r2, #8
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:233
+    {
+      pos = (((uint32_t)0x01) << (pinpos + 0x08));
+ 800040a:	2701      	movs	r7, #1
+ 800040c:	40b7      	lsls	r7, r6
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:235
+      /* Get the port pins position */
+      currentpin = ((GPIO_InitStruct->GPIO_Pin) & pos);
+ 800040e:	ea07 0601 	and.w	r6, r7, r1
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:236
+      if (currentpin == pos)
+ 8000412:	42be      	cmp	r6, r7
+ 8000414:	d111      	bne.n	800043a <GPIO_Init+0x92>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:238
+      {
+        pos = pinpos << 2;
+ 8000416:	0097      	lsls	r7, r2, #2
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:240
+        /* Clear the corresponding high control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+ 8000418:	f04f 0c0f 	mov.w	ip, #15
+ 800041c:	fa0c fc07 	lsl.w	ip, ip, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:243
+        tmpreg &= ~pinmask;
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 8000420:	fa05 f707 	lsl.w	r7, r5, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:241
+      if (currentpin == pos)
+      {
+        pos = pinpos << 2;
+        /* Clear the corresponding high control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+        tmpreg &= ~pinmask;
+ 8000424:	ea24 040c 	bic.w	r4, r4, ip
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:245
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 8000428:	2b28      	cmp	r3, #40	; 0x28
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:243
+        pos = pinpos << 2;
+        /* Clear the corresponding high control register bits */
+        pinmask = ((uint32_t)0x0F) << pos;
+        tmpreg &= ~pinmask;
+        /* Write the mode configuration in the corresponding bits */
+        tmpreg |= (currentmode << pos);
+ 800042a:	ea44 0407 	orr.w	r4, r4, r7
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:245
+        /* Reset the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD)
+ 800042e:	d101      	bne.n	8000434 <GPIO_Init+0x8c>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:247
+        {
+          GPIOx->BRR = (((uint32_t)0x01) << (pinpos + 0x08));
+ 8000430:	6146      	str	r6, [r0, #20]
+ 8000432:	e002      	b.n	800043a <GPIO_Init+0x92>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:250
+        }
+        /* Set the corresponding ODR bit */
+        if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU)
+ 8000434:	2b48      	cmp	r3, #72	; 0x48
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:252
+        {
+          GPIOx->BSRR = (((uint32_t)0x01) << (pinpos + 0x08));
+ 8000436:	bf08      	it	eq
+ 8000438:	6106      	streq	r6, [r0, #16]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:231
+/*---------------------------- GPIO CRH Configuration ------------------------*/
+  /* Configure the eight high port pins */
+  if (GPIO_InitStruct->GPIO_Pin > 0x00FF)
+  {
+    tmpreg = GPIOx->CRH;
+    for (pinpos = 0x00; pinpos < 0x08; pinpos++)
+ 800043a:	3201      	adds	r2, #1
+ 800043c:	2a08      	cmp	r2, #8
+ 800043e:	d1e2      	bne.n	8000406 <GPIO_Init+0x5e>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:256
+        {
+          GPIOx->BSRR = (((uint32_t)0x01) << (pinpos + 0x08));
+        }
+      }
+    }
+    GPIOx->CRH = tmpreg;
+ 8000440:	6044      	str	r4, [r0, #4]
+ 8000442:	bdf0      	pop	{r4, r5, r6, r7, pc}
+
+08000444 <GPIO_ReadInputDataBit>:
+GPIO_ReadInputDataBit():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:289
+  
+  /* Check the parameters */
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GET_GPIO_PIN(GPIO_Pin)); 
+  
+  if ((GPIOx->IDR & GPIO_Pin) != (uint32_t)Bit_RESET)
+ 8000444:	6883      	ldr	r3, [r0, #8]
+ 8000446:	4219      	tst	r1, r3
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:298
+  else
+  {
+    bitstatus = (uint8_t)Bit_RESET;
+  }
+  return bitstatus;
+}
+ 8000448:	bf0c      	ite	eq
+ 800044a:	2000      	moveq	r0, #0
+ 800044c:	2001      	movne	r0, #1
+ 800044e:	4770      	bx	lr
+
+08000450 <GPIO_SetBits>:
+GPIO_SetBits():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:364
+{
+  /* Check the parameters */
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_PIN(GPIO_Pin));
+  
+  GPIOx->BSRR = GPIO_Pin;
+ 8000450:	6101      	str	r1, [r0, #16]
+ 8000452:	4770      	bx	lr
+
+08000454 <GPIO_ResetBits>:
+GPIO_ResetBits():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:380
+{
+  /* Check the parameters */
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+  assert_param(IS_GPIO_PIN(GPIO_Pin));
+  
+  GPIOx->BRR = GPIO_Pin;
+ 8000454:	6141      	str	r1, [r0, #20]
+ 8000456:	4770      	bx	lr
+
+08000458 <GPIO_EXTILineConfig>:
+GPIO_EXTILineConfig():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:616
+  uint32_t tmp = 0x00;
+  /* Check the parameters */
+  assert_param(IS_GPIO_EXTI_PORT_SOURCE(GPIO_PortSource));
+  assert_param(IS_GPIO_PIN_SOURCE(GPIO_PinSource));
+  
+  tmp = ((uint32_t)0x0F) << (0x04 * (GPIO_PinSource & (uint8_t)0x03));
+ 8000458:	f001 0303 	and.w	r3, r1, #3
+ 800045c:	009b      	lsls	r3, r3, #2
+ 800045e:	220f      	movs	r2, #15
+ 8000460:	409a      	lsls	r2, r3
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:618
+  AFIO->EXTICR[GPIO_PinSource >> 0x02] &= ~tmp;
+  AFIO->EXTICR[GPIO_PinSource >> 0x02] |= (((uint32_t)GPIO_PortSource) << (0x04 * (GPIO_PinSource & (uint8_t)0x03)));
+ 8000462:	4098      	lsls	r0, r3
+ 8000464:	f001 01fc 	and.w	r1, r1, #252	; 0xfc
+ 8000468:	f101 4180 	add.w	r1, r1, #1073741824	; 0x40000000
+ 800046c:	f501 3180 	add.w	r1, r1, #65536	; 0x10000
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:610
+  * @param  GPIO_PinSource: specifies the EXTI line to be configured.
+  *   This parameter can be GPIO_PinSourcex where x can be (0..15).
+  * @retval None
+  */
+void GPIO_EXTILineConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource)
+{
+ 8000470:	b510      	push	{r4, lr}
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:617
+  /* Check the parameters */
+  assert_param(IS_GPIO_EXTI_PORT_SOURCE(GPIO_PortSource));
+  assert_param(IS_GPIO_PIN_SOURCE(GPIO_PinSource));
+  
+  tmp = ((uint32_t)0x0F) << (0x04 * (GPIO_PinSource & (uint8_t)0x03));
+  AFIO->EXTICR[GPIO_PinSource >> 0x02] &= ~tmp;
+ 8000472:	688c      	ldr	r4, [r1, #8]
+ 8000474:	ea24 0202 	bic.w	r2, r4, r2
+ 8000478:	608a      	str	r2, [r1, #8]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_gpio.c:618
+  AFIO->EXTICR[GPIO_PinSource >> 0x02] |= (((uint32_t)GPIO_PortSource) << (0x04 * (GPIO_PinSource & (uint8_t)0x03)));
+ 800047a:	688a      	ldr	r2, [r1, #8]
+ 800047c:	4302      	orrs	r2, r0
+ 800047e:	608a      	str	r2, [r1, #8]
+ 8000480:	bd10      	pop	{r4, pc}
+	...
+
+08000484 <RCC_APB2PeriphClockCmd>:
+RCC_APB2PeriphClockCmd():
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_rcc.c:1096
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+ 8000484:	4b04      	ldr	r3, [pc, #16]	; (8000498 <RCC_APB2PeriphClockCmd+0x14>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_rcc.c:1102
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+  {
+    RCC->APB2ENR |= RCC_APB2Periph;
+ 8000486:	699a      	ldr	r2, [r3, #24]
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_rcc.c:1100
+void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+ 8000488:	b109      	cbz	r1, 800048e <RCC_APB2PeriphClockCmd+0xa>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_rcc.c:1102
+  {
+    RCC->APB2ENR |= RCC_APB2Periph;
+ 800048a:	4310      	orrs	r0, r2
+ 800048c:	e001      	b.n	8000492 <RCC_APB2PeriphClockCmd+0xe>
+/home/kartik/workspaceSTM32/nb/Release/../libs/StdPeriph/src/stm32f10x_rcc.c:1106
+  }
+  else
+  {
+    RCC->APB2ENR &= ~RCC_APB2Periph;
+ 800048e:	ea22 0000 	bic.w	r0, r2, r0
+ 8000492:	6198      	str	r0, [r3, #24]
+ 8000494:	4770      	bx	lr
+ 8000496:	bf00      	nop
+ 8000498:	40021000 	.word	0x40021000
+
+0800049c <__libc_init_array>:
+__libc_init_array():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:179
+(*__fini_array_end[])(void) __attribute__((weak));
+
+// Iterate over all the preinit/init routines.
+inline void
+__libc_init_array(void)
+{
+ 800049c:	b570      	push	{r4, r5, r6, lr}
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:183
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+ 800049e:	4b0d      	ldr	r3, [pc, #52]	; (80004d4 <__libc_init_array+0x38>)
+ 80004a0:	4d0d      	ldr	r5, [pc, #52]	; (80004d8 <__libc_init_array+0x3c>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:184
+  for (i = 0; i < count; i++)
+ 80004a2:	2400      	movs	r4, #0
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:183
+__libc_init_array(void)
+{
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+ 80004a4:	1aed      	subs	r5, r5, r3
+ 80004a6:	10ad      	asrs	r5, r5, #2
+ 80004a8:	461e      	mov	r6, r3
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:184 (discriminator 1)
+  for (i = 0; i < count; i++)
+ 80004aa:	42ac      	cmp	r4, r5
+ 80004ac:	d004      	beq.n	80004b8 <__libc_init_array+0x1c>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:185 (discriminator 2)
+    __preinit_array_start[i]();
+ 80004ae:	f856 2024 	ldr.w	r2, [r6, r4, lsl #2]
+ 80004b2:	4790      	blx	r2
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:184 (discriminator 2)
+{
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+  for (i = 0; i < count; i++)
+ 80004b4:	3401      	adds	r4, #1
+ 80004b6:	e7f8      	b.n	80004aa <__libc_init_array+0xe>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:192
+  // If you need to run the code in the .init section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+ 80004b8:	4b08      	ldr	r3, [pc, #32]	; (80004dc <__libc_init_array+0x40>)
+ 80004ba:	4d09      	ldr	r5, [pc, #36]	; (80004e0 <__libc_init_array+0x44>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:193
+  for (i = 0; i < count; i++)
+ 80004bc:	2400      	movs	r4, #0
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:192
+  // If you need to run the code in the .init section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+ 80004be:	1aed      	subs	r5, r5, r3
+ 80004c0:	10ad      	asrs	r5, r5, #2
+ 80004c2:	461e      	mov	r6, r3
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:193 (discriminator 1)
+  for (i = 0; i < count; i++)
+ 80004c4:	42ac      	cmp	r4, r5
+ 80004c6:	d004      	beq.n	80004d2 <__libc_init_array+0x36>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:194 (discriminator 2)
+    __init_array_start[i]();
+ 80004c8:	f856 2024 	ldr.w	r2, [r6, r4, lsl #2]
+ 80004cc:	4790      	blx	r2
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:193 (discriminator 2)
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+  for (i = 0; i < count; i++)
+ 80004ce:	3401      	adds	r4, #1
+ 80004d0:	e7f8      	b.n	80004c4 <__libc_init_array+0x28>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:195
+    __init_array_start[i]();
+}
+ 80004d2:	bd70      	pop	{r4, r5, r6, pc}
+ 80004d4:	08000178 	.word	0x08000178
+ 80004d8:	0800017c 	.word	0x0800017c
+ 80004dc:	0800017c 	.word	0x0800017c
+ 80004e0:	0800017c 	.word	0x0800017c
+
+080004e4 <__libc_fini_array>:
+__libc_fini_array():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:200
+
+// Run all the cleanup routines.
+inline void
+__libc_fini_array(void)
+{
+ 80004e4:	b538      	push	{r3, r4, r5, lr}
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:204
+  size_t count;
+  size_t i;
+
+  count = __fini_array_end - __fini_array_start;
+ 80004e6:	4d06      	ldr	r5, [pc, #24]	; (8000500 <__libc_fini_array+0x1c>)
+ 80004e8:	4c06      	ldr	r4, [pc, #24]	; (8000504 <__libc_fini_array+0x20>)
+ 80004ea:	1b64      	subs	r4, r4, r5
+ 80004ec:	10a4      	asrs	r4, r4, #2
+ 80004ee:	eb05 0584 	add.w	r5, r5, r4, lsl #2
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:205 (discriminator 1)
+  for (i = count; i > 0; i--)
+ 80004f2:	b124      	cbz	r4, 80004fe <__libc_fini_array+0x1a>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:206 (discriminator 2)
+    __fini_array_start[i - 1]();
+ 80004f4:	f855 3d04 	ldr.w	r3, [r5, #-4]!
+ 80004f8:	3c01      	subs	r4, #1
+ 80004fa:	4798      	blx	r3
+ 80004fc:	e7f9      	b.n	80004f2 <__libc_fini_array+0xe>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/startup_cm.c:212
+
+  // If you need to run the code in the .fini section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_fini();
+}
+ 80004fe:	bd38      	pop	{r3, r4, r5, pc}
+ 8000500:	0800017c 	.word	0x0800017c
+ 8000504:	0800017c 	.word	0x0800017c
+
+08000508 <_exit>:
+NVIC_SystemReset():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/include/core_cm3.h:1722
+ * Initiate a system reset request to reset the MCU
+ */
+static __INLINE void NVIC_SystemReset(void)
+{
+  SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      | 
+                 (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) | 
+ 8000508:	4a04      	ldr	r2, [pc, #16]	; (800051c <_exit+0x14>)
+ 800050a:	4b05      	ldr	r3, [pc, #20]	; (8000520 <_exit+0x18>)
+ 800050c:	68d1      	ldr	r1, [r2, #12]
+ 800050e:	f401 61e0 	and.w	r1, r1, #1792	; 0x700
+ 8000512:	430b      	orrs	r3, r1
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/include/core_cm3.h:1721
+ *
+ * Initiate a system reset request to reset the MCU
+ */
+static __INLINE void NVIC_SystemReset(void)
+{
+  SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      | 
+ 8000514:	60d3      	str	r3, [r2, #12]
+__DSB():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/include/core_cm3.h:1215
+static __INLINE void __NOP()                      { __ASM volatile ("nop"); }
+static __INLINE void __WFI()                      { __ASM volatile ("wfi"); }
+static __INLINE void __WFE()                      { __ASM volatile ("wfe"); }
+static __INLINE void __SEV()                      { __ASM volatile ("sev"); }
+static __INLINE void __ISB()                      { __ASM volatile ("isb"); }
+static __INLINE void __DSB()                      { __ASM volatile ("dsb"); }
+ 8000516:	f3bf 8f4f 	dsb	sy
+ 800051a:	e7fe      	b.n	800051a <_exit+0x12>
+ 800051c:	e000ed00 	.word	0xe000ed00
+ 8000520:	05fa0004 	.word	0x05fa0004
+
+08000524 <SystemInit>:
+SystemInit():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:216
+  */
+void SystemInit (void)
+{
+  /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+ 8000524:	4b38      	ldr	r3, [pc, #224]	; (8000608 <SystemInit+0xe4>)
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:213
+  * @note   This function should be used only after reset.
+  * @param  None
+  * @retval None
+  */
+void SystemInit (void)
+{
+ 8000526:	b082      	sub	sp, #8
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:216
+  /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+ 8000528:	681a      	ldr	r2, [r3, #0]
+ 800052a:	f042 0201 	orr.w	r2, r2, #1
+ 800052e:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:220
+
+  /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
+#ifndef STM32F10X_CL
+  RCC->CFGR &= (uint32_t)0xF8FF0000;
+ 8000530:	6859      	ldr	r1, [r3, #4]
+ 8000532:	4a36      	ldr	r2, [pc, #216]	; (800060c <SystemInit+0xe8>)
+ 8000534:	400a      	ands	r2, r1
+ 8000536:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:226
+#else
+  RCC->CFGR &= (uint32_t)0xF0FF0000;
+#endif /* STM32F10X_CL */   
+  
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+ 8000538:	681a      	ldr	r2, [r3, #0]
+ 800053a:	f022 7284 	bic.w	r2, r2, #17301504	; 0x1080000
+ 800053e:	f422 3280 	bic.w	r2, r2, #65536	; 0x10000
+ 8000542:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:229
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+ 8000544:	681a      	ldr	r2, [r3, #0]
+ 8000546:	f422 2280 	bic.w	r2, r2, #262144	; 0x40000
+ 800054a:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:232
+
+  /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE/OTGFSPRE bits */
+  RCC->CFGR &= (uint32_t)0xFF80FFFF;
+ 800054c:	685a      	ldr	r2, [r3, #4]
+ 800054e:	f422 02fe 	bic.w	r2, r2, #8323072	; 0x7f0000
+ 8000552:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:251
+
+  /* Reset CFGR2 register */
+  RCC->CFGR2 = 0x00000000;      
+#else
+  /* Disable all interrupts and clear pending bits  */
+  RCC->CIR = 0x009F0000;
+ 8000554:	f44f 021f 	mov.w	r2, #10420224	; 0x9f0000
+ 8000558:	609a      	str	r2, [r3, #8]
+SetSysClockTo72():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:989
+  * @param  None
+  * @retval None
+  */
+static void SetSysClockTo72(void)
+{
+  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+ 800055a:	2200      	movs	r2, #0
+ 800055c:	9200      	str	r2, [sp, #0]
+ 800055e:	9201      	str	r2, [sp, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:993
+  
+  /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/    
+  /* Enable HSE */    
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+ 8000560:	681a      	ldr	r2, [r3, #0]
+ 8000562:	f442 3280 	orr.w	r2, r2, #65536	; 0x10000
+ 8000566:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:998
+ 
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC->CR & RCC_CR_HSERDY;
+ 8000568:	681a      	ldr	r2, [r3, #0]
+ 800056a:	f402 3200 	and.w	r2, r2, #131072	; 0x20000
+ 800056e:	9201      	str	r2, [sp, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:999
+    StartUpCounter++;  
+ 8000570:	9a00      	ldr	r2, [sp, #0]
+ 8000572:	3201      	adds	r2, #1
+ 8000574:	9200      	str	r2, [sp, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1000
+  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+ 8000576:	9a01      	ldr	r2, [sp, #4]
+ 8000578:	b91a      	cbnz	r2, 8000582 <SystemInit+0x5e>
+ 800057a:	9a00      	ldr	r2, [sp, #0]
+ 800057c:	f5b2 6fa0 	cmp.w	r2, #1280	; 0x500
+ 8000580:	d1f2      	bne.n	8000568 <SystemInit+0x44>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1002
+
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+ 8000582:	681a      	ldr	r2, [r3, #0]
+ 8000584:	f412 3200 	ands.w	r2, r2, #131072	; 0x20000
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1004
+  {
+    HSEStatus = (uint32_t)0x01;
+ 8000588:	bf18      	it	ne
+ 800058a:	2201      	movne	r2, #1
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1008
+  }
+  else
+  {
+    HSEStatus = (uint32_t)0x00;
+ 800058c:	9201      	str	r2, [sp, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1011
+  }  
+
+  if (HSEStatus == (uint32_t)0x01)
+ 800058e:	9a01      	ldr	r2, [sp, #4]
+ 8000590:	2a01      	cmp	r2, #1
+ 8000592:	d005      	beq.n	80005a0 <SystemInit+0x7c>
+SystemInit():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:267
+  SetSysClock();
+
+#ifdef VECT_TAB_SRAM
+  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */
+#else
+  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
+ 8000594:	4b1e      	ldr	r3, [pc, #120]	; (8000610 <SystemInit+0xec>)
+ 8000596:	f04f 6200 	mov.w	r2, #134217728	; 0x8000000
+ 800059a:	609a      	str	r2, [r3, #8]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:269
+#endif 
+}
+ 800059c:	b002      	add	sp, #8
+ 800059e:	4770      	bx	lr
+SetSysClockTo72():
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1014
+  }  
+
+  if (HSEStatus == (uint32_t)0x01)
+  {
+    /* Enable Prefetch Buffer */
+    FLASH->ACR |= FLASH_ACR_PRFTBE;
+ 80005a0:	4a1c      	ldr	r2, [pc, #112]	; (8000614 <SystemInit+0xf0>)
+ 80005a2:	6811      	ldr	r1, [r2, #0]
+ 80005a4:	f041 0110 	orr.w	r1, r1, #16
+ 80005a8:	6011      	str	r1, [r2, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1017
+
+    /* Flash 2 wait state */
+    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
+ 80005aa:	6811      	ldr	r1, [r2, #0]
+ 80005ac:	f021 0103 	bic.w	r1, r1, #3
+ 80005b0:	6011      	str	r1, [r2, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1018
+    FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;    
+ 80005b2:	6811      	ldr	r1, [r2, #0]
+ 80005b4:	f041 0102 	orr.w	r1, r1, #2
+ 80005b8:	6011      	str	r1, [r2, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1022
+
+ 
+    /* HCLK = SYSCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+ 80005ba:	685a      	ldr	r2, [r3, #4]
+ 80005bc:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1025
+      
+    /* PCLK2 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
+ 80005be:	685a      	ldr	r2, [r3, #4]
+ 80005c0:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1028
+    
+    /* PCLK1 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
+ 80005c2:	685a      	ldr	r2, [r3, #4]
+ 80005c4:	f442 6280 	orr.w	r2, r2, #1024	; 0x400
+ 80005c8:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1054
+    RCC->CFGR &= (uint32_t)~(RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL);
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | 
+                            RCC_CFGR_PLLMULL9); 
+#else    
+    /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
+ 80005ca:	685a      	ldr	r2, [r3, #4]
+ 80005cc:	f422 127c 	bic.w	r2, r2, #4128768	; 0x3f0000
+ 80005d0:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1056
+                                        RCC_CFGR_PLLMULL));
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
+ 80005d2:	685a      	ldr	r2, [r3, #4]
+ 80005d4:	f442 12e8 	orr.w	r2, r2, #1900544	; 0x1d0000
+ 80005d8:	605a      	str	r2, [r3, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1060
+#endif /* STM32F10X_CL */
+
+    /* Enable PLL */
+    RCC->CR |= RCC_CR_PLLON;
+ 80005da:	681a      	ldr	r2, [r3, #0]
+ 80005dc:	f042 7280 	orr.w	r2, r2, #16777216	; 0x1000000
+ 80005e0:	601a      	str	r2, [r3, #0]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1063
+
+    /* Wait till PLL is ready */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)
+ 80005e2:	6819      	ldr	r1, [r3, #0]
+ 80005e4:	4a08      	ldr	r2, [pc, #32]	; (8000608 <SystemInit+0xe4>)
+ 80005e6:	0189      	lsls	r1, r1, #6
+ 80005e8:	d5fb      	bpl.n	80005e2 <SystemInit+0xbe>
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1068
+    {
+    }
+    
+    /* Select PLL as system clock source */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+ 80005ea:	6851      	ldr	r1, [r2, #4]
+ 80005ec:	f021 0103 	bic.w	r1, r1, #3
+ 80005f0:	6051      	str	r1, [r2, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1069
+    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
+ 80005f2:	6851      	ldr	r1, [r2, #4]
+ 80005f4:	f041 0102 	orr.w	r1, r1, #2
+ 80005f8:	6051      	str	r1, [r2, #4]
+/home/kartik/workspaceSTM32/nb/Release/../libs/CMSIS/src/system_stm32f10x.c:1072
+
+    /* Wait till PLL is used as system clock source */
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)
+ 80005fa:	685a      	ldr	r2, [r3, #4]
+ 80005fc:	f002 020c 	and.w	r2, r2, #12
+ 8000600:	2a08      	cmp	r2, #8
+ 8000602:	d1fa      	bne.n	80005fa <SystemInit+0xd6>
+ 8000604:	e7c6      	b.n	8000594 <SystemInit+0x70>
+ 8000606:	bf00      	nop
+ 8000608:	40021000 	.word	0x40021000
+ 800060c:	f8ff0000 	.word	0xf8ff0000
+ 8000610:	e000ed00 	.word	0xe000ed00
+ 8000614:	40022000 	.word	0x40022000
+
+08000618 <states.6410>:
+$d():
+ 8000618:	0001ff00 ff000001 010000ff 00ff0100     ................
