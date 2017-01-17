@@ -1,9 +1,4 @@
-#include "stm32f10x.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_rcc.h"
-#include "stm32f10x_usart.h"
-#include "stm32f10x_dma.h"
-#include <stdio.h>
+
 
 /**
   *****************************************************************************
@@ -14,21 +9,35 @@
   */
 
 // ----------------------------------------------------------------------------
+#include "stm32f10x.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_rcc.h"
+#include "stm32f10x_usart.h"
+#include "stm32f10x_dma.h"
+#include <stdio.h>
 
 //defining the ports and pins
+#define CIRCUM		6.28				//radius of the pulley
 #define USART_TX  	GPIO_Pin_9
 #define USART_RX  	GPIO_Pin_10
-#define MS1		  	3
-#define MS2		  	4
-#define MS3		  	5
-#define DIR		  	6
+
 #define GPIO_BLINK  GPIO_Pin_13
 GPIO_InitTypeDef	 gpio;
 USART_InitTypeDef	 usart;
 DMA_InitTypeDef		 dma;
 int rec_data();
+
+//timer function taken from example.
+static void
+Delay(__IO uint32_t nTime);
+static void
+TimingDelay_Decrement(void);
+void
+SysTick_Handler(void);
+int i, steps;
 unsigned int count;
-int i;
+char k[3];
+static uint16_t a;
 uint32_t  buffer = 0x0000;
 // ----------------------------------------------------------------------------
 int main ()
@@ -64,20 +73,50 @@ int main ()
 	USART_Init(USART1, &usart);
 	USART_Cmd(USART1,ENABLE);
 	//enabling the clock for DMA,
-	rec_data();
 		/*setting the USART input data register as the base address and disabling the
 		the mem location increment since same location is to be used to transfer data.
 		DMA.*/
 	//iterating through each count to get the data block in array and converting to integer
-
-	/*char k[3];
+	//the k buffer will contain the three inputs from a bash script on the host pc
+	//sending values using the pySerial library on python.
+	/*
+	 * The three inputs are mainly the distance to be travelled by the stepper's pulley,
+	 * the step size of the stepper and direction
+	 */
 	for(i=0;i<3;i++){
 		USART_Init(USART1, &usart);
 		USART_Cmd(USART1,ENABLE);
 		rec_data();
 		k[i]=buffer;
 	}
-*/	char k=buffer;
+	//putting a switch case to get the values
+	switch(k[2]){
+	case '1':
+		a=0x00;//this will be the for ms1, ms2, ms3=0;
+		//now given the distance, what will be the number of steps to travel
+		steps=k[1]/CIRCUM;
+		break;
+	case '2':
+		a=0x08;
+		steps=k[1]*2/CIRCUM;
+		break;
+	case '4':
+		a=0x10;
+		steps=k[1]*4/CIRCUM;
+		break;
+	case '8':
+		a=0x18;
+		steps=k[1]*8/CIRCUM;
+		break;
+	case '16':
+		a=0x38;
+		steps=k[1]*16/CIRCUM;
+		break;
+	}
+//since a pulse has to be given for every step,
+	set_bits();
+
+/*	char k=buffer;
 	if(k=='1')
 	{	GPIO_InitTypeDef gpio;
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
@@ -89,6 +128,9 @@ int main ()
 		GPIO_Init(GPIOC, &gpio);
 		GPIO_ResetBits(GPIOC, GPIO_Pin_13);
 	}
+	*/
+
+
 }
 
 //subroutine to get the recieved data
@@ -133,4 +175,47 @@ int rec_data(){
 }
 
 
+void set_bits()
+{
+	GPIO_InitTypeDef gpio;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+	gpio.GPIO_Pin=GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 ;
+	gpio.GPIO_Mode=GPIO_Mode_Out_PP;
+	gpio.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &gpio);
+	GPIOB->ODR&=0;
+	GPIOB->ODR|=a;
+
+}
+
+static __IO uint32_t uwTimingDelay;
+
+/**
+ * @brief  Inserts a delay time.
+ * @param  nTime: specifies the delay time length, in SysTick ticks.
+ * @retval None
+ */
+void
+Delay(__IO uint32_t nTime)
+{
+  uwTimingDelay = nTime;
+
+  while (uwTimingDelay != 0)
+    ;
+}
+
+void
+TimingDelay_Decrement(void)
+{
+  if (uwTimingDelay != 0x00)
+    {
+      uwTimingDelay--;
+    }
+}
+
+void
+SysTick_Handler(void)
+{
+  TimingDelay_Decrement();
+}
 
